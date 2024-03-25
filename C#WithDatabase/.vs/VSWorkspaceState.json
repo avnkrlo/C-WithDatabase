@@ -1,7 +1,7 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin"
   ],
-  "SelectedNode": "\\LoginForm.cs",
-  "PreviewInSolutionExplorer": false
+  "PreviewInSolutionExplorer": true
 }
