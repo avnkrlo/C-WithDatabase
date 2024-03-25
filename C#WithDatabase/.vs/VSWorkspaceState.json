@@ -1,7 +1,19 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< Updated upstream
     "\\bin"
   ],
   "PreviewInSolutionExplorer": true
+=======
+    "\\bin",
+    "\\bin\\Debug",
+    "\\CustomButtons",
+    "\\Icons",
+    "\\obj",
+    "\\Properties"
+  ],
+  "SelectedNode": "\\C#WithDatabase.csproj",
+  "PreviewInSolutionExplorer": false
+>>>>>>> Stashed changes
 }

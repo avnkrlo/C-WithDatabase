@@ -108,6 +108,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crudwithdatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crudwithdatabase.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CustomButtons\PrimaryButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -116,6 +121,17 @@
     </Compile>
     <Compile Include="DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRegisterForm.Designer.cs">
+      <DependentUpon>AdminRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -137,6 +153,9 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminRegisterForm.resx">
+      <DependentUpon>AdminRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +170,28 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="crudwithdatabase.xsc">
+      <DependentUpon>crudwithdatabase.xsd</DependentUpon>
+    </None>
+    <None Include="crudwithdatabase.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>crudwithdatabase.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="crudwithdatabase.xss">
+      <DependentUpon>crudwithdatabase.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -178,4 +219,8 @@
     <None Include="Icons\settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
 </Project>
