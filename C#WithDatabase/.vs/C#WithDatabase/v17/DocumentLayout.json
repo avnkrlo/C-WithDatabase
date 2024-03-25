@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "DashboardForm.Designer.cs",
               "ToolTip": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.Designer.cs",
               "RelativeToolTip": "DashboardForm.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoBAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-25T06:37:59.569Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "LoginForm.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T06:00:36.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T06:00:36.459Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "RegisterForm.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T06:36:41.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T06:36:41.505Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "DashboardForm.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T06:36:34.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T06:36:34.457Z"
             }
           ]
         }
