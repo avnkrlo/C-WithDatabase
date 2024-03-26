@@ -3,7 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C#WithDatabase\\c#withdatabase\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+<<<<<<< Updated upstream
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c#withdatabase\\c#withdatabase\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
       "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,6 +32,7 @@
       "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C#WithDatabase\\c#withdatabase\\adminregisterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\adminregisterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,6 +43,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C#WithDatabase\\c#withdatabase\\adminregisterform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\adminregisterform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:C#WithDatabase\\DashboardForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+=======
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:C#WithDatabase\\DashboardForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c#withdatabase\\c#withdatabase\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C#WithDatabase\\c#withdatabase\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\RegisterForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:C#WithDatabase\\RegisterForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\RegisterForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:C#WithDatabase\\RegisterForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+>>>>>>> Stashed changes
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
     }
   ],
   "DocumentGroupContainers": [
@@ -46,9 +76,14 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 5,
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
           "Children": [
             {
+<<<<<<< Updated upstream
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "AdminRegisterForm.Designer.cs",
@@ -63,6 +98,8 @@
               "EditorCaption": ""
             },
             {
+=======
+>>>>>>> Stashed changes
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
@@ -76,6 +113,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\LoginForm.cs",
@@ -126,20 +164,46 @@
             },
             {
               "$type": "Document",
+=======
+<<<<<<< Updated upstream
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
               "DocumentIndex": 3,
+=======
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\LoginForm.cs",
+              "RelativeDocumentMoniker": "C#WithDatabase\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\LoginForm.cs",
+              "RelativeToolTip": "C#WithDatabase\\LoginForm.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAYwEIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T03:04:43.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+>>>>>>> Stashed changes
               "Title": "DashboardForm.cs",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\DashboardForm.cs",
               "ToolTip": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.cs",
               "RelativeToolTip": "C#WithDatabase\\DashboardForm.cs",
+<<<<<<< HEAD
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAAAAAA",
+=======
+              "ViewState": "AQIAAB0AAAAAAAAAAIAwwDAAAAAJAAAA",
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-25T02:33:07.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 5,
+=======
+              "DocumentIndex": 1,
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
               "Title": "DashboardForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\DashboardForm.cs",
@@ -151,7 +215,15 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
+=======
+<<<<<<< Updated upstream
+              "DocumentIndex": 1,
+=======
+              "DocumentIndex": 3,
+>>>>>>> Stashed changes
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
               "Title": "RegisterForm.cs",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\RegisterForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\RegisterForm.cs",
@@ -164,15 +236,22 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 4,
+=======
+<<<<<<< Updated upstream
+              "DocumentIndex": 2,
+=======
+              "DocumentIndex": 4,
+>>>>>>> Stashed changes
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
               "Title": "RegisterForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\RegisterForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\RegisterForm.cs",
               "ToolTip": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\RegisterForm.cs [Design]",
               "RelativeToolTip": "C#WithDatabase\\RegisterForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T05:07:27.649Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-15T05:07:27.649Z"
             }
           ]
         }

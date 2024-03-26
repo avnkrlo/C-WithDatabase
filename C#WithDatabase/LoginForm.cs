@@ -1,9 +1,9 @@
+﻿using MySql.Data.MySqlClient;
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace C_WithDatabase
 {
@@ -13,7 +13,6 @@ namespace C_WithDatabase
         {
             InitializeComponent();
         }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -72,8 +71,6 @@ namespace C_WithDatabase
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            string connectionString = @"datasource=localhost; port=3306; userid=root; pwd=P@ssw0rd;";
-            string query = "SELECT * FROM crudwithdatabase.employee_info WHERE eid = @username AND password = @password";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -89,8 +86,6 @@ namespace C_WithDatabase
                     {
                         if (reader.HasRows)
                         {
-                            DashboardForm dashboardForm = new DashboardForm();
-                            dashboardForm.Show();
                             this.Hide();
                         }
                         else
