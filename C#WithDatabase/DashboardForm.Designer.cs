@@ -35,17 +35,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSidebar = new System.Windows.Forms.PictureBox();
             this.sidebarNavigation = new System.Windows.Forms.FlowLayoutPanel();
-<<<<<<< HEAD
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-=======
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
->>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -55,13 +52,10 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).BeginInit();
             this.sidebarNavigation.SuspendLayout();
-<<<<<<< HEAD
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-=======
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
->>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -140,7 +134,6 @@
             this.sidebarNavigation.Size = new System.Drawing.Size(260, 675);
             this.sidebarNavigation.TabIndex = 1;
             // 
-<<<<<<< HEAD
             // panel3
             // 
             this.panel3.Controls.Add(this.button2);
@@ -189,7 +182,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-=======
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
@@ -238,7 +230,6 @@
             this.button2.Text = "            Dashboard";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
->>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
             // 
             // panel4
             // 
@@ -314,13 +305,10 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).EndInit();
             this.sidebarNavigation.ResumeLayout(false);
-<<<<<<< HEAD
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-=======
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
->>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Windows.Forms;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace C_WithDatabase.CustomDesign
 {
@@ -19,7 +14,7 @@ namespace C_WithDatabase.CustomDesign
         private Color borderColor = Color.AliceBlue;
 
         [Category("Advance Design")]
-        public int BorderSize 
+        public int BorderSize
         {
             get
             {
@@ -33,7 +28,7 @@ namespace C_WithDatabase.CustomDesign
             }
         }
         [Category("Advance Design")]
-        public int BorderRadius 
+        public int BorderRadius
         {
             get
             {
@@ -42,17 +37,17 @@ namespace C_WithDatabase.CustomDesign
 
             set
             {
-                if(value <= this.Height)
+                if (value <= this.Height)
                     borderRadius = value;
                 else
                     borderRadius = this.Height;
-                    this.Invalidate();
-                
-                
+                this.Invalidate();
+
+
             }
         }
         [Category("Advance Design")]
-        public Color BorderColor 
+        public Color BorderColor
         {
             get
             {
@@ -142,22 +137,22 @@ namespace C_WithDatabase.CustomDesign
 
                     e.Graphics.DrawPath(penSurface, pathSurface);
 
-                    if(borderSize >= 1)
+                    if (borderSize >= 1)
                     {
                         e.Graphics.DrawPath(penBorder, pathBorder);
                     }
                 }
 
-            } 
+            }
             else //Normal Button
             {
                 this.Region = new Region(rectSurface);
-                if(borderSize >= 1)
+                if (borderSize >= 1)
                 {
                     using (Pen penBorder = new Pen(borderColor, borderSize))
                     {
                         penBorder.Alignment = PenAlignment.Inset;
-                        e.Graphics.DrawRectangle(penBorder, 0, 0, this.Width-1, this.Height-1);
+                        e.Graphics.DrawRectangle(penBorder, 0, 0, this.Width - 1, this.Height - 1);
                     }
                 }
             }
@@ -170,7 +165,7 @@ namespace C_WithDatabase.CustomDesign
 
         private void Container_BackColorChanged(object sender, EventArgs e)
         {
-            if(this.DesignMode)
+            if (this.DesignMode)
                 this.Invalidate();
         }
     }

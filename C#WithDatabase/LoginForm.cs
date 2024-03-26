@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -72,32 +72,25 @@ namespace C_WithDatabase
         private void loginButton_Click(object sender, EventArgs e)
         {
 
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            SqlConnection con = new SqlConnection(@"data source=local; user=root; pwd=P@ssw0rd; database=crudwithdatabase");
+            con.Open();
+            string query = "SELECT * FROM employee_info WHERE eid = @username AND password = @password";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = query;
+
+            cmd.Parameters.AddWithValue("@eid", txtUsername.Text.Trim());
+            cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read() == true)
             {
-                try
-                {
-                    conn.Open();
-
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                    cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.HasRows)
-                        {
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Incorrect Username/Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Username/Password!");
             }
         }
     }

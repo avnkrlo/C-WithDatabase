@@ -1,3 +1,4 @@
+C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDatabase.csproj.AssemblyReference.cache
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\bin\Debug\C#WithDatabase.exe.config
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\bin\Debug\C#WithDatabase.exe
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\bin\Debug\C#WithDatabase.pdb
@@ -36,7 +37,6 @@ C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\bin\Debug\System.Memory.
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDatabase.csproj.AssemblyReference.cache
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.AdminRegisterForm.resources
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.DashboardForm.resources
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.LoginForm.resources
