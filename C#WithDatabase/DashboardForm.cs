@@ -31,7 +31,11 @@ namespace C_WithDatabase
             if (sidebarExpand)
             {
                 sidebarNavigation.Width -= 10;
+<<<<<<< HEAD
                 if (sidebarNavigation.Width <= 63)
+=======
+                if(sidebarNavigation.Width <= 63)
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
                 {
                     sidebarExpand = false;
                     sidebarTransition.Stop();
@@ -39,7 +43,11 @@ namespace C_WithDatabase
                 else
                 {
                     sidebarNavigation.Width += 10;
+<<<<<<< HEAD
                     if (sidebarNavigation.Width >= 260)
+=======
+                    if(sidebarNavigation.Width >= 260)
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
                     {
                         sidebarExpand = true;
                         sidebarTransition.Stop();
@@ -52,10 +60,13 @@ namespace C_WithDatabase
         {
             sidebarTransition.Start();
         }
+<<<<<<< HEAD
 
         private void nightControlBox1_Click(object sender, System.EventArgs e)
         {
 
         }
+=======
+>>>>>>> 61ac22dbcf037db40caeae4ab8f295241a6ea74e
     }
 }
