@@ -128,11 +128,6 @@
     <Compile Include="AdminRegisterForm.Designer.cs">
       <DependentUpon>AdminRegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +148,24 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sidebar Navigation\AccountDBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sidebar Navigation\AccountDBForm.Designer.cs">
+      <DependentUpon>AccountDBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sidebar Navigation\ASForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sidebar Navigation\ASForm.Designer.cs">
+      <DependentUpon>ASForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sidebar Navigation\TMForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sidebar Navigation\TMForm.Designer.cs">
+      <DependentUpon>TMForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminRegisterForm.resx">
       <DependentUpon>AdminRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +183,15 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sidebar Navigation\AccountDBForm.resx">
+      <DependentUpon>AccountDBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sidebar Navigation\ASForm.resx">
+      <DependentUpon>ASForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sidebar Navigation\TMForm.resx">
+      <DependentUpon>TMForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="crudwithdatabase.xsc">
       <DependentUpon>crudwithdatabase.xsd</DependentUpon>
     </None>
@@ -180,17 +202,6 @@
     </None>
     <None Include="crudwithdatabase.xss">
       <DependentUpon>crudwithdatabase.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -207,9 +218,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\bars-solid.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Icons\settings-gears-bitmap.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +225,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\dashboard.png" />
+    <None Include="Icons\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

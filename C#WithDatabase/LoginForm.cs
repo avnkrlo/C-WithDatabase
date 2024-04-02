@@ -1,7 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -72,21 +71,23 @@ namespace C_WithDatabase
         private void loginButton_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(@"data source=local; user=root; pwd=P@ssw0rd; database=crudwithdatabase");
+            MySqlConnection con = new MySqlConnection(@"datasource=localhost; port=3306; user=root; password=P@ssw0rd; database=crudwithdatabase");
             con.Open();
             string query = "SELECT * FROM employee_info WHERE eid = @username AND password = @password";
-            SqlCommand cmd = new SqlCommand();
+            MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = con;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = query;
 
-            cmd.Parameters.AddWithValue("@eid", txtUsername.Text.Trim());
+            cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim());
             cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
 
-            SqlDataReader reader = cmd.ExecuteReader();
+            MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read() == true)
             {
                 this.Hide();
+                DashboardForm dashboardForm = new DashboardForm();
+                dashboardForm.Show();
             }
             else
             {
