@@ -170,12 +170,6 @@
       <DependentUpon>CalendarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sidebar Navigation\mdiProperties.cs" />
-    <Compile Include="Sidebar Navigation\TMForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sidebar Navigation\TMForm.Designer.cs">
-      <DependentUpon>TMForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AdminRegisterForm.resx">
       <DependentUpon>AdminRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar Navigation\CalendarForm.resx">
       <DependentUpon>CalendarForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sidebar Navigation\TMForm.resx">
-      <DependentUpon>TMForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="crudwithdatabase.xsc">
       <DependentUpon>crudwithdatabase.xsd</DependentUpon>

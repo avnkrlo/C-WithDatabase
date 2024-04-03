@@ -11,6 +11,14 @@
       "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c#withdatabase\\c#withdatabase\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c#withdatabase\\c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c#withdatabase\\c#withdatabase\\adminregisterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\adminregisterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c#withdatabase\\c#withdatabase\\sidebar navigation\\mdiproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\sidebar navigation\\mdiproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c#withdatabase\\c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,6 +71,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "DashboardForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.Designer.cs",
+              "RelativeDocumentMoniker": "C#WithDatabase\\DashboardForm.Designer.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.Designer.cs",
+              "RelativeToolTip": "C#WithDatabase\\DashboardForm.Designer.cs",
+              "ViewState": "AQIAAN8AAAAAAAAAAAAswPgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T05:21:39.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AdminRegisterForm.cs",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\AdminRegisterForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\AdminRegisterForm.cs",
@@ -79,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AdminRegisterForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\AdminRegisterForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\AdminRegisterForm.cs",
@@ -91,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "RegisterForm.cs",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\RegisterForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\RegisterForm.cs",
@@ -104,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RegisterForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\RegisterForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\RegisterForm.cs",
@@ -116,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "mdiProperties.cs",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\Sidebar Navigation\\mdiProperties.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\Sidebar Navigation\\mdiProperties.cs",
@@ -129,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\Login Authentication\\LoginForm.cs",
@@ -142,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\Login Authentication\\LoginForm.cs",
@@ -160,7 +177,7 @@
               "RelativeDocumentMoniker": "C#WithDatabase\\DashboardForm.cs",
               "ToolTip": "C:\\Users\\812\\source\\repos\\C#WithDatabase\\C#WithDatabase\\DashboardForm.cs",
               "RelativeToolTip": "C#WithDatabase\\DashboardForm.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowDEAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAcwA4AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T01:01:34.824Z",
               "EditorCaption": ""

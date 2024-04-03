@@ -8,7 +8,6 @@ namespace C_WithDatabase
 {
     public partial class DashboardForm : Form
     {
-        TMForm TimeForm;
         ASForm AccountSettingsForm;
         AccountDBForm AccountDBForm;
         CalendarForm CalendarForm;
@@ -30,12 +29,40 @@ namespace C_WithDatabase
 
         }
 
+        bool menuExpand = false;
+        private void menuTransition_Tick(object sender, EventArgs e)
+        {
+            if (menuExpand == false)
+            {
+                menuContainer.Height += 10;
+                if(menuContainer.Height == 183)
+                {
+                    menuTransition.Stop();
+                    menuExpand = true;
+                }
+                else
+                {
+                    menuContainer.Height -= 10;
+                    if(menuContainer.Height <= 61)
+                    {
+                        menuTransition.Stop();
+                        menuExpand = false;
+                    }
+                }
+            }
+        }
+
+        private void btnTimeMenu_Click(object sender, EventArgs e)
+        {
+            menuTransition.Start();
+        }
+
         bool sidebarExpand = true;
         private void sidebarTransition_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
             {
-                sidebar.Width -= 10;
+                sidebar.Width -= 50;
                 if(sidebar.Width <= 60)
                 {
                     sidebarExpand = false;
@@ -43,7 +70,7 @@ namespace C_WithDatabase
                 }
                 else
                 {
-                    sidebar.Width += 10;
+                    sidebar.Width += 50;
                     if(sidebar.Width >= 260)
                     {
                         sidebarExpand = true;
@@ -51,11 +78,6 @@ namespace C_WithDatabase
                     }
                 }
             }
-        }
-
-        private void btnSidebar_Click(object sender, EventArgs e)
-        {
-            sidebarTransition.Start();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -98,26 +120,6 @@ namespace C_WithDatabase
             CalendarForm = null;
         }
 
-        private void btnTM_Click(object sender, EventArgs e)
-        {
-            if(TimeForm == null)
-            {
-                TimeForm = new TMForm();
-                TimeForm.FormClosed += TMForm_FormClosed;
-                TimeForm.MdiParent = this;
-                TimeForm.Show();
-            }
-            else
-            {
-                TimeForm.Activate();
-            }
-        }
-
-        private void TMForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            TimeForm = null;
-        }
-
         private void btnAS_Click(object sender, EventArgs e)
         {
             if (AccountSettingsForm == null)
@@ -136,6 +138,11 @@ namespace C_WithDatabase
         private void ASForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             AccountSettingsForm = null;
+        }
+
+        private void btnHam_Click(object sender, EventArgs e)
+        {
+            sidebarTransition.Start();
         }
     }
 }
