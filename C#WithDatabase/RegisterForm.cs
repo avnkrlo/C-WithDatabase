@@ -40,7 +40,7 @@ namespace C_WithDatabase
         {
             if (!User_Validation())
             {
-                using (MySqlConnection conn = new MySqlConnection("server = localhost; userid = root; password = P@ssw0rd; database = crudwithdatabase"))
+                using (MySqlConnection conn = new MySqlConnection("server=localhost;userid=root;password=P@ssw0rd;database=crudwithdatabase"))
                 {
                     conn.Open();
                     var sql = "INSERT INTO employee_info(eid, first_name, middle_name, last_name, e_dob, e_age, e_department, computer_asset, password, confirm_password) " +
@@ -56,17 +56,10 @@ namespace C_WithDatabase
                         cmd.Parameters.AddWithValue("@e_department", department.Text);
                         cmd.Parameters.AddWithValue("@computer_asset", computer_asset.Text);
 
-                        string hashedPassword;
-                        using (SHA256 sha256 = SHA256.Create())
-                        {
-                            byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password.Text));
-                            StringBuilder builder = new StringBuilder();
-                            for (int i = 0; i < hashedBytes.Length; i++)
-                            {
-                                builder.Append(hashedBytes[i].ToString("x2"));
-                            }
-                            hashedPassword = builder.ToString();
-                        }
+                        // Hash the password provided by the user
+                        string passwordPlainText = password.Text;
+                        string hashedPassword = HashPassword(passwordPlainText);
+
                         cmd.Parameters.AddWithValue("@password", hashedPassword);
                         cmd.Parameters.AddWithValue("@confirm_password", hashedPassword);
 
@@ -78,6 +71,22 @@ namespace C_WithDatabase
                 }
             }
         }
+
+        // Method to hash the password using SHA256
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < hashedBytes.Length; i++)
+                {
+                    builder.Append(hashedBytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
 
         private void EmptyTextBoxes(Control control)
         {

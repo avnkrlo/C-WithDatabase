@@ -16,5 +16,10 @@ namespace C_WithDatabase
         {
             InitializeComponent();
         }
+
+        private void TMForm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }

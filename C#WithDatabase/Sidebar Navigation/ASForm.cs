@@ -16,5 +16,10 @@ namespace C_WithDatabase.Sidebar_Navigation
         {
             InitializeComponent();
         }
+
+        private void ASForm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }

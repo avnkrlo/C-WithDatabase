@@ -52,6 +52,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TMForm";
             this.Text = "TMForm";
+            this.Load += new System.EventHandler(this.TMForm_Load);
             this.ResumeLayout(false);
 
         }
