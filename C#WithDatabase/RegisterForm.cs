@@ -43,8 +43,8 @@ namespace C_WithDatabase
                 using (MySqlConnection conn = new MySqlConnection("server=localhost;userid=root;password=P@ssw0rd;database=crudwithdatabase"))
                 {
                     conn.Open();
-                    var sql = "INSERT INTO employee_info(eid, first_name, middle_name, last_name, e_dob, e_age, e_department, computer_asset, password, confirm_password) " +
-                        "VALUES(@eid, @first_name, @middle_name, @last_name, @e_dob, @e_age, @e_department, @computer_asset, @password, @confirm_password)";
+                    var sql = "INSERT INTO employee_info(eid, role, first_name, middle_name, last_name, e_dob, e_age, e_department, computer_asset, username, password, confirm_password) " +
+                        "VALUES(@eid, @role, @first_name, @middle_name, @last_name, @e_dob, @e_age, @e_department, @computer_asset, @username, @password, @confirm_password)";
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@eid", eid.Text);
@@ -55,6 +55,7 @@ namespace C_WithDatabase
                         cmd.Parameters.AddWithValue("e_age", txtAge.Text);
                         cmd.Parameters.AddWithValue("@e_department", department.Text);
                         cmd.Parameters.AddWithValue("@computer_asset", computer_asset.Text);
+                        cmd.Parameters.AddWithValue("@username", username.Text);
 
                         // Hash the password provided by the user
                         string passwordPlainText = password.Text;
@@ -62,6 +63,32 @@ namespace C_WithDatabase
 
                         cmd.Parameters.AddWithValue("@password", hashedPassword);
                         cmd.Parameters.AddWithValue("@confirm_password", hashedPassword);
+
+                        // Role
+                        int selectedValue = 0;
+                        if (comboRole.SelectedItem != null)
+                        {
+                            string selectedText = comboRole.SelectedItem.ToString();
+
+                            if (selectedText == "Super Admin")
+                            {
+                                selectedValue = 1;
+                            }
+                            else if (selectedText == "Admin")
+                            {
+                                selectedValue = 2;
+                            }
+                            else if (selectedText == "Team Leader")
+                            {
+                                selectedValue = 3;
+                            }
+                            else if (selectedText == "Employee")
+                            {
+                                selectedValue = 4;
+                            }
+                        }
+
+                        cmd.Parameters.AddWithValue("@role", selectedValue);
 
                         cmd.ExecuteNonQuery();
                         conn.Close();

@@ -63,13 +63,6 @@ namespace C_WithDatabase
             }
         }
 
-        private void adminRegisterButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AdminRegisterForm adminRegisterForm = new AdminRegisterForm();
-            adminRegisterForm.Show();
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection(@"datasource=localhost; port=3306; user=root; password=P@ssw0rd; database=crudwithdatabase");

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.loginButton = new C_WithDatabase.CustomDesign.PrimaryButton();
-            this.registerButton = new C_WithDatabase.CustomDesign.PrimaryButton();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.userIcon = new System.Windows.Forms.PictureBox();
@@ -38,51 +36,11 @@
             this.rememberMe = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.adminRegisterButton = new C_WithDatabase.CustomDesign.PrimaryButton();
+            this.registerButton = new C_WithDatabase.CustomDesign.PrimaryButton();
+            this.loginButton = new C_WithDatabase.CustomDesign.PrimaryButton();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // loginButton
-            // 
-            this.loginButton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.loginButton.BackgroundColor = System.Drawing.SystemColors.Highlight;
-            this.loginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.loginButton.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.loginButton.BorderRadius = 30;
-            this.loginButton.BorderSize = 1;
-            this.loginButton.FlatAppearance.BorderSize = 0;
-            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.loginButton.Location = new System.Drawing.Point(484, 269);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(228, 35);
-            this.loginButton.TabIndex = 11;
-            this.loginButton.Text = "LOGIN";
-            this.loginButton.TextColor = System.Drawing.SystemColors.HighlightText;
-            this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-            // 
-            // registerButton
-            // 
-            this.registerButton.BackColor = System.Drawing.Color.White;
-            this.registerButton.BackgroundColor = System.Drawing.Color.White;
-            this.registerButton.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.registerButton.BorderRadius = 30;
-            this.registerButton.BorderSize = 1;
-            this.registerButton.FlatAppearance.BorderSize = 0;
-            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.registerButton.Location = new System.Drawing.Point(484, 310);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(228, 36);
-            this.registerButton.TabIndex = 12;
-            this.registerButton.Text = "REGISTER";
-            this.registerButton.TextColor = System.Drawing.SystemColors.Highlight;
-            this.registerButton.UseVisualStyleBackColor = false;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click_1);
             // 
             // txtUsername
             // 
@@ -155,32 +113,52 @@
             this.label2.Text = "IDLE TIME TRACKER";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // adminRegisterButton
+            // registerButton
             // 
-            this.adminRegisterButton.BackColor = System.Drawing.Color.White;
-            this.adminRegisterButton.BackgroundColor = System.Drawing.Color.White;
-            this.adminRegisterButton.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.adminRegisterButton.BorderRadius = 30;
-            this.adminRegisterButton.BorderSize = 1;
-            this.adminRegisterButton.FlatAppearance.BorderSize = 0;
-            this.adminRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminRegisterButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminRegisterButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.adminRegisterButton.Location = new System.Drawing.Point(484, 352);
-            this.adminRegisterButton.Name = "adminRegisterButton";
-            this.adminRegisterButton.Size = new System.Drawing.Size(228, 36);
-            this.adminRegisterButton.TabIndex = 20;
-            this.adminRegisterButton.Text = "REGISTER AN ADMIN";
-            this.adminRegisterButton.TextColor = System.Drawing.SystemColors.Highlight;
-            this.adminRegisterButton.UseVisualStyleBackColor = false;
-            this.adminRegisterButton.Click += new System.EventHandler(this.adminRegisterButton_Click);
+            this.registerButton.BackColor = System.Drawing.Color.White;
+            this.registerButton.BackgroundColor = System.Drawing.Color.White;
+            this.registerButton.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.registerButton.BorderRadius = 30;
+            this.registerButton.BorderSize = 1;
+            this.registerButton.FlatAppearance.BorderSize = 0;
+            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.registerButton.Location = new System.Drawing.Point(484, 310);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(228, 36);
+            this.registerButton.TabIndex = 12;
+            this.registerButton.Text = "REGISTER";
+            this.registerButton.TextColor = System.Drawing.SystemColors.Highlight;
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click_1);
+            // 
+            // loginButton
+            // 
+            this.loginButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.loginButton.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.loginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.loginButton.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.loginButton.BorderRadius = 30;
+            this.loginButton.BorderSize = 1;
+            this.loginButton.FlatAppearance.BorderSize = 0;
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.loginButton.Location = new System.Drawing.Point(484, 269);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(228, 35);
+            this.loginButton.TabIndex = 11;
+            this.loginButton.Text = "LOGIN";
+            this.loginButton.TextColor = System.Drawing.SystemColors.HighlightText;
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.adminRegisterButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rememberMe);
             this.Controls.Add(this.passwordIcon);
@@ -214,7 +192,6 @@
         private System.Windows.Forms.CheckBox rememberMe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private CustomDesign.PrimaryButton adminRegisterButton;
     }
 }
 
