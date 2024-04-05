@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\C#WithDatabase"
+    "\\C#WithDatabase",
+    "\\C#WithDatabase\\Login Authentication"
   ],
-  "SelectedNode": "\\C#WithDatabase\\LoginForm.cs",
+  "SelectedNode": "\\C#WithDatabase.sln",
   "PreviewInSolutionExplorer": false
 }

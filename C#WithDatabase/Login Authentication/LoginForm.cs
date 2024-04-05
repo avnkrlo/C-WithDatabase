@@ -20,13 +20,6 @@ namespace C_WithDatabase
             txtUsername.Select();
         }
 
-        private void registerButton_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();
-        }
-
         private void txtUsername_Enter(object sender, EventArgs e)
         {
             if (txtUsername.Text == "Username")
@@ -67,7 +60,7 @@ namespace C_WithDatabase
         {
             MySqlConnection con = new MySqlConnection(@"datasource=localhost; port=3306; user=root; password=P@ssw0rd; database=crudwithdatabase");
             con.Open();
-            string query = "SELECT * FROM user_info WHERE username = @username AND password = @password";
+            string query = "SELECT * FROM employee_info WHERE username = @username AND password = @password";
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = con;
             cmd.CommandType = CommandType.Text;

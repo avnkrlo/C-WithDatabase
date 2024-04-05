@@ -36,7 +36,6 @@
             this.rememberMe = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.registerButton = new C_WithDatabase.CustomDesign.PrimaryButton();
             this.loginButton = new C_WithDatabase.CustomDesign.PrimaryButton();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
@@ -45,7 +44,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(522, 165);
+            this.txtUsername.Location = new System.Drawing.Point(522, 195);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(190, 33);
@@ -56,7 +55,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(522, 204);
+            this.txtPassword.Location = new System.Drawing.Point(522, 234);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
@@ -68,7 +67,7 @@
             // userIcon
             // 
             this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
-            this.userIcon.Location = new System.Drawing.Point(484, 164);
+            this.userIcon.Location = new System.Drawing.Point(484, 194);
             this.userIcon.Name = "userIcon";
             this.userIcon.Size = new System.Drawing.Size(32, 34);
             this.userIcon.TabIndex = 15;
@@ -77,7 +76,7 @@
             // passwordIcon
             // 
             this.passwordIcon.Image = ((System.Drawing.Image)(resources.GetObject("passwordIcon.Image")));
-            this.passwordIcon.Location = new System.Drawing.Point(484, 204);
+            this.passwordIcon.Location = new System.Drawing.Point(484, 234);
             this.passwordIcon.Name = "passwordIcon";
             this.passwordIcon.Size = new System.Drawing.Size(32, 32);
             this.passwordIcon.TabIndex = 16;
@@ -85,7 +84,7 @@
             // 
             // rememberMe
             // 
-            this.rememberMe.Location = new System.Drawing.Point(484, 243);
+            this.rememberMe.Location = new System.Drawing.Point(484, 273);
             this.rememberMe.Name = "rememberMe";
             this.rememberMe.Size = new System.Drawing.Size(228, 20);
             this.rememberMe.TabIndex = 17;
@@ -99,39 +98,19 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(776, 432);
+            this.label1.Size = new System.Drawing.Size(392, 432);
             this.label1.TabIndex = 18;
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(389, 9);
+            this.label2.Location = new System.Drawing.Point(410, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(399, 152);
+            this.label2.Size = new System.Drawing.Size(378, 182);
             this.label2.TabIndex = 19;
-            this.label2.Text = "IDLE TIME TRACKER";
+            this.label2.Text = "IDLE TIME TRACKER SYSTEM";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // registerButton
-            // 
-            this.registerButton.BackColor = System.Drawing.Color.White;
-            this.registerButton.BackgroundColor = System.Drawing.Color.White;
-            this.registerButton.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.registerButton.BorderRadius = 30;
-            this.registerButton.BorderSize = 1;
-            this.registerButton.FlatAppearance.BorderSize = 0;
-            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.registerButton.Location = new System.Drawing.Point(484, 310);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(228, 36);
-            this.registerButton.TabIndex = 12;
-            this.registerButton.Text = "REGISTER";
-            this.registerButton.TextColor = System.Drawing.SystemColors.Highlight;
-            this.registerButton.UseVisualStyleBackColor = false;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click_1);
             // 
             // loginButton
             // 
@@ -145,7 +124,7 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.loginButton.Location = new System.Drawing.Point(484, 269);
+            this.loginButton.Location = new System.Drawing.Point(484, 299);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(228, 35);
             this.loginButton.TabIndex = 11;
@@ -165,7 +144,6 @@
             this.Controls.Add(this.userIcon);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,7 +162,6 @@
 
         #endregion
         private CustomDesign.PrimaryButton loginButton;
-        private CustomDesign.PrimaryButton registerButton;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox userIcon;

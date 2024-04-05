@@ -37,29 +37,26 @@
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panelDashboard = new System.Windows.Forms.Panel();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTM = new System.Windows.Forms.Panel();
             this.btnTimeMenu = new System.Windows.Forms.Button();
             this.panelCalendar = new System.Windows.Forms.Panel();
             this.btnCalendar = new System.Windows.Forms.Button();
-            this.panelLeave = new System.Windows.Forms.Panel();
-            this.btnFileLeave = new System.Windows.Forms.Button();
             this.panelAccountSettings = new System.Windows.Forms.Panel();
             this.btnAS = new System.Windows.Forms.Button();
             this.panelLogout = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
+            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panelDashboard.SuspendLayout();
-            this.menuContainer.SuspendLayout();
             this.panelTM.SuspendLayout();
             this.panelCalendar.SuspendLayout();
-            this.panelLeave.SuspendLayout();
             this.panelAccountSettings.SuspendLayout();
             this.panelLogout.SuspendLayout();
+            this.menuContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,7 +126,7 @@
             this.sidebar.Controls.Add(this.panelLogout);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 35);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(4);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(0);
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(260, 675);
             this.sidebar.TabIndex = 1;
@@ -160,18 +157,6 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // menuContainer
-            // 
-            this.menuContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.menuContainer.Controls.Add(this.panelTM);
-            this.menuContainer.Controls.Add(this.panelCalendar);
-            this.menuContainer.Controls.Add(this.panelLeave);
-            this.menuContainer.Location = new System.Drawing.Point(0, 61);
-            this.menuContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.menuContainer.Name = "menuContainer";
-            this.menuContainer.Size = new System.Drawing.Size(260, 61);
-            this.menuContainer.TabIndex = 3;
-            // 
             // panelTM
             // 
             this.panelTM.Controls.Add(this.btnTimeMenu);
@@ -188,6 +173,7 @@
             this.btnTimeMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnTimeMenu.Image")));
             this.btnTimeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimeMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnTimeMenu.Margin = new System.Windows.Forms.Padding(0);
             this.btnTimeMenu.Name = "btnTimeMenu";
             this.btnTimeMenu.Padding = new System.Windows.Forms.Padding(10);
             this.btnTimeMenu.Size = new System.Drawing.Size(260, 61);
@@ -222,31 +208,6 @@
             this.btnCalendar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCalendar.UseVisualStyleBackColor = false;
             this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
-            // 
-            // panelLeave
-            // 
-            this.panelLeave.Controls.Add(this.btnFileLeave);
-            this.panelLeave.Location = new System.Drawing.Point(0, 122);
-            this.panelLeave.Margin = new System.Windows.Forms.Padding(0);
-            this.panelLeave.Name = "panelLeave";
-            this.panelLeave.Size = new System.Drawing.Size(260, 61);
-            this.panelLeave.TabIndex = 9;
-            // 
-            // btnFileLeave
-            // 
-            this.btnFileLeave.BackColor = System.Drawing.Color.White;
-            this.btnFileLeave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFileLeave.Image = ((System.Drawing.Image)(resources.GetObject("btnFileLeave.Image")));
-            this.btnFileLeave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFileLeave.Location = new System.Drawing.Point(0, 0);
-            this.btnFileLeave.Margin = new System.Windows.Forms.Padding(0);
-            this.btnFileLeave.Name = "btnFileLeave";
-            this.btnFileLeave.Padding = new System.Windows.Forms.Padding(10);
-            this.btnFileLeave.Size = new System.Drawing.Size(260, 61);
-            this.btnFileLeave.TabIndex = 4;
-            this.btnFileLeave.Text = "              FILE A LEAVE";
-            this.btnFileLeave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFileLeave.UseVisualStyleBackColor = false;
             // 
             // panelAccountSettings
             // 
@@ -299,7 +260,6 @@
             // 
             // sidebarTransition
             // 
-            this.sidebarTransition.Enabled = true;
             this.sidebarTransition.Interval = 10;
             this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
             // 
@@ -307,6 +267,16 @@
             // 
             this.menuTransition.Interval = 10;
             this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
+            // 
+            // menuContainer
+            // 
+            this.menuContainer.Controls.Add(this.panelTM);
+            this.menuContainer.Controls.Add(this.panelCalendar);
+            this.menuContainer.Location = new System.Drawing.Point(0, 61);
+            this.menuContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.menuContainer.Name = "menuContainer";
+            this.menuContainer.Size = new System.Drawing.Size(260, 61);
+            this.menuContainer.TabIndex = 6;
             // 
             // DashboardForm
             // 
@@ -330,12 +300,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panelDashboard.ResumeLayout(false);
-            this.menuContainer.ResumeLayout(false);
             this.panelTM.ResumeLayout(false);
             this.panelCalendar.ResumeLayout(false);
-            this.panelLeave.ResumeLayout(false);
             this.panelAccountSettings.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
+            this.menuContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -358,9 +327,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelCalendar;
         private System.Windows.Forms.Button btnCalendar;
-        private System.Windows.Forms.FlowLayoutPanel menuContainer;
-        private System.Windows.Forms.Button btnFileLeave;
-        private System.Windows.Forms.Panel panelLeave;
         private System.Windows.Forms.Timer menuTransition;
+        private System.Windows.Forms.FlowLayoutPanel menuContainer;
     }
 }

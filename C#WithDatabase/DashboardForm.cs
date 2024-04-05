@@ -32,22 +32,19 @@ namespace C_WithDatabase
         bool menuExpand = false;
         private void menuTransition_Tick(object sender, EventArgs e)
         {
-            if (menuExpand == false)
-            {
+            if (menuExpand == false) {
                 menuContainer.Height += 10;
-                if(menuContainer.Height == 183)
+                if (menuContainer.Height >= 120)
                 {
                     menuTransition.Stop();
                     menuExpand = true;
                 }
-                else
+            } else {
+                menuContainer.Height -= 10;
+                if(menuContainer.Height <= 61)
                 {
-                    menuContainer.Height -= 10;
-                    if(menuContainer.Height <= 61)
-                    {
-                        menuTransition.Stop();
-                        menuExpand = false;
-                    }
+                    menuTransition.Stop();
+                    menuExpand = false;
                 }
             }
         }
@@ -60,22 +57,17 @@ namespace C_WithDatabase
         bool sidebarExpand = true;
         private void sidebarTransition_Tick(object sender, EventArgs e)
         {
-            if (sidebarExpand)
-            {
-                sidebar.Width -= 50;
-                if(sidebar.Width <= 60)
-                {
+            if (sidebarExpand) {
+                sidebar.Width -= 10;
+                if (sidebar.Width <= 65) {
                     sidebarExpand = false;
                     sidebarTransition.Stop();
                 }
-                else
-                {
-                    sidebar.Width += 50;
-                    if(sidebar.Width >= 260)
-                    {
-                        sidebarExpand = true;
-                        sidebarTransition.Stop();
-                    }
+            } else {
+                sidebar.Width += 10;
+                if ( sidebar.Width >= 260) {
+                    sidebarExpand = true;
+                    sidebarTransition.Stop();
                 }
             }
         }

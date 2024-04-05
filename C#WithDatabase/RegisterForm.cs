@@ -92,7 +92,7 @@ namespace C_WithDatabase
 
                         cmd.ExecuteNonQuery();
                         conn.Close();
-                        MessageBox.Show("Employee Inserted Successfully!", "Success", MessageBoxButtons.OK);
+                        MessageBox.Show("Employee registered successfully!", "Success", MessageBoxButtons.OK);
                         EmptyTextBoxes(this);
                     }
                 }
@@ -126,6 +126,10 @@ namespace C_WithDatabase
                 else if (c.GetType() == typeof(ComboBox))
                 {
                     ((ComboBox)c).SelectedIndex = -1;
+                }
+                else if (c.GetType() == typeof(DateTimePicker))
+                {
+                    ((DateTimePicker)c).Text = string.Empty;
                 }
                 else if (c.HasChildren)
                 {
