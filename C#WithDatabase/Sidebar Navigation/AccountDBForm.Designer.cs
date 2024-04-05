@@ -28,24 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtFullname = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // txtFullname
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(377, 246);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ACCOUNT DASHBOARD";
+            this.txtFullname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullname.Location = new System.Drawing.Point(1596, 39);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(0);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.Size = new System.Drawing.Size(315, 38);
+            this.txtFullname.TabIndex = 0;
+            this.txtFullname.Text = "Full Name";
+            this.txtFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AccountDBForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 554);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.txtFullname);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -58,6 +60,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtFullname;
     }
 }
