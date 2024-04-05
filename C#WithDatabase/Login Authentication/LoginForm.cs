@@ -72,6 +72,11 @@ namespace C_WithDatabase
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read() == true)
             {
+                string firstName = reader["first_name"].ToString();
+                string middleName = reader["middle_name"].ToString();
+                string lastName = reader["last_name"].ToString();
+                string fullName = lastName + " " + firstName + " " + middleName;
+
                 this.Hide();
                 DashboardForm dashboardForm = new DashboardForm();
                 dashboardForm.Show();
