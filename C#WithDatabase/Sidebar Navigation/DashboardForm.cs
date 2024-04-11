@@ -66,7 +66,7 @@ namespace C_WithDatabase
                 }
             } else {
                 sidebar.Width += 10;
-                if ( sidebar.Width >= 260) {
+                if ( sidebar.Width >= 270) {
                     sidebarExpand = true;
                     sidebarTransition.Stop();
                 }
@@ -140,7 +140,20 @@ namespace C_WithDatabase
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
         {
+            if (RegForm == null)
+            {
+                RegForm = new RegisterForm();
+                RegForm.FormClosed += RegisterForm_FormClosed;
+                RegForm.MdiParent = this;
+                RegForm.Show();
+            } else {
+                RegForm.Activate();
+            }
+        }
 
+        private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            RegForm = null;
         }
     }
 }
