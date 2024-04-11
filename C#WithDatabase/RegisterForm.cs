@@ -129,7 +129,8 @@ namespace C_WithDatabase
                 }
                 else if (c.GetType() == typeof(DateTimePicker))
                 {
-                    ((DateTimePicker)c).Text = string.Empty;
+                    ((DateTimePicker)c).CustomFormat = " ";
+                    ((DateTimePicker)c).Format = DateTimePickerFormat.Custom;
                 }
                 else if (c.HasChildren)
                 {

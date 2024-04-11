@@ -11,6 +11,7 @@ namespace C_WithDatabase
         ASForm AccountSettingsForm;
         AccountDBForm AccountDBForm;
         CalendarForm CalendarForm;
+        RegisterForm RegForm;
 
         public DashboardForm()
         {
@@ -135,6 +136,11 @@ namespace C_WithDatabase
         private void btnHam_Click(object sender, EventArgs e)
         {
             sidebarTransition.Start();
+        }
+
+        private void btnRegisterUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

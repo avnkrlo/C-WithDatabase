@@ -36,6 +36,7 @@
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panelDashboard = new System.Windows.Forms.Panel();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTM = new System.Windows.Forms.Panel();
             this.btnTimeMenu = new System.Windows.Forms.Button();
             this.panelCalendar = new System.Windows.Forms.Panel();
@@ -46,16 +47,18 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
-            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelAddUser = new System.Windows.Forms.Panel();
+            this.btnRegisterUser = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panelDashboard.SuspendLayout();
+            this.menuContainer.SuspendLayout();
             this.panelTM.SuspendLayout();
             this.panelCalendar.SuspendLayout();
             this.panelAccountSettings.SuspendLayout();
             this.panelLogout.SuspendLayout();
-            this.menuContainer.SuspendLayout();
+            this.panelAddUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,13 +69,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1918, 35);
+            this.panel1.Size = new System.Drawing.Size(1920, 35);
             this.panel1.TabIndex = 0;
             // 
             // btnHam
             // 
             this.btnHam.Image = ((System.Drawing.Image)(resources.GetObject("btnHam.Image")));
-            this.btnHam.Location = new System.Drawing.Point(3, 3);
+            this.btnHam.Location = new System.Drawing.Point(3, 2);
+            this.btnHam.Margin = new System.Windows.Forms.Padding(0);
             this.btnHam.Name = "btnHam";
             this.btnHam.Size = new System.Drawing.Size(44, 30);
             this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,12 +101,13 @@
             this.sidebar.Controls.Add(this.panelDashboard);
             this.sidebar.Controls.Add(this.menuContainer);
             this.sidebar.Controls.Add(this.panelAccountSettings);
+            this.sidebar.Controls.Add(this.panelAddUser);
             this.sidebar.Controls.Add(this.panelLogout);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 35);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(0);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(10);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(260, 1013);
+            this.sidebar.Size = new System.Drawing.Size(260, 1045);
             this.sidebar.TabIndex = 1;
             // 
             // panelDashboard
@@ -117,6 +122,7 @@
             // btnDashboard
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.White;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,6 +137,16 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
+            // menuContainer
+            // 
+            this.menuContainer.Controls.Add(this.panelTM);
+            this.menuContainer.Controls.Add(this.panelCalendar);
+            this.menuContainer.Location = new System.Drawing.Point(0, 61);
+            this.menuContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.menuContainer.Name = "menuContainer";
+            this.menuContainer.Size = new System.Drawing.Size(260, 61);
+            this.menuContainer.TabIndex = 6;
+            // 
             // panelTM
             // 
             this.panelTM.Controls.Add(this.btnTimeMenu);
@@ -143,6 +159,7 @@
             // btnTimeMenu
             // 
             this.btnTimeMenu.BackColor = System.Drawing.Color.White;
+            this.btnTimeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimeMenu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimeMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnTimeMenu.Image")));
             this.btnTimeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,6 +186,7 @@
             // btnCalendar
             // 
             this.btnCalendar.BackColor = System.Drawing.Color.White;
+            this.btnCalendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalendar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalendar.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendar.Image")));
             this.btnCalendar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,10 +213,12 @@
             // btnAS
             // 
             this.btnAS.BackColor = System.Drawing.Color.White;
+            this.btnAS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAS.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAS.Image = ((System.Drawing.Image)(resources.GetObject("btnAS.Image")));
             this.btnAS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAS.Location = new System.Drawing.Point(0, 0);
+            this.btnAS.Margin = new System.Windows.Forms.Padding(0);
             this.btnAS.Name = "btnAS";
             this.btnAS.Padding = new System.Windows.Forms.Padding(10);
             this.btnAS.Size = new System.Drawing.Size(260, 61);
@@ -211,7 +231,7 @@
             // panelLogout
             // 
             this.panelLogout.Controls.Add(this.btnLogout);
-            this.panelLogout.Location = new System.Drawing.Point(0, 183);
+            this.panelLogout.Location = new System.Drawing.Point(0, 244);
             this.panelLogout.Margin = new System.Windows.Forms.Padding(0);
             this.panelLogout.Name = "panelLogout";
             this.panelLogout.Size = new System.Drawing.Size(260, 61);
@@ -220,10 +240,12 @@
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.White;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(0, 0);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(10);
             this.btnLogout.Size = new System.Drawing.Size(260, 61);
@@ -242,26 +264,42 @@
             this.menuTransition.Interval = 10;
             this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
             // 
-            // menuContainer
+            // panelAddUser
             // 
-            this.menuContainer.Controls.Add(this.panelTM);
-            this.menuContainer.Controls.Add(this.panelCalendar);
-            this.menuContainer.Location = new System.Drawing.Point(0, 61);
-            this.menuContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.menuContainer.Name = "menuContainer";
-            this.menuContainer.Size = new System.Drawing.Size(260, 61);
-            this.menuContainer.TabIndex = 6;
+            this.panelAddUser.Controls.Add(this.btnRegisterUser);
+            this.panelAddUser.Location = new System.Drawing.Point(0, 183);
+            this.panelAddUser.Margin = new System.Windows.Forms.Padding(0);
+            this.panelAddUser.Name = "panelAddUser";
+            this.panelAddUser.Size = new System.Drawing.Size(260, 61);
+            this.panelAddUser.TabIndex = 6;
+            // 
+            // btnRegisterUser
+            // 
+            this.btnRegisterUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterUser.Image = ((System.Drawing.Image)(resources.GetObject("btnRegisterUser.Image")));
+            this.btnRegisterUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegisterUser.Location = new System.Drawing.Point(0, 0);
+            this.btnRegisterUser.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Padding = new System.Windows.Forms.Padding(10);
+            this.btnRegisterUser.Size = new System.Drawing.Size(260, 61);
+            this.btnRegisterUser.TabIndex = 7;
+            this.btnRegisterUser.Text = "              ADD USER";
+            this.btnRegisterUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegisterUser.UseVisualStyleBackColor = true;
+            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
             // DashboardForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1918, 1048);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1918, 1048);
@@ -269,16 +307,18 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panelDashboard.ResumeLayout(false);
+            this.menuContainer.ResumeLayout(false);
             this.panelTM.ResumeLayout(false);
             this.panelCalendar.ResumeLayout(false);
             this.panelAccountSettings.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
-            this.menuContainer.ResumeLayout(false);
+            this.panelAddUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -302,5 +342,7 @@
         private System.Windows.Forms.Button btnCalendar;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.FlowLayoutPanel menuContainer;
+        private System.Windows.Forms.Panel panelAddUser;
+        private System.Windows.Forms.Button btnRegisterUser;
     }
 }
