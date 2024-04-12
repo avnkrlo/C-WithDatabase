@@ -145,11 +145,11 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sidebar Navigation\AccountDBForm.cs">
+    <Compile Include="Sidebar Navigation\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sidebar Navigation\AccountDBForm.Designer.cs">
-      <DependentUpon>AccountDBForm.cs</DependentUpon>
+    <Compile Include="Sidebar Navigation\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sidebar Navigation\ASForm.cs">
       <SubType>Form</SubType>
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sidebar Navigation\AccountDBForm.resx">
-      <DependentUpon>AccountDBForm.cs</DependentUpon>
+    <EmbeddedResource Include="Sidebar Navigation\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar Navigation\ASForm.resx">
       <DependentUpon>ASForm.cs</DependentUpon>
@@ -220,6 +220,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icons\dashboard.png" />
+    <None Include="Icons\restriction.png" />
+    <None Include="Icons\look.png" />
     <None Include="Icons\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

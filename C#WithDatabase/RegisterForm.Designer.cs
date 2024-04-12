@@ -50,18 +50,18 @@
             this.eid = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.computer_asset = new System.Windows.Forms.TextBox();
-            this.loginBtn = new C_WithDatabase.CustomDesign.PrimaryButton();
             this.submitBtn = new C_WithDatabase.CustomDesign.PrimaryButton();
             this.label7 = new System.Windows.Forms.Label();
             this.comboRole = new System.Windows.Forms.ComboBox();
             this.username = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // registerLabel
             // 
             this.registerLabel.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerLabel.Location = new System.Drawing.Point(207, 27);
+            this.registerLabel.Location = new System.Drawing.Point(15, 23);
             this.registerLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.registerLabel.Name = "registerLabel";
             this.registerLabel.Size = new System.Drawing.Size(1179, 94);
@@ -73,7 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(250, 140);
+            this.label1.Location = new System.Drawing.Point(58, 136);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 21);
@@ -84,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(250, 179);
+            this.label2.Location = new System.Drawing.Point(58, 175);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 21);
@@ -95,7 +95,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(250, 218);
+            this.label3.Location = new System.Drawing.Point(58, 214);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 21);
@@ -106,7 +106,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(250, 294);
+            this.label4.Location = new System.Drawing.Point(58, 276);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 21);
@@ -117,7 +117,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(250, 255);
+            this.label5.Location = new System.Drawing.Point(58, 251);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 21);
@@ -128,7 +128,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(250, 335);
+            this.label6.Location = new System.Drawing.Point(58, 331);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 21);
@@ -139,7 +139,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(830, 294);
+            this.label8.Location = new System.Drawing.Point(638, 290);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 21);
@@ -150,7 +150,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(830, 332);
+            this.label9.Location = new System.Drawing.Point(638, 328);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(184, 21);
@@ -160,7 +160,7 @@
             // first_name
             // 
             this.first_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.first_name.Location = new System.Drawing.Point(402, 135);
+            this.first_name.Location = new System.Drawing.Point(210, 131);
             this.first_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.first_name.Name = "first_name";
             this.first_name.Size = new System.Drawing.Size(276, 27);
@@ -169,7 +169,7 @@
             // middle_name
             // 
             this.middle_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middle_name.Location = new System.Drawing.Point(402, 175);
+            this.middle_name.Location = new System.Drawing.Point(210, 171);
             this.middle_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.middle_name.Name = "middle_name";
             this.middle_name.Size = new System.Drawing.Size(276, 27);
@@ -178,7 +178,7 @@
             // last_name
             // 
             this.last_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.last_name.Location = new System.Drawing.Point(402, 214);
+            this.last_name.Location = new System.Drawing.Point(210, 210);
             this.last_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.last_name.Name = "last_name";
             this.last_name.Size = new System.Drawing.Size(276, 27);
@@ -187,7 +187,7 @@
             // txtAge
             // 
             this.txtAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(402, 293);
+            this.txtAge.Location = new System.Drawing.Point(210, 289);
             this.txtAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAge.Name = "txtAge";
             this.txtAge.ReadOnly = true;
@@ -197,7 +197,7 @@
             // password
             // 
             this.password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(1046, 291);
+            this.password.Location = new System.Drawing.Point(854, 287);
             this.password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.password.Name = "password";
             this.password.PasswordChar = '•';
@@ -208,7 +208,7 @@
             // confirm_password
             // 
             this.confirm_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirm_password.Location = new System.Drawing.Point(1046, 329);
+            this.confirm_password.Location = new System.Drawing.Point(854, 325);
             this.confirm_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.confirm_password.Name = "confirm_password";
             this.confirm_password.PasswordChar = '•';
@@ -218,7 +218,7 @@
             // age_datepicker
             // 
             this.age_datepicker.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.age_datepicker.Location = new System.Drawing.Point(402, 253);
+            this.age_datepicker.Location = new System.Drawing.Point(210, 249);
             this.age_datepicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.age_datepicker.Name = "age_datepicker";
             this.age_datepicker.Size = new System.Drawing.Size(276, 26);
@@ -235,7 +235,7 @@
             "MLD",
             "Software Development",
             "IT"});
-            this.department.Location = new System.Drawing.Point(402, 332);
+            this.department.Location = new System.Drawing.Point(210, 328);
             this.department.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.department.Name = "department";
             this.department.Size = new System.Drawing.Size(276, 29);
@@ -245,7 +245,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(830, 179);
+            this.label10.Location = new System.Drawing.Point(638, 175);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 21);
             this.label10.TabIndex = 25;
@@ -253,7 +253,7 @@
             // 
             // eid
             // 
-            this.eid.Location = new System.Drawing.Point(1046, 175);
+            this.eid.Location = new System.Drawing.Point(854, 171);
             this.eid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eid.Name = "eid";
             this.eid.Size = new System.Drawing.Size(140, 26);
@@ -263,7 +263,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(830, 218);
+            this.label11.Location = new System.Drawing.Point(638, 214);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(153, 21);
             this.label11.TabIndex = 27;
@@ -272,32 +272,11 @@
             // computer_asset
             // 
             this.computer_asset.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.computer_asset.Location = new System.Drawing.Point(1046, 211);
+            this.computer_asset.Location = new System.Drawing.Point(854, 207);
             this.computer_asset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.computer_asset.Name = "computer_asset";
             this.computer_asset.Size = new System.Drawing.Size(276, 27);
             this.computer_asset.TabIndex = 28;
-            // 
-            // loginBtn
-            // 
-            this.loginBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.loginBtn.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.loginBtn.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.loginBtn.BorderRadius = 40;
-            this.loginBtn.BorderSize = 1;
-            this.loginBtn.FlatAppearance.BorderSize = 0;
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.loginBtn.Location = new System.Drawing.Point(628, 526);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(165, 47);
-            this.loginBtn.TabIndex = 23;
-            this.loginBtn.Text = "LOGIN";
-            this.loginBtn.TextColor = System.Drawing.SystemColors.Highlight;
-            this.loginBtn.UseVisualStyleBackColor = false;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // submitBtn
             // 
@@ -310,10 +289,10 @@
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(803, 526);
+            this.submitBtn.Location = new System.Drawing.Point(512, 519);
             this.submitBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(165, 47);
+            this.submitBtn.Size = new System.Drawing.Size(199, 47);
             this.submitBtn.TabIndex = 22;
             this.submitBtn.Text = "SUBMIT";
             this.submitBtn.TextColor = System.Drawing.Color.White;
@@ -323,7 +302,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(830, 142);
+            this.label7.Location = new System.Drawing.Point(638, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 25);
             this.label7.TabIndex = 29;
@@ -337,7 +316,7 @@
             "Admin",
             "Team Leader",
             "Employee"});
-            this.comboRole.Location = new System.Drawing.Point(1046, 139);
+            this.comboRole.Location = new System.Drawing.Point(854, 135);
             this.comboRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboRole.Name = "comboRole";
             this.comboRole.Size = new System.Drawing.Size(140, 28);
@@ -346,7 +325,7 @@
             // username
             // 
             this.username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(1046, 249);
+            this.username.Location = new System.Drawing.Point(854, 245);
             this.username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(276, 27);
@@ -356,17 +335,27 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(830, 257);
+            this.label12.Location = new System.Drawing.Point(638, 253);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 21);
             this.label12.TabIndex = 31;
             this.label12.Text = "USERNAME:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(731, 519);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 47);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1800, 1000);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.comboRole);
@@ -376,7 +365,6 @@
             this.Controls.Add(this.eid);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.department);
-            this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.age_datepicker);
             this.Controls.Add(this.confirm_password);
@@ -427,7 +415,6 @@
         private System.Windows.Forms.TextBox confirm_password;
         private System.Windows.Forms.DateTimePicker age_datepicker;
         private CustomDesign.PrimaryButton submitBtn;
-        private CustomDesign.PrimaryButton loginBtn;
         private System.Windows.Forms.ComboBox department;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox eid;
@@ -437,5 +424,6 @@
         private System.Windows.Forms.ComboBox comboRole;
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
     }
 }

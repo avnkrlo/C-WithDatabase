@@ -31,15 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.userIcon = new System.Windows.Forms.PictureBox();
-            this.passwordIcon = new System.Windows.Forms.PictureBox();
             this.rememberMe = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.passwordIcon = new System.Windows.Forms.PictureBox();
+            this.userIcon = new System.Windows.Forms.PictureBox();
             this.loginButton = new C_WithDatabase.CustomDesign.PrimaryButton();
-            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
+            this.btnPeekPassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -64,24 +65,6 @@
             this.txtPassword.TabIndex = 14;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
-            // 
-            // userIcon
-            // 
-            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
-            this.userIcon.Location = new System.Drawing.Point(841, 531);
-            this.userIcon.Name = "userIcon";
-            this.userIcon.Size = new System.Drawing.Size(32, 34);
-            this.userIcon.TabIndex = 15;
-            this.userIcon.TabStop = false;
-            // 
-            // passwordIcon
-            // 
-            this.passwordIcon.Image = ((System.Drawing.Image)(resources.GetObject("passwordIcon.Image")));
-            this.passwordIcon.Location = new System.Drawing.Point(841, 571);
-            this.passwordIcon.Name = "passwordIcon";
-            this.passwordIcon.Size = new System.Drawing.Size(32, 32);
-            this.passwordIcon.TabIndex = 16;
-            this.passwordIcon.TabStop = false;
             // 
             // rememberMe
             // 
@@ -114,6 +97,24 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // passwordIcon
+            // 
+            this.passwordIcon.Image = ((System.Drawing.Image)(resources.GetObject("passwordIcon.Image")));
+            this.passwordIcon.Location = new System.Drawing.Point(841, 571);
+            this.passwordIcon.Name = "passwordIcon";
+            this.passwordIcon.Size = new System.Drawing.Size(32, 32);
+            this.passwordIcon.TabIndex = 16;
+            this.passwordIcon.TabStop = false;
+            // 
+            // userIcon
+            // 
+            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
+            this.userIcon.Location = new System.Drawing.Point(841, 531);
+            this.userIcon.Name = "userIcon";
+            this.userIcon.Size = new System.Drawing.Size(32, 34);
+            this.userIcon.TabIndex = 15;
+            this.userIcon.TabStop = false;
+            // 
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.SystemColors.Highlight;
@@ -135,11 +136,25 @@
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // btnPeekPassword
+            // 
+            this.btnPeekPassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnPeekPassword.BackgroundImage = global::C_WithDatabase.Properties.Resources.restriction;
+            this.btnPeekPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPeekPassword.FlatAppearance.BorderSize = 0;
+            this.btnPeekPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeekPassword.Location = new System.Drawing.Point(1075, 570);
+            this.btnPeekPassword.Name = "btnPeekPassword";
+            this.btnPeekPassword.Size = new System.Drawing.Size(39, 34);
+            this.btnPeekPassword.TabIndex = 21;
+            this.btnPeekPassword.UseVisualStyleBackColor = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1918, 1048);
+            this.Controls.Add(this.btnPeekPassword);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rememberMe);
@@ -157,9 +172,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IDLE TIME TRACKER SYSTEM";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +189,7 @@
         private System.Windows.Forms.CheckBox rememberMe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnPeekPassword;
     }
 }
 

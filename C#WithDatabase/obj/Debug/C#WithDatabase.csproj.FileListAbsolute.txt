@@ -46,6 +46,6 @@ C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDatabase
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDa.4FDD6AB1.Up2Date
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDatabase.exe
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDatabase.pdb
-C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.AccountDBForm.resources
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.ASForm.resources
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.CalendarForm.resources
+C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.HomeForm.resources

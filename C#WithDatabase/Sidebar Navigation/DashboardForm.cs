@@ -9,7 +9,7 @@ namespace C_WithDatabase
     public partial class DashboardForm : Form
     {
         ASForm AccountSettingsForm;
-        AccountDBForm AccountDBForm;
+        HomeForm Home;
         CalendarForm CalendarForm;
         RegisterForm RegForm;
 
@@ -75,22 +75,22 @@ namespace C_WithDatabase
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            if(AccountDBForm == null)
+            if(Home == null)
             {
-                AccountDBForm = new AccountDBForm();
-                AccountDBForm.FormClosed += AccountDBForm_FormClosed;
-                AccountDBForm.MdiParent = this;
-                AccountDBForm.Show();
+                Home = new HomeForm();
+                Home.FormClosed += Home_FormClosed;
+                Home.MdiParent = this;
+                Home.Show();
             } 
             else
             {
-                AccountDBForm.Activate();
+                Home.Activate();
             }
         }
 
-        private void AccountDBForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
         {
-            AccountDBForm = null;
+            Home = null;
         }
 
         private void btnCalendar_Click(object sender, EventArgs e)
