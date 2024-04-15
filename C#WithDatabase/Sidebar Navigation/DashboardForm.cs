@@ -8,10 +8,10 @@ namespace C_WithDatabase
 {
     public partial class DashboardForm : Form
     {
-        ASForm AccountSettingsForm;
+        ASForm AccountSettings;
         HomeForm Home;
-        CalendarForm CalendarForm;
-        RegisterForm RegForm;
+        CalendarForm Calendar;
+        RegisterForm Register;
 
         public DashboardForm()
         {
@@ -63,23 +63,38 @@ namespace C_WithDatabase
                 if (sidebar.Width <= 65) {
                     sidebarExpand = false;
                     sidebarTransition.Stop();
+
+                    panelHome.Width = sidebar.Width;
+                    panelCalendar.Width = sidebar.Width;
+                    panelAddUser.Width = sidebar.Width;
+                    panelAccountSettings.Width = sidebar.Width;
+                    panelLogout.Width = sidebar.Width;
+                    menuContainer.Width = sidebar.Width;
                 }
             } else {
                 sidebar.Width += 10;
                 if ( sidebar.Width >= 270) {
                     sidebarExpand = true;
                     sidebarTransition.Stop();
+
+                    panelHome.Width = sidebar.Width;
+                    panelCalendar.Width = sidebar.Width;
+                    panelAddUser.Width = sidebar.Width;
+                    panelAccountSettings.Width = sidebar.Width;
+                    panelLogout.Width = sidebar.Width;
+                    menuContainer.Width = sidebar.Width;
                 }
             }
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
             if(Home == null)
             {
                 Home = new HomeForm();
                 Home.FormClosed += Home_FormClosed;
                 Home.MdiParent = this;
+                Home.Dock = DockStyle.Fill;
                 Home.Show();
             } 
             else
@@ -95,42 +110,44 @@ namespace C_WithDatabase
 
         private void btnCalendar_Click(object sender, EventArgs e)
         {
-            if(CalendarForm == null)
+            if(Calendar == null)
             {
-                CalendarForm = new CalendarForm();
-                CalendarForm.FormClosed += CalendarForm_FormClosed;
-                CalendarForm.MdiParent = this;
-                CalendarForm.Show();
+                Calendar = new CalendarForm();
+                Calendar.FormClosed += CalendarForm_FormClosed;
+                Calendar.MdiParent = this;
+                Calendar.Dock = DockStyle.Fill;
+                Calendar.Show();
             }
             else
             {
-                CalendarForm.Activate();
+                Calendar.Activate();
             }
         }
 
         private void CalendarForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            CalendarForm = null;
+            Calendar = null;
         }
 
         private void btnAS_Click(object sender, EventArgs e)
         {
-            if (AccountSettingsForm == null)
+            if (AccountSettings == null)
             {
-                AccountSettingsForm = new ASForm();
-                AccountSettingsForm.FormClosed += ASForm_FormClosed;
-                AccountSettingsForm.MdiParent = this;
-                AccountSettingsForm.Show();
+                AccountSettings = new ASForm();
+                AccountSettings.FormClosed += ASForm_FormClosed;
+                AccountSettings.MdiParent = this;
+                AccountSettings.Dock = DockStyle.Fill;
+                AccountSettings.Show();
             }
             else
             {
-                AccountSettingsForm.Activate();
+                AccountSettings.Activate();
             }
         }
 
         private void ASForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            AccountSettingsForm = null;
+            AccountSettings = null;
         }
 
         private void btnHam_Click(object sender, EventArgs e)
@@ -140,20 +157,21 @@ namespace C_WithDatabase
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
         {
-            if (RegForm == null)
+            if (Register == null)
             {
-                RegForm = new RegisterForm();
-                RegForm.FormClosed += RegisterForm_FormClosed;
-                RegForm.MdiParent = this;
-                RegForm.Show();
-            } else {
-                RegForm.Activate();
+                Register = new RegisterForm();
+                Register.FormClosed += RegisterForm_FormClosed;
+                Register.MdiParent = this;
+                Register.Dock = DockStyle.Fill;
+                Register.Show();
+            } else { 
+                Register.Activate();
             }
         }
 
         private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            RegForm = null;
+            Register = null;
         }
     }
 }

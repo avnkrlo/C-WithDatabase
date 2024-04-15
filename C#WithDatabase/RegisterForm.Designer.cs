@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
-            this.registerLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,18 +55,13 @@
             this.username = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pnlRegisterForm = new System.Windows.Forms.Panel();
+            this.pnlRegisterHeader = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlRegisterForm.SuspendLayout();
+            this.pnlRegisterHeader.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // registerLabel
-            // 
-            this.registerLabel.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerLabel.Location = new System.Drawing.Point(15, 23);
-            this.registerLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.registerLabel.Name = "registerLabel";
-            this.registerLabel.Size = new System.Drawing.Size(1179, 94);
-            this.registerLabel.TabIndex = 0;
-            this.registerLabel.Text = "REGISTER AN ACCOUNT";
-            this.registerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -350,11 +344,50 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // pnlRegisterForm
+            // 
+            this.pnlRegisterForm.Controls.Add(this.panel1);
+            this.pnlRegisterForm.Controls.Add(this.pnlRegisterHeader);
+            this.pnlRegisterForm.Location = new System.Drawing.Point(-2, 0);
+            this.pnlRegisterForm.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlRegisterForm.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.pnlRegisterForm.MinimumSize = new System.Drawing.Size(1918, 1048);
+            this.pnlRegisterForm.Name = "pnlRegisterForm";
+            this.pnlRegisterForm.Size = new System.Drawing.Size(1920, 1080);
+            this.pnlRegisterForm.TabIndex = 34;
+            // 
+            // pnlRegisterHeader
+            // 
+            this.pnlRegisterHeader.Controls.Add(this.label13);
+            this.pnlRegisterHeader.Location = new System.Drawing.Point(3, 3);
+            this.pnlRegisterHeader.Name = "pnlRegisterHeader";
+            this.pnlRegisterHeader.Size = new System.Drawing.Size(1917, 61);
+            this.pnlRegisterHeader.TabIndex = 0;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(5, 6);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(245, 47);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "CREATE AN ACCOUNT";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 67);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1917, 1013);
+            this.panel1.TabIndex = 1;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1800, 1000);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label12);
@@ -381,24 +414,24 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.registerLabel);
+            this.Controls.Add(this.pnlRegisterForm);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.MaximumSize = new System.Drawing.Size(1800, 1000);
-            this.MinimumSize = new System.Drawing.Size(1800, 1000);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(1918, 1048);
             this.Name = "RegisterForm";
             this.Text = "EMPLOYEE REGISTRATION";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
+            this.pnlRegisterForm.ResumeLayout(false);
+            this.pnlRegisterHeader.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label registerLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -425,5 +458,9 @@
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlRegisterForm;
+        private System.Windows.Forms.Panel pnlRegisterHeader;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel1;
     }
 }

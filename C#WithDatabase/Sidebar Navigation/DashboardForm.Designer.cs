@@ -31,34 +31,34 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHam = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelDashboard = new System.Windows.Forms.Panel();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTM = new System.Windows.Forms.Panel();
+            this.btnTimeMenu = new System.Windows.Forms.Button();
             this.panelCalendar = new System.Windows.Forms.Panel();
+            this.btnCalendar = new System.Windows.Forms.Button();
             this.panelAddUser = new System.Windows.Forms.Panel();
+            this.btnRegisterUser = new System.Windows.Forms.Button();
             this.panelAccountSettings = new System.Windows.Forms.Panel();
+            this.btnAS = new System.Windows.Forms.Button();
             this.panelLogout = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.btnTimeMenu = new System.Windows.Forms.Button();
-            this.btnCalendar = new System.Windows.Forms.Button();
-            this.btnRegisterUser = new System.Windows.Forms.Button();
-            this.btnAS = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnHam = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.sidebar.SuspendLayout();
-            this.panelDashboard.SuspendLayout();
+            this.panelHome.SuspendLayout();
             this.menuContainer.SuspendLayout();
             this.panelTM.SuspendLayout();
             this.panelCalendar.SuspendLayout();
             this.panelAddUser.SuspendLayout();
             this.panelAccountSettings.SuspendLayout();
             this.panelLogout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1918, 35);
             this.panel1.TabIndex = 0;
+            // 
+            // btnHam
+            // 
+            this.btnHam.Image = ((System.Drawing.Image)(resources.GetObject("btnHam.Image")));
+            this.btnHam.Location = new System.Drawing.Point(3, 2);
+            this.btnHam.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHam.Name = "btnHam";
+            this.btnHam.Size = new System.Drawing.Size(44, 30);
+            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHam.TabIndex = 6;
+            this.btnHam.TabStop = false;
+            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
             // 
             // label1
             // 
@@ -86,7 +98,7 @@
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.White;
-            this.sidebar.Controls.Add(this.panelDashboard);
+            this.sidebar.Controls.Add(this.panelHome);
             this.sidebar.Controls.Add(this.menuContainer);
             this.sidebar.Controls.Add(this.panelAddUser);
             this.sidebar.Controls.Add(this.panelAccountSettings);
@@ -98,14 +110,33 @@
             this.sidebar.Size = new System.Drawing.Size(270, 1013);
             this.sidebar.TabIndex = 1;
             // 
-            // panelDashboard
+            // panelHome
             // 
-            this.panelDashboard.Controls.Add(this.btnDashboard);
-            this.panelDashboard.Location = new System.Drawing.Point(0, 0);
-            this.panelDashboard.Margin = new System.Windows.Forms.Padding(0);
-            this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(260, 61);
-            this.panelDashboard.TabIndex = 2;
+            this.panelHome.Controls.Add(this.btnHome);
+            this.panelHome.Location = new System.Drawing.Point(0, 0);
+            this.panelHome.Margin = new System.Windows.Forms.Padding(0);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(260, 61);
+            this.panelHome.TabIndex = 2;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(10);
+            this.btnHome.Size = new System.Drawing.Size(260, 61);
+            this.btnHome.TabIndex = 7;
+            this.btnHome.Text = "              HOME";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // menuContainer
             // 
@@ -126,71 +157,6 @@
             this.panelTM.Size = new System.Drawing.Size(260, 61);
             this.panelTM.TabIndex = 3;
             // 
-            // panelCalendar
-            // 
-            this.panelCalendar.Controls.Add(this.btnCalendar);
-            this.panelCalendar.Location = new System.Drawing.Point(0, 61);
-            this.panelCalendar.Margin = new System.Windows.Forms.Padding(0);
-            this.panelCalendar.Name = "panelCalendar";
-            this.panelCalendar.Size = new System.Drawing.Size(260, 61);
-            this.panelCalendar.TabIndex = 8;
-            // 
-            // panelAddUser
-            // 
-            this.panelAddUser.Controls.Add(this.btnRegisterUser);
-            this.panelAddUser.Location = new System.Drawing.Point(0, 122);
-            this.panelAddUser.Margin = new System.Windows.Forms.Padding(0);
-            this.panelAddUser.Name = "panelAddUser";
-            this.panelAddUser.Size = new System.Drawing.Size(260, 61);
-            this.panelAddUser.TabIndex = 6;
-            // 
-            // panelAccountSettings
-            // 
-            this.panelAccountSettings.Controls.Add(this.btnAS);
-            this.panelAccountSettings.Location = new System.Drawing.Point(0, 183);
-            this.panelAccountSettings.Margin = new System.Windows.Forms.Padding(0);
-            this.panelAccountSettings.Name = "panelAccountSettings";
-            this.panelAccountSettings.Size = new System.Drawing.Size(260, 61);
-            this.panelAccountSettings.TabIndex = 4;
-            // 
-            // panelLogout
-            // 
-            this.panelLogout.Controls.Add(this.btnLogout);
-            this.panelLogout.Location = new System.Drawing.Point(0, 244);
-            this.panelLogout.Margin = new System.Windows.Forms.Padding(0);
-            this.panelLogout.Name = "panelLogout";
-            this.panelLogout.Size = new System.Drawing.Size(260, 61);
-            this.panelLogout.TabIndex = 5;
-            // 
-            // sidebarTransition
-            // 
-            this.sidebarTransition.Interval = 10;
-            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
-            // 
-            // menuTransition
-            // 
-            this.menuTransition.Interval = 10;
-            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.White;
-            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10);
-            this.btnDashboard.Size = new System.Drawing.Size(260, 61);
-            this.btnDashboard.TabIndex = 7;
-            this.btnDashboard.Text = "              HOME";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
             // btnTimeMenu
             // 
             this.btnTimeMenu.BackColor = System.Drawing.Color.White;
@@ -209,6 +175,15 @@
             this.btnTimeMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimeMenu.UseVisualStyleBackColor = false;
             this.btnTimeMenu.Click += new System.EventHandler(this.btnTimeMenu_Click);
+            // 
+            // panelCalendar
+            // 
+            this.panelCalendar.Controls.Add(this.btnCalendar);
+            this.panelCalendar.Location = new System.Drawing.Point(0, 61);
+            this.panelCalendar.Margin = new System.Windows.Forms.Padding(0);
+            this.panelCalendar.Name = "panelCalendar";
+            this.panelCalendar.Size = new System.Drawing.Size(260, 61);
+            this.panelCalendar.TabIndex = 8;
             // 
             // btnCalendar
             // 
@@ -229,6 +204,15 @@
             this.btnCalendar.UseVisualStyleBackColor = false;
             this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
             // 
+            // panelAddUser
+            // 
+            this.panelAddUser.Controls.Add(this.btnRegisterUser);
+            this.panelAddUser.Location = new System.Drawing.Point(0, 122);
+            this.panelAddUser.Margin = new System.Windows.Forms.Padding(0);
+            this.panelAddUser.Name = "panelAddUser";
+            this.panelAddUser.Size = new System.Drawing.Size(260, 61);
+            this.panelAddUser.TabIndex = 6;
+            // 
             // btnRegisterUser
             // 
             this.btnRegisterUser.BackColor = System.Drawing.Color.White;
@@ -247,6 +231,15 @@
             this.btnRegisterUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegisterUser.UseVisualStyleBackColor = false;
             this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
+            // 
+            // panelAccountSettings
+            // 
+            this.panelAccountSettings.Controls.Add(this.btnAS);
+            this.panelAccountSettings.Location = new System.Drawing.Point(0, 183);
+            this.panelAccountSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.panelAccountSettings.Name = "panelAccountSettings";
+            this.panelAccountSettings.Size = new System.Drawing.Size(260, 61);
+            this.panelAccountSettings.TabIndex = 4;
             // 
             // btnAS
             // 
@@ -267,6 +260,15 @@
             this.btnAS.UseVisualStyleBackColor = false;
             this.btnAS.Click += new System.EventHandler(this.btnAS_Click);
             // 
+            // panelLogout
+            // 
+            this.panelLogout.Controls.Add(this.btnLogout);
+            this.panelLogout.Location = new System.Drawing.Point(0, 244);
+            this.panelLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.panelLogout.Name = "panelLogout";
+            this.panelLogout.Size = new System.Drawing.Size(260, 61);
+            this.panelLogout.TabIndex = 5;
+            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.White;
@@ -286,17 +288,15 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
-            // btnHam
+            // sidebarTransition
             // 
-            this.btnHam.Image = ((System.Drawing.Image)(resources.GetObject("btnHam.Image")));
-            this.btnHam.Location = new System.Drawing.Point(3, 2);
-            this.btnHam.Margin = new System.Windows.Forms.Padding(0);
-            this.btnHam.Name = "btnHam";
-            this.btnHam.Size = new System.Drawing.Size(44, 30);
-            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnHam.TabIndex = 6;
-            this.btnHam.TabStop = false;
-            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
+            this.sidebarTransition.Interval = 10;
+            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
+            // 
+            // menuTransition
+            // 
+            this.menuTransition.Interval = 10;
+            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
             // 
             // DashboardForm
             // 
@@ -320,15 +320,15 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.sidebar.ResumeLayout(false);
-            this.panelDashboard.ResumeLayout(false);
+            this.panelHome.ResumeLayout(false);
             this.menuContainer.ResumeLayout(false);
             this.panelTM.ResumeLayout(false);
             this.panelCalendar.ResumeLayout(false);
             this.panelAddUser.ResumeLayout(false);
             this.panelAccountSettings.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,13 +338,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
-        private System.Windows.Forms.Panel panelDashboard;
+        private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.Panel panelTM;
         private System.Windows.Forms.Panel panelAccountSettings;
         private System.Windows.Forms.Panel panelLogout;
         private System.Windows.Forms.Timer sidebarTransition;
         private System.Windows.Forms.PictureBox btnHam;
-        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnTimeMenu;
         private System.Windows.Forms.Button btnAS;
         private System.Windows.Forms.Button btnLogout;

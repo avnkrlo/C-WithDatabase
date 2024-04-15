@@ -21,5 +21,10 @@ namespace C_WithDatabase.Sidebar_Navigation
         {
             this.ControlBox = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
