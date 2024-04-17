@@ -15,7 +15,7 @@ namespace C_WithDatabase
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
-
+            this.ControlBox = false;
         }
 
         private void loginBtn_Click(object sender, EventArgs e)

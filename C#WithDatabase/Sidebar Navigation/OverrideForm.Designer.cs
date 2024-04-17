@@ -51,6 +51,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "OverrideForm";
             this.Text = "OverrideForm";
+            this.Load += new System.EventHandler(this.OverrideForm_Load);
             this.ResumeLayout(false);
 
         }

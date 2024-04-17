@@ -56,9 +56,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlRegisterForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlRegisterHeader = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlRegisterForm.SuspendLayout();
             this.pnlRegisterHeader.SuspendLayout();
             this.SuspendLayout();
@@ -348,13 +348,21 @@
             // 
             this.pnlRegisterForm.Controls.Add(this.panel1);
             this.pnlRegisterForm.Controls.Add(this.pnlRegisterHeader);
-            this.pnlRegisterForm.Location = new System.Drawing.Point(-2, 0);
+            this.pnlRegisterForm.Location = new System.Drawing.Point(0, 0);
             this.pnlRegisterForm.Margin = new System.Windows.Forms.Padding(0);
             this.pnlRegisterForm.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.pnlRegisterForm.MinimumSize = new System.Drawing.Size(1918, 1048);
             this.pnlRegisterForm.Name = "pnlRegisterForm";
-            this.pnlRegisterForm.Size = new System.Drawing.Size(1920, 1080);
+            this.pnlRegisterForm.Size = new System.Drawing.Size(1918, 1080);
             this.pnlRegisterForm.TabIndex = 34;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 67);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1917, 1013);
+            this.panel1.TabIndex = 1;
             // 
             // pnlRegisterHeader
             // 
@@ -375,19 +383,11 @@
             this.label13.Text = "CREATE AN ACCOUNT";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(3, 67);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1917, 1013);
-            this.panel1.TabIndex = 1;
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1061);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label12);

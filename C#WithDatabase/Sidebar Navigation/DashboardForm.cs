@@ -35,16 +35,19 @@ namespace C_WithDatabase
         bool menuExpand = false;
         private void menuTransition_Tick(object sender, EventArgs e)
         {
-            if (menuExpand == false) {
+            if (menuExpand == false)
+            {
                 menuContainer.Height += 10;
                 if (menuContainer.Height >= 245)
                 {
                     menuTransition.Stop();
                     menuExpand = true;
                 }
-            } else {
+            }
+            else
+            {
                 menuContainer.Height -= 10;
-                if(menuContainer.Height <= 61)
+                if (menuContainer.Height <= 61)
                 {
                     menuTransition.Stop();
                     menuExpand = false;
@@ -60,9 +63,11 @@ namespace C_WithDatabase
         bool sidebarExpand = true;
         private void sidebarTransition_Tick(object sender, EventArgs e)
         {
-            if (sidebarExpand) {
+            if (sidebarExpand)
+            {
                 sidebar.Width -= 10;
-                if (sidebar.Width <= 65) {
+                if (sidebar.Width <= 65)
+                {
                     sidebarExpand = false;
                     sidebarTransition.Stop();
 
@@ -70,12 +75,14 @@ namespace C_WithDatabase
                     panelCalendar.Width = sidebar.Width;
                     panelAddUser.Width = sidebar.Width;
                     panelAccountSettings.Width = sidebar.Width;
-                    panelLogout.Width = sidebar.Width;
                     menuContainer.Width = sidebar.Width;
                 }
-            } else {
+            }
+            else
+            {
                 sidebar.Width += 10;
-                if ( sidebar.Width >= 270) {
+                if (sidebar.Width >= 270)
+                {
                     sidebarExpand = true;
                     sidebarTransition.Stop();
 
@@ -83,7 +90,6 @@ namespace C_WithDatabase
                     panelCalendar.Width = sidebar.Width;
                     panelAddUser.Width = sidebar.Width;
                     panelAccountSettings.Width = sidebar.Width;
-                    panelLogout.Width = sidebar.Width;
                     menuContainer.Width = sidebar.Width;
                 }
             }
@@ -91,21 +97,23 @@ namespace C_WithDatabase
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            if(Home == null)
+            if (Home == null)
             {
                 Home = new HomeForm();
                 Home.FormClosed += Home_FormClosed;
                 Home.MdiParent = this;
                 Home.Dock = DockStyle.Fill;
                 Home.Show();
-            } else {
+            }
+            else
+            {
                 Home.Activate();
             }
         }
 
         private void btnMenuTimesheet_Click(object sender, EventArgs e)
         {
-            if(Timesheet == null)
+            if (Timesheet == null)
             {
                 Timesheet = new TimesheetForm();
                 Timesheet.FormClosed += TimesheetForm_FormClosed;
@@ -128,7 +136,9 @@ namespace C_WithDatabase
                 Activity.MdiParent = this;
                 Activity.Dock = DockStyle.Fill;
                 Activity.Show();
-            } else {
+            }
+            else
+            {
                 Activity.Activate();
             }
         }
@@ -142,7 +152,9 @@ namespace C_WithDatabase
                 Override.MdiParent = this;
                 Override.Dock = DockStyle.Fill;
                 Override.Show();
-            } else {
+            }
+            else
+            {
                 Override.Activate();
             }
         }
@@ -156,7 +168,9 @@ namespace C_WithDatabase
                 AccountSettings.MdiParent = this;
                 AccountSettings.Dock = DockStyle.Fill;
                 AccountSettings.Show();
-            } else {
+            }
+            else
+            {
                 AccountSettings.Activate();
             }
         }
