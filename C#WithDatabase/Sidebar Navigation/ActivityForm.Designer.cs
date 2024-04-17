@@ -1,6 +1,6 @@
 ﻿namespace C_WithDatabase.Sidebar_Navigation
 {
-    partial class CalendarForm
+    partial class ActivityForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,27 +33,26 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(401, 253);
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 24);
+            this.label1.Size = new System.Drawing.Size(1182, 674);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Calendar";
+            this.label1.Text = "ACTIVITY";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // CalendarForm
+            // ActivityForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1800, 1000);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1800, 1000);
-            this.MinimumSize = new System.Drawing.Size(1800, 1000);
-            this.Name = "CalendarForm";
-            this.Text = "CalendarForm";
-            this.Load += new System.EventHandler(this.CalendarForm_Load);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "ActivityForm";
+            this.Text = "ActivityForm";
             this.ResumeLayout(false);
 
         }

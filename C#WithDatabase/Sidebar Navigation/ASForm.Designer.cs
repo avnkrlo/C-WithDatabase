@@ -41,6 +41,18 @@
             this.btnPeekConfPass = new System.Windows.Forms.Button();
             this.btnPasswordSave = new System.Windows.Forms.Button();
             this.pnlAccountSettingsForm = new System.Windows.Forms.Panel();
+            this.pnlProfile_02 = new System.Windows.Forms.Panel();
+            this.pnlEditProfile = new System.Windows.Forms.Panel();
+            this.txtboxDepartment = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnProfileCancel = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtboxFirstName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtboxLastName = new System.Windows.Forms.TextBox();
+            this.btnProfileSave = new System.Windows.Forms.Button();
+            this.txtboxMiddleName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlProfile_01 = new System.Windows.Forms.Panel();
             this.lblProfile = new System.Windows.Forms.Label();
             this.btnEditProfile = new System.Windows.Forms.Button();
@@ -49,25 +61,13 @@
             this.btnPasswordCancel = new System.Windows.Forms.Button();
             this.pnlPassword_01 = new System.Windows.Forms.Panel();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.pnlProfile_02 = new System.Windows.Forms.Panel();
-            this.pnlEditProfile = new System.Windows.Forms.Panel();
-            this.btnProfileCancel = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnProfileSave = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pnlAccountSettingsForm.SuspendLayout();
+            this.pnlProfile_02.SuspendLayout();
+            this.pnlEditProfile.SuspendLayout();
             this.pnlProfile_01.SuspendLayout();
             this.pnlPassword_02.SuspendLayout();
             this.pnlChangePassword.SuspendLayout();
             this.pnlPassword_01.SuspendLayout();
-            this.pnlProfile_02.SuspendLayout();
-            this.pnlEditProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -207,6 +207,139 @@
             this.pnlAccountSettingsForm.Size = new System.Drawing.Size(1920, 1080);
             this.pnlAccountSettingsForm.TabIndex = 26;
             // 
+            // pnlProfile_02
+            // 
+            this.pnlProfile_02.Controls.Add(this.pnlEditProfile);
+            this.pnlProfile_02.Location = new System.Drawing.Point(9, 346);
+            this.pnlProfile_02.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlProfile_02.Name = "pnlProfile_02";
+            this.pnlProfile_02.Size = new System.Drawing.Size(593, 259);
+            this.pnlProfile_02.TabIndex = 29;
+            // 
+            // pnlEditProfile
+            // 
+            this.pnlEditProfile.Controls.Add(this.txtboxDepartment);
+            this.pnlEditProfile.Controls.Add(this.label7);
+            this.pnlEditProfile.Controls.Add(this.btnProfileCancel);
+            this.pnlEditProfile.Controls.Add(this.label4);
+            this.pnlEditProfile.Controls.Add(this.txtboxFirstName);
+            this.pnlEditProfile.Controls.Add(this.label5);
+            this.pnlEditProfile.Controls.Add(this.txtboxLastName);
+            this.pnlEditProfile.Controls.Add(this.btnProfileSave);
+            this.pnlEditProfile.Controls.Add(this.txtboxMiddleName);
+            this.pnlEditProfile.Controls.Add(this.label6);
+            this.pnlEditProfile.Location = new System.Drawing.Point(10, 10);
+            this.pnlEditProfile.Margin = new System.Windows.Forms.Padding(10);
+            this.pnlEditProfile.Name = "pnlEditProfile";
+            this.pnlEditProfile.Size = new System.Drawing.Size(573, 239);
+            this.pnlEditProfile.TabIndex = 0;
+            // 
+            // txtboxDepartment
+            // 
+            this.txtboxDepartment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxDepartment.Location = new System.Drawing.Point(216, 20);
+            this.txtboxDepartment.Name = "txtboxDepartment";
+            this.txtboxDepartment.ReadOnly = true;
+            this.txtboxDepartment.Size = new System.Drawing.Size(286, 19);
+            this.txtboxDepartment.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(59, 20);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 26);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Department";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnProfileCancel
+            // 
+            this.btnProfileCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfileCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileCancel.Image")));
+            this.btnProfileCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfileCancel.Location = new System.Drawing.Point(216, 180);
+            this.btnProfileCancel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProfileCancel.Name = "btnProfileCancel";
+            this.btnProfileCancel.Padding = new System.Windows.Forms.Padding(5);
+            this.btnProfileCancel.Size = new System.Drawing.Size(140, 49);
+            this.btnProfileCancel.TabIndex = 28;
+            this.btnProfileCancel.Text = "       CANCEL";
+            this.btnProfileCancel.UseVisualStyleBackColor = true;
+            this.btnProfileCancel.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(59, 60);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 26);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "First Name";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtboxFirstName
+            // 
+            this.txtboxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxFirstName.Location = new System.Drawing.Point(216, 60);
+            this.txtboxFirstName.Name = "txtboxFirstName";
+            this.txtboxFirstName.ReadOnly = true;
+            this.txtboxFirstName.Size = new System.Drawing.Size(286, 19);
+            this.txtboxFirstName.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(59, 141);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 26);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Last Name";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtboxLastName
+            // 
+            this.txtboxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxLastName.Location = new System.Drawing.Point(216, 141);
+            this.txtboxLastName.Name = "txtboxLastName";
+            this.txtboxLastName.ReadOnly = true;
+            this.txtboxLastName.Size = new System.Drawing.Size(286, 19);
+            this.txtboxLastName.TabIndex = 11;
+            // 
+            // btnProfileSave
+            // 
+            this.btnProfileSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfileSave.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileSave.Image")));
+            this.btnProfileSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfileSave.Location = new System.Drawing.Point(362, 180);
+            this.btnProfileSave.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProfileSave.Name = "btnProfileSave";
+            this.btnProfileSave.Padding = new System.Windows.Forms.Padding(5);
+            this.btnProfileSave.Size = new System.Drawing.Size(140, 49);
+            this.btnProfileSave.TabIndex = 25;
+            this.btnProfileSave.Text = "       SAVE";
+            this.btnProfileSave.UseVisualStyleBackColor = true;
+            this.btnProfileSave.Visible = false;
+            // 
+            // txtboxMiddleName
+            // 
+            this.txtboxMiddleName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxMiddleName.Location = new System.Drawing.Point(216, 101);
+            this.txtboxMiddleName.Name = "txtboxMiddleName";
+            this.txtboxMiddleName.ReadOnly = true;
+            this.txtboxMiddleName.Size = new System.Drawing.Size(286, 19);
+            this.txtboxMiddleName.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(59, 101);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(150, 26);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Middle Name";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // pnlProfile_01
             // 
             this.pnlProfile_01.Controls.Add(this.lblProfile);
@@ -304,139 +437,6 @@
             this.lblPassword.Text = "PASSWORD";
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pnlProfile_02
-            // 
-            this.pnlProfile_02.Controls.Add(this.pnlEditProfile);
-            this.pnlProfile_02.Location = new System.Drawing.Point(9, 346);
-            this.pnlProfile_02.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlProfile_02.Name = "pnlProfile_02";
-            this.pnlProfile_02.Size = new System.Drawing.Size(593, 259);
-            this.pnlProfile_02.TabIndex = 29;
-            // 
-            // pnlEditProfile
-            // 
-            this.pnlEditProfile.Controls.Add(this.textBox4);
-            this.pnlEditProfile.Controls.Add(this.label7);
-            this.pnlEditProfile.Controls.Add(this.btnProfileCancel);
-            this.pnlEditProfile.Controls.Add(this.label4);
-            this.pnlEditProfile.Controls.Add(this.textBox1);
-            this.pnlEditProfile.Controls.Add(this.label5);
-            this.pnlEditProfile.Controls.Add(this.textBox2);
-            this.pnlEditProfile.Controls.Add(this.btnProfileSave);
-            this.pnlEditProfile.Controls.Add(this.textBox3);
-            this.pnlEditProfile.Controls.Add(this.label6);
-            this.pnlEditProfile.Location = new System.Drawing.Point(10, 10);
-            this.pnlEditProfile.Margin = new System.Windows.Forms.Padding(10);
-            this.pnlEditProfile.Name = "pnlEditProfile";
-            this.pnlEditProfile.Size = new System.Drawing.Size(573, 239);
-            this.pnlEditProfile.TabIndex = 0;
-            // 
-            // btnProfileCancel
-            // 
-            this.btnProfileCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfileCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileCancel.Image")));
-            this.btnProfileCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfileCancel.Location = new System.Drawing.Point(216, 180);
-            this.btnProfileCancel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnProfileCancel.Name = "btnProfileCancel";
-            this.btnProfileCancel.Padding = new System.Windows.Forms.Padding(5);
-            this.btnProfileCancel.Size = new System.Drawing.Size(140, 49);
-            this.btnProfileCancel.TabIndex = 28;
-            this.btnProfileCancel.Text = "       CANCEL";
-            this.btnProfileCancel.UseVisualStyleBackColor = true;
-            this.btnProfileCancel.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(59, 60);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 26);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "First Name";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(216, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(286, 19);
-            this.textBox1.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(59, 141);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 26);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Last Name";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(216, 141);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(286, 19);
-            this.textBox2.TabIndex = 11;
-            // 
-            // btnProfileSave
-            // 
-            this.btnProfileSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfileSave.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileSave.Image")));
-            this.btnProfileSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfileSave.Location = new System.Drawing.Point(362, 180);
-            this.btnProfileSave.Margin = new System.Windows.Forms.Padding(0);
-            this.btnProfileSave.Name = "btnProfileSave";
-            this.btnProfileSave.Padding = new System.Windows.Forms.Padding(5);
-            this.btnProfileSave.Size = new System.Drawing.Size(140, 49);
-            this.btnProfileSave.TabIndex = 25;
-            this.btnProfileSave.Text = "       SAVE";
-            this.btnProfileSave.UseVisualStyleBackColor = true;
-            this.btnProfileSave.Visible = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(216, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(286, 19);
-            this.textBox3.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(59, 101);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 26);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Middle Name";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(59, 20);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 26);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Department";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(216, 20);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(286, 19);
-            this.textBox4.TabIndex = 30;
-            // 
             // ASForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -452,14 +452,14 @@
             this.Text = "ASForm";
             this.Load += new System.EventHandler(this.ASForm_Load);
             this.pnlAccountSettingsForm.ResumeLayout(false);
+            this.pnlProfile_02.ResumeLayout(false);
+            this.pnlEditProfile.ResumeLayout(false);
+            this.pnlEditProfile.PerformLayout();
             this.pnlProfile_01.ResumeLayout(false);
             this.pnlPassword_02.ResumeLayout(false);
             this.pnlChangePassword.ResumeLayout(false);
             this.pnlChangePassword.PerformLayout();
             this.pnlPassword_01.ResumeLayout(false);
-            this.pnlProfile_02.ResumeLayout(false);
-            this.pnlEditProfile.ResumeLayout(false);
-            this.pnlEditProfile.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -489,13 +489,13 @@
         private System.Windows.Forms.Panel pnlEditProfile;
         private System.Windows.Forms.Button btnProfileCancel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtboxFirstName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtboxLastName;
         private System.Windows.Forms.Button btnProfileSave;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtboxMiddleName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtboxDepartment;
         private System.Windows.Forms.Label label7;
     }
 }

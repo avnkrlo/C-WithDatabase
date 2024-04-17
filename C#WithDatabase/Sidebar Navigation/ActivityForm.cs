@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace C_WithDatabase.Sidebar_Navigation
 {
-    public partial class CalendarForm : Form
+    public partial class ActivityForm : Form
     {
-        public CalendarForm()
+        public ActivityForm()
         {
             InitializeComponent();
-        }
-
-        private void CalendarForm_Load(object sender, EventArgs e)
-        {
-            this.ControlBox = false;
         }
     }
 }

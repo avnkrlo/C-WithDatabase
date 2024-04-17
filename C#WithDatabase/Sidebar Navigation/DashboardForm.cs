@@ -10,8 +10,10 @@ namespace C_WithDatabase
     {
         ASForm AccountSettings;
         HomeForm Home;
-        CalendarForm Calendar;
+        TimesheetForm Timesheet;
         RegisterForm Register;
+        ActivityForm Activity;
+        OverrideForm Override;
 
         public DashboardForm()
         {
@@ -35,7 +37,7 @@ namespace C_WithDatabase
         {
             if (menuExpand == false) {
                 menuContainer.Height += 10;
-                if (menuContainer.Height >= 120)
+                if (menuContainer.Height >= 245)
                 {
                     menuTransition.Stop();
                     menuExpand = true;
@@ -50,7 +52,7 @@ namespace C_WithDatabase
             }
         }
 
-        private void btnTimeMenu_Click(object sender, EventArgs e)
+        private void btnReportMenu_Click(object sender, EventArgs e)
         {
             menuTransition.Start();
         }
@@ -96,37 +98,53 @@ namespace C_WithDatabase
                 Home.MdiParent = this;
                 Home.Dock = DockStyle.Fill;
                 Home.Show();
-            } 
-            else
-            {
+            } else {
                 Home.Activate();
             }
         }
 
-        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnMenuTimesheet_Click(object sender, EventArgs e)
         {
-            Home = null;
-        }
-
-        private void btnCalendar_Click(object sender, EventArgs e)
-        {
-            if(Calendar == null)
+            if(Timesheet == null)
             {
-                Calendar = new CalendarForm();
-                Calendar.FormClosed += CalendarForm_FormClosed;
-                Calendar.MdiParent = this;
-                Calendar.Dock = DockStyle.Fill;
-                Calendar.Show();
+                Timesheet = new TimesheetForm();
+                Timesheet.FormClosed += TimesheetForm_FormClosed;
+                Timesheet.MdiParent = this;
+                Timesheet.Dock = DockStyle.Fill;
+                Timesheet.Show();
             }
             else
             {
-                Calendar.Activate();
+                Timesheet.Activate();
             }
         }
 
-        private void CalendarForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnMenuActivity_Click(object sender, EventArgs e)
         {
-            Calendar = null;
+            if (Activity == null)
+            {
+                Activity = new ActivityForm();
+                Activity.FormClosed += ActivityForm_FormClosed;
+                Activity.MdiParent = this;
+                Activity.Dock = DockStyle.Fill;
+                Activity.Show();
+            } else {
+                Activity.Activate();
+            }
+        }
+
+        private void btnMenuOverride_Click(object sender, EventArgs e)
+        {
+            if (Override == null)
+            {
+                Override = new OverrideForm();
+                Override.FormClosed += OverrideForm_FormClosed;
+                Override.MdiParent = this;
+                Override.Dock = DockStyle.Fill;
+                Override.Show();
+            } else {
+                Override.Activate();
+            }
         }
 
         private void btnAS_Click(object sender, EventArgs e)
@@ -138,21 +156,9 @@ namespace C_WithDatabase
                 AccountSettings.MdiParent = this;
                 AccountSettings.Dock = DockStyle.Fill;
                 AccountSettings.Show();
-            }
-            else
-            {
+            } else {
                 AccountSettings.Activate();
             }
-        }
-
-        private void ASForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            AccountSettings = null;
-        }
-
-        private void btnHam_Click(object sender, EventArgs e)
-        {
-            sidebarTransition.Start();
         }
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
@@ -164,14 +170,46 @@ namespace C_WithDatabase
                 Register.MdiParent = this;
                 Register.Dock = DockStyle.Fill;
                 Register.Show();
-            } else { 
+            }
+            else
+            {
                 Register.Activate();
             }
+        }
+
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Home = null;
+        }
+
+        private void TimesheetForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Timesheet = null;
+        }
+
+        private void ActivityForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Activity = null;
+        }
+
+        private void OverrideForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Override = null;
         }
 
         private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Register = null;
+        }
+
+        private void ASForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            AccountSettings = null;
+        }
+
+        private void btnHam_Click(object sender, EventArgs e)
+        {
+            sidebarTransition.Start();
         }
     }
 }
