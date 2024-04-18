@@ -14,6 +14,12 @@ namespace C_WithDatabase
         RegisterForm Register;
         ActivityForm Activity;
         OverrideForm Override;
+        AssetForm Asset;
+        DepartmentsForm Departments;
+        RolesForm Roles;
+        UsersForm Users;
+        SitesForm Sites;
+        PermissionsForm Permissions;
 
         public DashboardForm()
         {
@@ -55,9 +61,36 @@ namespace C_WithDatabase
             }
         }
 
+        bool menuExpand2 = false;
+        private void menuTransition2_Tick(object sender, EventArgs e)
+        {
+            if (menuExpand2 == false)
+            {
+                menuContainer2.Height += 10;
+                if (menuContainer2.Height >= 430)
+                {
+                    menuTransition2.Stop();
+                    menuExpand2 = true;
+                }
+            } else {
+
+                menuContainer2.Height -= 10;
+                if (menuContainer2.Height <= 61)
+                {
+                    menuTransition2.Stop();
+                    menuExpand2 = false;
+                }
+            }
+        }
+
         private void btnReportMenu_Click(object sender, EventArgs e)
         {
             menuTransition.Start();
+        }
+
+        private void btnAdminMenu_Click(object sender, EventArgs e)
+        {
+            menuTransition2.Start();
         }
 
         bool sidebarExpand = true;
@@ -95,6 +128,11 @@ namespace C_WithDatabase
             }
         }
 
+        private void btnHam_Click(object sender, EventArgs e)
+        {
+            sidebarTransition.Start();
+        }
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             if (Home == null)
@@ -109,6 +147,11 @@ namespace C_WithDatabase
             {
                 Home.Activate();
             }
+        }
+
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Home = null;
         }
 
         private void btnMenuTimesheet_Click(object sender, EventArgs e)
@@ -127,6 +170,11 @@ namespace C_WithDatabase
             }
         }
 
+        private void TimesheetForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Timesheet = null;
+        }
+
         private void btnMenuActivity_Click(object sender, EventArgs e)
         {
             if (Activity == null)
@@ -141,6 +189,11 @@ namespace C_WithDatabase
             {
                 Activity.Activate();
             }
+        }
+
+        private void ActivityForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Activity = null;
         }
 
         private void btnMenuOverride_Click(object sender, EventArgs e)
@@ -159,20 +212,9 @@ namespace C_WithDatabase
             }
         }
 
-        private void btnAS_Click(object sender, EventArgs e)
+        private void OverrideForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (AccountSettings == null)
-            {
-                AccountSettings = new ASForm();
-                AccountSettings.FormClosed += ASForm_FormClosed;
-                AccountSettings.MdiParent = this;
-                AccountSettings.Dock = DockStyle.Fill;
-                AccountSettings.Show();
-            }
-            else
-            {
-                AccountSettings.Activate();
-            }
+            Override = null;
         }
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
@@ -191,39 +233,152 @@ namespace C_WithDatabase
             }
         }
 
-        private void Home_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Home = null;
-        }
-
-        private void TimesheetForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Timesheet = null;
-        }
-
-        private void ActivityForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Activity = null;
-        }
-
-        private void OverrideForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Override = null;
-        }
-
         private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Register = null;
         }
 
+        private void btnAS_Click(object sender, EventArgs e)
+        {
+            if (AccountSettings == null)
+            {
+                AccountSettings = new ASForm();
+                AccountSettings.FormClosed += ASForm_FormClosed;
+                AccountSettings.MdiParent = this;
+                AccountSettings.Dock = DockStyle.Fill;
+                AccountSettings.Show();
+            }
+            else
+            {
+                AccountSettings.Activate();
+            }
+        }
+        
         private void ASForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             AccountSettings = null;
         }
 
-        private void btnHam_Click(object sender, EventArgs e)
+        
+
+        private void btnAssetMenu_Click(object sender, EventArgs e)
         {
-            sidebarTransition.Start();
+            if (Asset == null)
+            {
+                Asset = new AssetForm();
+                Asset.FormClosed += AssetForm_FormClosed;
+                Asset.MdiParent = this;
+                Asset.Dock = DockStyle.Fill;
+                Asset.Show();
+            } else
+            {
+                Asset.Activate();
+            }
+        }
+
+        private void AssetForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Asset = null;
+        }
+
+        private void btnDepartmentMenu_Click(object sender, EventArgs e)
+        {
+            if (Departments == null)
+            {
+                Departments = new DepartmentsForm();
+                Departments.FormClosed += DepartmentsForm_FormClosed;
+                Departments.MdiParent = this;
+                Departments.Dock = DockStyle.Fill;
+                Departments.Show();
+            } else
+            {
+                Departments.Activate();
+            }
+        }
+
+        private void DepartmentsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Departments = null;
+        }
+
+        private void btnRolesMenu_Click(object sender, EventArgs e)
+        {
+            if (Roles == null)
+            {
+                Roles = new RolesForm();
+                Roles.FormClosed += RolesForm_FormClosed;
+                Roles.MdiParent = this;
+                Roles.Dock = DockStyle.Fill;
+                Roles.Show();
+            } else
+            {
+                Roles.Activate();
+            }
+        }
+
+        private void RolesForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Roles = null;
+        }
+
+        private void btnUsersMenu_Click(object sender, EventArgs e)
+        {
+            if (Users == null)
+            {
+                Users = new UsersForm();
+                Users.FormClosed += UsersForm_FormClosed;
+                Users.MdiParent = this;
+                Users.Dock = DockStyle.Fill;
+                Users.Show();
+            } else
+            {
+                Users.Activate();
+            }
+        }
+
+        private void UsersForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Users = null;
+        }
+
+        private void btnSitesMenu_Click(object sender, EventArgs e)
+        {
+            if (Sites == null)
+            {
+                Sites = new SitesForm();
+                Sites.FormClosed += SitesForm_FormClosed;
+                Sites.MdiParent = this;
+                Sites.Dock = DockStyle.Fill;
+                Sites.Show();
+            } else
+            {
+                Sites.Activate();
+            }
+        }
+
+        private void SitesForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Sites = null;
+        }
+
+        private void btnPermissionsMenu_Click(object sender, EventArgs e)
+        {
+            if (Permissions == null)
+            {
+                Permissions = new PermissionsForm();
+                Permissions.FormClosed += PermissionsForm_FormClosed;
+                Permissions.MdiParent = this;
+                Permissions.Dock = DockStyle.Fill;
+                Permissions.Show();
+            } else
+            {
+                Permissions.Activate();
+            }
+        }
+
+        private void PermissionsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Permissions = null;
         }
     }
 }

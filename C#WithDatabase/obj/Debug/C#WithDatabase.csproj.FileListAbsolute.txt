@@ -51,3 +51,9 @@ C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDatabase
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDa.4FDD6AB1.Up2Date
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDatabase.exe
 C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C#WithDatabase.pdb
+C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.AssetForm.resources
+C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.DepartmentsForm.resources
+C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.PermissionsForm.resources
+C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.RolesForm.resources
+C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.SitesForm.resources
+C:\Users\812\source\repos\C#WithDatabase\C#WithDatabase\obj\Debug\C_WithDatabase.Sidebar_Navigation.UsersForm.resources

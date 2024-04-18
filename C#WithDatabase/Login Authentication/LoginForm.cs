@@ -86,5 +86,17 @@ namespace C_WithDatabase
             }
 
         }
+
+        private void btnPeekPassword_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar != '\0')
+            {
+                txtPassword.PasswordChar = '\0';
+                btnPeekPassword.Image = C_WithDatabase.Properties.Resources.restriction;
+            } else {
+                txtPassword.PasswordChar = '●';
+                btnPeekPassword.Image = C_WithDatabase.Properties.Resources.look;
+            }
+        }
     }
 }

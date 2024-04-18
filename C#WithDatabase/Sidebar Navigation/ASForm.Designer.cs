@@ -34,34 +34,38 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtboxNewPassword = new System.Windows.Forms.TextBox();
             this.txtboxConfirmNewPassword = new System.Windows.Forms.TextBox();
-            this.btnChangePassword = new System.Windows.Forms.Button();
             this.txtboxPassword = new System.Windows.Forms.TextBox();
-            this.btnPeekPass = new System.Windows.Forms.Button();
-            this.btnPeekNewPass = new System.Windows.Forms.Button();
-            this.btnPeekConfPass = new System.Windows.Forms.Button();
-            this.btnPasswordSave = new System.Windows.Forms.Button();
             this.pnlAccountSettingsForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlProfile_02 = new System.Windows.Forms.Panel();
             this.pnlEditProfile = new System.Windows.Forms.Panel();
             this.txtboxDepartment = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnProfileCancel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtboxFirstName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtboxLastName = new System.Windows.Forms.TextBox();
-            this.btnProfileSave = new System.Windows.Forms.Button();
             this.txtboxMiddleName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlProfile_01 = new System.Windows.Forms.Panel();
             this.lblProfile = new System.Windows.Forms.Label();
-            this.btnEditProfile = new System.Windows.Forms.Button();
             this.pnlPassword_02 = new System.Windows.Forms.Panel();
             this.pnlChangePassword = new System.Windows.Forms.Panel();
-            this.btnPasswordCancel = new System.Windows.Forms.Button();
             this.pnlPassword_01 = new System.Windows.Forms.Panel();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.btnProfileCancel = new System.Windows.Forms.Button();
+            this.btnProfileSave = new System.Windows.Forms.Button();
+            this.btnEditProfile = new System.Windows.Forms.Button();
+            this.btnPasswordCancel = new System.Windows.Forms.Button();
+            this.btnPeekPass = new System.Windows.Forms.Button();
+            this.btnPeekNewPass = new System.Windows.Forms.Button();
+            this.btnPeekConfPass = new System.Windows.Forms.Button();
+            this.btnPasswordSave = new System.Windows.Forms.Button();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.pnlAccountSettingsForm.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlProfile_02.SuspendLayout();
             this.pnlEditProfile.SuspendLayout();
             this.pnlProfile_01.SuspendLayout();
@@ -102,99 +106,43 @@
             // 
             // txtboxNewPassword
             // 
-            this.txtboxNewPassword.Location = new System.Drawing.Point(216, 50);
+            this.txtboxNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxNewPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtboxNewPassword.Location = new System.Drawing.Point(216, 53);
+            this.txtboxNewPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtboxNewPassword.Name = "txtboxNewPassword";
+            this.txtboxNewPassword.PasswordChar = '●';
             this.txtboxNewPassword.ReadOnly = true;
-            this.txtboxNewPassword.Size = new System.Drawing.Size(246, 26);
+            this.txtboxNewPassword.Size = new System.Drawing.Size(246, 19);
             this.txtboxNewPassword.TabIndex = 10;
             // 
             // txtboxConfirmNewPassword
             // 
-            this.txtboxConfirmNewPassword.Location = new System.Drawing.Point(216, 90);
+            this.txtboxConfirmNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxConfirmNewPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtboxConfirmNewPassword.Location = new System.Drawing.Point(216, 93);
+            this.txtboxConfirmNewPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtboxConfirmNewPassword.Name = "txtboxConfirmNewPassword";
+            this.txtboxConfirmNewPassword.PasswordChar = '●';
             this.txtboxConfirmNewPassword.ReadOnly = true;
-            this.txtboxConfirmNewPassword.Size = new System.Drawing.Size(246, 26);
+            this.txtboxConfirmNewPassword.Size = new System.Drawing.Size(246, 19);
             this.txtboxConfirmNewPassword.TabIndex = 11;
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
-            this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChangePassword.Location = new System.Drawing.Point(443, 7);
-            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(0);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Padding = new System.Windows.Forms.Padding(5);
-            this.btnChangePassword.Size = new System.Drawing.Size(131, 49);
-            this.btnChangePassword.TabIndex = 12;
-            this.btnChangePassword.Text = "        CHANGE";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
             // 
             // txtboxPassword
             // 
-            this.txtboxPassword.Location = new System.Drawing.Point(216, 9);
+            this.txtboxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtboxPassword.Location = new System.Drawing.Point(216, 12);
+            this.txtboxPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtboxPassword.Name = "txtboxPassword";
+            this.txtboxPassword.PasswordChar = '●';
             this.txtboxPassword.ReadOnly = true;
-            this.txtboxPassword.Size = new System.Drawing.Size(246, 26);
+            this.txtboxPassword.Size = new System.Drawing.Size(246, 19);
             this.txtboxPassword.TabIndex = 13;
-            // 
-            // btnPeekPass
-            // 
-            this.btnPeekPass.BackColor = System.Drawing.Color.Transparent;
-            this.btnPeekPass.BackgroundImage = global::C_WithDatabase.Properties.Resources.look;
-            this.btnPeekPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPeekPass.FlatAppearance.BorderSize = 0;
-            this.btnPeekPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeekPass.Location = new System.Drawing.Point(468, 9);
-            this.btnPeekPass.Name = "btnPeekPass";
-            this.btnPeekPass.Size = new System.Drawing.Size(34, 26);
-            this.btnPeekPass.TabIndex = 22;
-            this.btnPeekPass.UseVisualStyleBackColor = false;
-            // 
-            // btnPeekNewPass
-            // 
-            this.btnPeekNewPass.BackColor = System.Drawing.Color.Transparent;
-            this.btnPeekNewPass.BackgroundImage = global::C_WithDatabase.Properties.Resources.look;
-            this.btnPeekNewPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPeekNewPass.FlatAppearance.BorderSize = 0;
-            this.btnPeekNewPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeekNewPass.Location = new System.Drawing.Point(468, 50);
-            this.btnPeekNewPass.Name = "btnPeekNewPass";
-            this.btnPeekNewPass.Size = new System.Drawing.Size(34, 26);
-            this.btnPeekNewPass.TabIndex = 23;
-            this.btnPeekNewPass.UseVisualStyleBackColor = false;
-            // 
-            // btnPeekConfPass
-            // 
-            this.btnPeekConfPass.BackColor = System.Drawing.Color.Transparent;
-            this.btnPeekConfPass.BackgroundImage = global::C_WithDatabase.Properties.Resources.look;
-            this.btnPeekConfPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPeekConfPass.FlatAppearance.BorderSize = 0;
-            this.btnPeekConfPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeekConfPass.Location = new System.Drawing.Point(468, 90);
-            this.btnPeekConfPass.Name = "btnPeekConfPass";
-            this.btnPeekConfPass.Size = new System.Drawing.Size(34, 26);
-            this.btnPeekConfPass.TabIndex = 24;
-            this.btnPeekConfPass.UseVisualStyleBackColor = false;
-            // 
-            // btnPasswordSave
-            // 
-            this.btnPasswordSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPasswordSave.Image = ((System.Drawing.Image)(resources.GetObject("btnPasswordSave.Image")));
-            this.btnPasswordSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPasswordSave.Location = new System.Drawing.Point(362, 131);
-            this.btnPasswordSave.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPasswordSave.Name = "btnPasswordSave";
-            this.btnPasswordSave.Padding = new System.Windows.Forms.Padding(5);
-            this.btnPasswordSave.Size = new System.Drawing.Size(140, 49);
-            this.btnPasswordSave.TabIndex = 25;
-            this.btnPasswordSave.Text = "       SAVE";
-            this.btnPasswordSave.UseVisualStyleBackColor = true;
-            this.btnPasswordSave.Visible = false;
-            this.btnPasswordSave.Click += new System.EventHandler(this.button1_Click);
             // 
             // pnlAccountSettingsForm
             // 
+            this.pnlAccountSettingsForm.Controls.Add(this.panel1);
             this.pnlAccountSettingsForm.Controls.Add(this.pnlProfile_02);
             this.pnlAccountSettingsForm.Controls.Add(this.pnlProfile_01);
             this.pnlAccountSettingsForm.Controls.Add(this.pnlPassword_02);
@@ -206,6 +154,36 @@
             this.pnlAccountSettingsForm.Name = "pnlAccountSettingsForm";
             this.pnlAccountSettingsForm.Size = new System.Drawing.Size(1920, 1080);
             this.pnlAccountSettingsForm.TabIndex = 26;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Location = new System.Drawing.Point(9, 605);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(593, 63);
+            this.panel1.TabIndex = 30;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(226, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(286, 28);
+            this.comboBox1.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 7);
+            this.label8.Margin = new System.Windows.Forms.Padding(0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(144, 49);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "LANGUAGE";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlProfile_02
             // 
@@ -237,7 +215,9 @@
             // txtboxDepartment
             // 
             this.txtboxDepartment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxDepartment.ForeColor = System.Drawing.Color.Black;
             this.txtboxDepartment.Location = new System.Drawing.Point(216, 20);
+            this.txtboxDepartment.Margin = new System.Windows.Forms.Padding(0);
             this.txtboxDepartment.Name = "txtboxDepartment";
             this.txtboxDepartment.ReadOnly = true;
             this.txtboxDepartment.Size = new System.Drawing.Size(286, 19);
@@ -253,21 +233,6 @@
             this.label7.Text = "Department";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnProfileCancel
-            // 
-            this.btnProfileCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfileCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileCancel.Image")));
-            this.btnProfileCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfileCancel.Location = new System.Drawing.Point(216, 180);
-            this.btnProfileCancel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnProfileCancel.Name = "btnProfileCancel";
-            this.btnProfileCancel.Padding = new System.Windows.Forms.Padding(5);
-            this.btnProfileCancel.Size = new System.Drawing.Size(140, 49);
-            this.btnProfileCancel.TabIndex = 28;
-            this.btnProfileCancel.Text = "       CANCEL";
-            this.btnProfileCancel.UseVisualStyleBackColor = true;
-            this.btnProfileCancel.Visible = false;
-            // 
             // label4
             // 
             this.label4.Location = new System.Drawing.Point(59, 60);
@@ -281,7 +246,9 @@
             // txtboxFirstName
             // 
             this.txtboxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxFirstName.ForeColor = System.Drawing.Color.Black;
             this.txtboxFirstName.Location = new System.Drawing.Point(216, 60);
+            this.txtboxFirstName.Margin = new System.Windows.Forms.Padding(0);
             this.txtboxFirstName.Name = "txtboxFirstName";
             this.txtboxFirstName.ReadOnly = true;
             this.txtboxFirstName.Size = new System.Drawing.Size(286, 19);
@@ -300,31 +267,20 @@
             // txtboxLastName
             // 
             this.txtboxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxLastName.ForeColor = System.Drawing.Color.Black;
             this.txtboxLastName.Location = new System.Drawing.Point(216, 141);
+            this.txtboxLastName.Margin = new System.Windows.Forms.Padding(0);
             this.txtboxLastName.Name = "txtboxLastName";
             this.txtboxLastName.ReadOnly = true;
             this.txtboxLastName.Size = new System.Drawing.Size(286, 19);
             this.txtboxLastName.TabIndex = 11;
             // 
-            // btnProfileSave
-            // 
-            this.btnProfileSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfileSave.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileSave.Image")));
-            this.btnProfileSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfileSave.Location = new System.Drawing.Point(362, 180);
-            this.btnProfileSave.Margin = new System.Windows.Forms.Padding(0);
-            this.btnProfileSave.Name = "btnProfileSave";
-            this.btnProfileSave.Padding = new System.Windows.Forms.Padding(5);
-            this.btnProfileSave.Size = new System.Drawing.Size(140, 49);
-            this.btnProfileSave.TabIndex = 25;
-            this.btnProfileSave.Text = "       SAVE";
-            this.btnProfileSave.UseVisualStyleBackColor = true;
-            this.btnProfileSave.Visible = false;
-            // 
             // txtboxMiddleName
             // 
             this.txtboxMiddleName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxMiddleName.ForeColor = System.Drawing.Color.Black;
             this.txtboxMiddleName.Location = new System.Drawing.Point(216, 101);
+            this.txtboxMiddleName.Margin = new System.Windows.Forms.Padding(0);
             this.txtboxMiddleName.Name = "txtboxMiddleName";
             this.txtboxMiddleName.ReadOnly = true;
             this.txtboxMiddleName.Size = new System.Drawing.Size(286, 19);
@@ -354,25 +310,12 @@
             // 
             this.lblProfile.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfile.Location = new System.Drawing.Point(12, 7);
+            this.lblProfile.Margin = new System.Windows.Forms.Padding(0);
             this.lblProfile.Name = "lblProfile";
             this.lblProfile.Size = new System.Drawing.Size(144, 49);
             this.lblProfile.TabIndex = 27;
             this.lblProfile.Text = "PROFILE";
             this.lblProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnEditProfile
-            // 
-            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnEditProfile.Image")));
-            this.btnEditProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditProfile.Location = new System.Drawing.Point(443, 7);
-            this.btnEditProfile.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Padding = new System.Windows.Forms.Padding(5);
-            this.btnEditProfile.Size = new System.Drawing.Size(131, 49);
-            this.btnEditProfile.TabIndex = 12;
-            this.btnEditProfile.Text = "        EDIT";
-            this.btnEditProfile.UseVisualStyleBackColor = true;
             // 
             // pnlPassword_02
             // 
@@ -402,21 +345,6 @@
             this.pnlChangePassword.Size = new System.Drawing.Size(573, 191);
             this.pnlChangePassword.TabIndex = 0;
             // 
-            // btnPasswordCancel
-            // 
-            this.btnPasswordCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPasswordCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnPasswordCancel.Image")));
-            this.btnPasswordCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPasswordCancel.Location = new System.Drawing.Point(216, 131);
-            this.btnPasswordCancel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPasswordCancel.Name = "btnPasswordCancel";
-            this.btnPasswordCancel.Padding = new System.Windows.Forms.Padding(5);
-            this.btnPasswordCancel.Size = new System.Drawing.Size(140, 49);
-            this.btnPasswordCancel.TabIndex = 28;
-            this.btnPasswordCancel.Text = "       CANCEL";
-            this.btnPasswordCancel.UseVisualStyleBackColor = true;
-            this.btnPasswordCancel.Visible = false;
-            // 
             // pnlPassword_01
             // 
             this.pnlPassword_01.Controls.Add(this.lblPassword);
@@ -437,6 +365,140 @@
             this.lblPassword.Text = "PASSWORD";
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnProfileCancel
+            // 
+            this.btnProfileCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfileCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileCancel.Image")));
+            this.btnProfileCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfileCancel.Location = new System.Drawing.Point(216, 180);
+            this.btnProfileCancel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProfileCancel.Name = "btnProfileCancel";
+            this.btnProfileCancel.Padding = new System.Windows.Forms.Padding(5);
+            this.btnProfileCancel.Size = new System.Drawing.Size(140, 49);
+            this.btnProfileCancel.TabIndex = 28;
+            this.btnProfileCancel.Text = "       CANCEL";
+            this.btnProfileCancel.UseVisualStyleBackColor = true;
+            this.btnProfileCancel.Visible = false;
+            this.btnProfileCancel.Click += new System.EventHandler(this.btnProfileCancel_Click);
+            // 
+            // btnProfileSave
+            // 
+            this.btnProfileSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfileSave.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileSave.Image")));
+            this.btnProfileSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfileSave.Location = new System.Drawing.Point(362, 180);
+            this.btnProfileSave.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProfileSave.Name = "btnProfileSave";
+            this.btnProfileSave.Padding = new System.Windows.Forms.Padding(5);
+            this.btnProfileSave.Size = new System.Drawing.Size(140, 49);
+            this.btnProfileSave.TabIndex = 25;
+            this.btnProfileSave.Text = "       SAVE";
+            this.btnProfileSave.UseVisualStyleBackColor = true;
+            this.btnProfileSave.Visible = false;
+            // 
+            // btnEditProfile
+            // 
+            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnEditProfile.Image")));
+            this.btnEditProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditProfile.Location = new System.Drawing.Point(443, 7);
+            this.btnEditProfile.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Padding = new System.Windows.Forms.Padding(5);
+            this.btnEditProfile.Size = new System.Drawing.Size(131, 49);
+            this.btnEditProfile.TabIndex = 12;
+            this.btnEditProfile.Text = "        EDIT";
+            this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
+            // 
+            // btnPasswordCancel
+            // 
+            this.btnPasswordCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPasswordCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnPasswordCancel.Image")));
+            this.btnPasswordCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPasswordCancel.Location = new System.Drawing.Point(216, 131);
+            this.btnPasswordCancel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPasswordCancel.Name = "btnPasswordCancel";
+            this.btnPasswordCancel.Padding = new System.Windows.Forms.Padding(5);
+            this.btnPasswordCancel.Size = new System.Drawing.Size(140, 49);
+            this.btnPasswordCancel.TabIndex = 28;
+            this.btnPasswordCancel.Text = "       CANCEL";
+            this.btnPasswordCancel.UseVisualStyleBackColor = true;
+            this.btnPasswordCancel.Visible = false;
+            this.btnPasswordCancel.Click += new System.EventHandler(this.btnPasswordCancel_Click);
+            // 
+            // btnPeekPass
+            // 
+            this.btnPeekPass.BackColor = System.Drawing.Color.Transparent;
+            this.btnPeekPass.BackgroundImage = global::C_WithDatabase.Properties.Resources.look;
+            this.btnPeekPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPeekPass.FlatAppearance.BorderSize = 0;
+            this.btnPeekPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeekPass.Location = new System.Drawing.Point(468, 9);
+            this.btnPeekPass.Name = "btnPeekPass";
+            this.btnPeekPass.Size = new System.Drawing.Size(34, 26);
+            this.btnPeekPass.TabIndex = 22;
+            this.btnPeekPass.UseVisualStyleBackColor = false;
+            this.btnPeekPass.Visible = false;
+            // 
+            // btnPeekNewPass
+            // 
+            this.btnPeekNewPass.BackColor = System.Drawing.Color.Transparent;
+            this.btnPeekNewPass.BackgroundImage = global::C_WithDatabase.Properties.Resources.look;
+            this.btnPeekNewPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPeekNewPass.FlatAppearance.BorderSize = 0;
+            this.btnPeekNewPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeekNewPass.Location = new System.Drawing.Point(468, 50);
+            this.btnPeekNewPass.Name = "btnPeekNewPass";
+            this.btnPeekNewPass.Size = new System.Drawing.Size(34, 26);
+            this.btnPeekNewPass.TabIndex = 23;
+            this.btnPeekNewPass.UseVisualStyleBackColor = false;
+            this.btnPeekNewPass.Visible = false;
+            // 
+            // btnPeekConfPass
+            // 
+            this.btnPeekConfPass.BackColor = System.Drawing.Color.Transparent;
+            this.btnPeekConfPass.BackgroundImage = global::C_WithDatabase.Properties.Resources.look;
+            this.btnPeekConfPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPeekConfPass.FlatAppearance.BorderSize = 0;
+            this.btnPeekConfPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeekConfPass.Location = new System.Drawing.Point(468, 90);
+            this.btnPeekConfPass.Name = "btnPeekConfPass";
+            this.btnPeekConfPass.Size = new System.Drawing.Size(34, 26);
+            this.btnPeekConfPass.TabIndex = 24;
+            this.btnPeekConfPass.UseVisualStyleBackColor = false;
+            this.btnPeekConfPass.Visible = false;
+            // 
+            // btnPasswordSave
+            // 
+            this.btnPasswordSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPasswordSave.Image = ((System.Drawing.Image)(resources.GetObject("btnPasswordSave.Image")));
+            this.btnPasswordSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPasswordSave.Location = new System.Drawing.Point(362, 131);
+            this.btnPasswordSave.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPasswordSave.Name = "btnPasswordSave";
+            this.btnPasswordSave.Padding = new System.Windows.Forms.Padding(5);
+            this.btnPasswordSave.Size = new System.Drawing.Size(140, 49);
+            this.btnPasswordSave.TabIndex = 25;
+            this.btnPasswordSave.Text = "       SAVE";
+            this.btnPasswordSave.UseVisualStyleBackColor = true;
+            this.btnPasswordSave.Visible = false;
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
+            this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChangePassword.Location = new System.Drawing.Point(443, 7);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(0);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Padding = new System.Windows.Forms.Padding(5);
+            this.btnChangePassword.Size = new System.Drawing.Size(131, 49);
+            this.btnChangePassword.TabIndex = 12;
+            this.btnChangePassword.Text = "        CHANGE";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
             // ASForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -452,6 +514,7 @@
             this.Text = "ASForm";
             this.Load += new System.EventHandler(this.ASForm_Load);
             this.pnlAccountSettingsForm.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlProfile_02.ResumeLayout(false);
             this.pnlEditProfile.ResumeLayout(false);
             this.pnlEditProfile.PerformLayout();
@@ -497,5 +560,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtboxDepartment;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
     }
 }

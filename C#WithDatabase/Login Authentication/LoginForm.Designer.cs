@@ -38,9 +38,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPeekPassword = new System.Windows.Forms.Button();
             this.pnlLoginForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnShutdown = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.loginButton = new C_WithDatabase.CustomDesign.PrimaryButton();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
@@ -55,7 +55,7 @@
             this.txtUsername.Location = new System.Drawing.Point(879, 532);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(190, 33);
+            this.txtUsername.Size = new System.Drawing.Size(221, 33);
             this.txtUsername.TabIndex = 13;
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
@@ -67,7 +67,7 @@
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(190, 33);
+            this.txtPassword.Size = new System.Drawing.Size(221, 33);
             this.txtPassword.TabIndex = 14;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
@@ -103,6 +103,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(935, 378);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(210, 147);
             this.label2.TabIndex = 19;
@@ -124,18 +125,20 @@
             // btnPeekPassword
             // 
             this.btnPeekPassword.BackColor = System.Drawing.Color.Transparent;
-            this.btnPeekPassword.BackgroundImage = global::C_WithDatabase.Properties.Resources.look;
             this.btnPeekPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPeekPassword.FlatAppearance.BorderSize = 0;
             this.btnPeekPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeekPassword.Location = new System.Drawing.Point(1075, 570);
+            this.btnPeekPassword.Image = global::C_WithDatabase.Properties.Resources.look;
+            this.btnPeekPassword.Location = new System.Drawing.Point(1106, 570);
             this.btnPeekPassword.Name = "btnPeekPassword";
             this.btnPeekPassword.Size = new System.Drawing.Size(39, 34);
             this.btnPeekPassword.TabIndex = 21;
             this.btnPeekPassword.UseVisualStyleBackColor = false;
+            this.btnPeekPassword.Click += new System.EventHandler(this.btnPeekPassword_Click);
             // 
             // pnlLoginForm
             // 
+            this.pnlLoginForm.Controls.Add(this.btnPeekPassword);
             this.pnlLoginForm.Controls.Add(this.panel1);
             this.pnlLoginForm.ForeColor = System.Drawing.Color.Transparent;
             this.pnlLoginForm.Location = new System.Drawing.Point(0, 0);
@@ -145,6 +148,15 @@
             this.pnlLoginForm.Name = "pnlLoginForm";
             this.pnlLoginForm.Size = new System.Drawing.Size(1920, 1080);
             this.pnlLoginForm.TabIndex = 22;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnShutdown);
+            this.panel1.Controls.Add(this.btnRestart);
+            this.panel1.Location = new System.Drawing.Point(1713, 872);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(195, 142);
+            this.panel1.TabIndex = 2;
             // 
             // btnShutdown
             // 
@@ -184,15 +196,6 @@
             this.btnRestart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRestart.UseVisualStyleBackColor = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnShutdown);
-            this.panel1.Controls.Add(this.btnRestart);
-            this.panel1.Location = new System.Drawing.Point(1713, 872);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(195, 142);
-            this.panel1.TabIndex = 2;
-            // 
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.SystemColors.Highlight;
@@ -219,7 +222,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1061);
-            this.Controls.Add(this.btnPeekPassword);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rememberMe);
