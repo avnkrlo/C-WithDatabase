@@ -25,6 +25,7 @@ namespace C_WithDatabase
             loginForm.Show();
         }
 
+        /*
         private void age_datepicker_ValueChanged(object sender, EventArgs e)
         {
             DateTime time_start = Convert.ToDateTime(age_datepicker.Value);
@@ -157,5 +158,6 @@ namespace C_WithDatabase
                 return false;
             }
         }
+        */
     }
 }

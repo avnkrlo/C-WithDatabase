@@ -106,7 +106,6 @@ namespace C_WithDatabase
 
                     panelHome.Width = sidebar.Width;
                     panelCalendar.Width = sidebar.Width;
-                    panelAddUser.Width = sidebar.Width;
                     panelAccountSettings.Width = sidebar.Width;
                     menuContainer.Width = sidebar.Width;
                 }
@@ -121,7 +120,6 @@ namespace C_WithDatabase
 
                     panelHome.Width = sidebar.Width;
                     panelCalendar.Width = sidebar.Width;
-                    panelAddUser.Width = sidebar.Width;
                     panelAccountSettings.Width = sidebar.Width;
                     menuContainer.Width = sidebar.Width;
                 }

@@ -55,7 +55,7 @@
             this.txtUsername.Location = new System.Drawing.Point(879, 532);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(221, 33);
+            this.txtUsername.Size = new System.Drawing.Size(247, 33);
             this.txtUsername.TabIndex = 13;
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
@@ -67,7 +67,7 @@
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(221, 33);
+            this.txtPassword.Size = new System.Drawing.Size(202, 33);
             this.txtPassword.TabIndex = 14;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
@@ -129,7 +129,7 @@
             this.btnPeekPassword.FlatAppearance.BorderSize = 0;
             this.btnPeekPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeekPassword.Image = global::C_WithDatabase.Properties.Resources.look;
-            this.btnPeekPassword.Location = new System.Drawing.Point(1106, 570);
+            this.btnPeekPassword.Location = new System.Drawing.Point(1087, 571);
             this.btnPeekPassword.Name = "btnPeekPassword";
             this.btnPeekPassword.Size = new System.Drawing.Size(39, 34);
             this.btnPeekPassword.TabIndex = 21;
@@ -210,7 +210,7 @@
             this.loginButton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.loginButton.Location = new System.Drawing.Point(841, 636);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(228, 35);
+            this.loginButton.Size = new System.Drawing.Size(304, 35);
             this.loginButton.TabIndex = 11;
             this.loginButton.Text = "LOGIN";
             this.loginButton.TextColor = System.Drawing.SystemColors.HighlightText;

@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssetForm));
             this.pnlAssetForm = new System.Windows.Forms.Panel();
-            this.pnlAssetFilter = new System.Windows.Forms.Panel();
-            this.lblFilter = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dgAssetTable = new System.Windows.Forms.DataGridView();
             this.pnlAddUser = new System.Windows.Forms.Panel();
+            this.pnlAssetFilter = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblFilter = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlAssetForm.SuspendLayout();
-            this.pnlAssetFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAssetTable)).BeginInit();
             this.pnlAddUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnlAssetFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAssetForm
             // 
-            this.pnlAssetForm.Controls.Add(this.dataGridView1);
+            this.pnlAssetForm.Controls.Add(this.dgAssetTable);
             this.pnlAssetForm.Controls.Add(this.pnlAddUser);
             this.pnlAssetForm.Controls.Add(this.pnlAssetFilter);
             this.pnlAssetForm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -58,17 +58,66 @@
             this.pnlAssetForm.Size = new System.Drawing.Size(1200, 692);
             this.pnlAssetForm.TabIndex = 0;
             // 
+            // dgAssetTable
+            // 
+            this.dgAssetTable.AllowUserToAddRows = false;
+            this.dgAssetTable.AllowUserToDeleteRows = false;
+            this.dgAssetTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgAssetTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgAssetTable.BackgroundColor = System.Drawing.Color.White;
+            this.dgAssetTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgAssetTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgAssetTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAssetTable.Location = new System.Drawing.Point(37, 149);
+            this.dgAssetTable.Margin = new System.Windows.Forms.Padding(12);
+            this.dgAssetTable.Name = "dgAssetTable";
+            this.dgAssetTable.ReadOnly = true;
+            this.dgAssetTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgAssetTable.RowHeadersVisible = false;
+            this.dgAssetTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgAssetTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgAssetTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgAssetTable.Size = new System.Drawing.Size(1127, 531);
+            this.dgAssetTable.TabIndex = 2;
+            // 
+            // pnlAddUser
+            // 
+            this.pnlAddUser.Controls.Add(this.button2);
+            this.pnlAddUser.Location = new System.Drawing.Point(37, 89);
+            this.pnlAddUser.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAddUser.Name = "pnlAddUser";
+            this.pnlAddUser.Size = new System.Drawing.Size(1127, 48);
+            this.pnlAddUser.TabIndex = 1;
+            // 
             // pnlAssetFilter
             // 
             this.pnlAssetFilter.Controls.Add(this.button1);
             this.pnlAssetFilter.Controls.Add(this.comboBox2);
             this.pnlAssetFilter.Controls.Add(this.comboBox1);
             this.pnlAssetFilter.Controls.Add(this.lblFilter);
-            this.pnlAssetFilter.Location = new System.Drawing.Point(28, 18);
+            this.pnlAssetFilter.Location = new System.Drawing.Point(37, 18);
             this.pnlAssetFilter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAssetFilter.Name = "pnlAssetFilter";
-            this.pnlAssetFilter.Size = new System.Drawing.Size(1107, 55);
+            this.pnlAssetFilter.Size = new System.Drawing.Size(1127, 55);
             this.pnlAssetFilter.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(349, 16);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(352, 28);
+            this.comboBox2.TabIndex = 34;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(111, 16);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(222, 28);
+            this.comboBox1.TabIndex = 33;
             // 
             // lblFilter
             // 
@@ -81,71 +130,33 @@
             this.lblFilter.Text = "PROFILE";
             this.lblFilter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 16);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 28);
-            this.comboBox1.TabIndex = 33;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(349, 16);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(352, 28);
-            this.comboBox2.TabIndex = 34;
-            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1558, 3);
+            this.button1.Location = new System.Drawing.Point(827, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(5);
-            this.button1.Size = new System.Drawing.Size(155, 49);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "        FILTER";
+            this.button1.Padding = new System.Windows.Forms.Padding(10);
+            this.button1.Size = new System.Drawing.Size(189, 48);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "FILTER";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pnlAddUser
-            // 
-            this.pnlAddUser.Controls.Add(this.button2);
-            this.pnlAddUser.Location = new System.Drawing.Point(28, 96);
-            this.pnlAddUser.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlAddUser.Name = "pnlAddUser";
-            this.pnlAddUser.Size = new System.Drawing.Size(1107, 55);
-            this.pnlAddUser.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1558, 3);
+            this.button2.Location = new System.Drawing.Point(827, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(5);
-            this.button2.Size = new System.Drawing.Size(155, 49);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "        ADD USER";
+            this.button2.Padding = new System.Windows.Forms.Padding(10);
+            this.button2.Size = new System.Drawing.Size(189, 48);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "    ADD ASSET";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 171);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1107, 493);
-            this.dataGridView1.TabIndex = 2;
             // 
             // AssetForm
             // 
@@ -160,9 +171,9 @@
             this.Text = "AssetForm";
             this.Load += new System.EventHandler(this.AssetForm_Load);
             this.pnlAssetForm.ResumeLayout(false);
-            this.pnlAssetFilter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgAssetTable)).EndInit();
             this.pnlAddUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnlAssetFilter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -173,10 +184,10 @@
         private System.Windows.Forms.Panel pnlAssetFilter;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblFilter;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel pnlAddUser;
+        private System.Windows.Forms.DataGridView dgAssetTable;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
