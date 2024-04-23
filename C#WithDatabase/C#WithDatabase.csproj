@@ -199,11 +199,23 @@
     <Compile Include="CustomButtons\PrimaryButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Form Modals\add_departments_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Modals\add_departments_modal.Designer.cs">
+      <DependentUpon>add_departments_modal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form Modals\add_users_modal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form Modals\add_users_modal.Designer.cs">
       <DependentUpon>add_users_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Modals\batchupdate_pemissions_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Modals\batchupdate_pemissions_modal.Designer.cs">
+      <DependentUpon>batchupdate_pemissions_modal.cs</DependentUpon>
     </Compile>
     <Compile Include="Sidebar Navigation\ActivityForm.cs">
       <SubType>Form</SubType>
@@ -298,8 +310,14 @@
     <Compile Include="Sidebar Navigation\UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form Modals\add_departments_modal.resx">
+      <DependentUpon>add_departments_modal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form Modals\add_users_modal.resx">
       <DependentUpon>add_users_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Modals\batchupdate_pemissions_modal.resx">
+      <DependentUpon>batchupdate_pemissions_modal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar Navigation\ActivityForm.resx">
       <DependentUpon>ActivityForm.cs</DependentUpon>
