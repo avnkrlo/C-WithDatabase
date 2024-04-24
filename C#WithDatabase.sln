@@ -1,17 +1,17 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C#WithDatabase", "C#WithDatabase\C#WithDatabase.csproj", "{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C#WithDatabase", "C#WithDatabase\C#WithDatabase.csproj", "{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{4CEE964D-41FD-4264-9E57-0694E111A88A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{4CEE964D-41FD-4264-9E57-0694E111A88A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{E9405ADF-E73C-40F9-B6CF-F8CF293DE311}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{E9405ADF-E73C-40F9-B6CF-F8CF293DE311}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReports", "ExcelReports\ExcelReports.csproj", "{89E609FB-31C8-4B20-A1BD-E65F72766877}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelReports", "ExcelReports\ExcelReports.csproj", "{89E609FB-31C8-4B20-A1BD-E65F72766877}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
