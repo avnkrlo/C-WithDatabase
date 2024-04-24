@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C_WithDatabase.Sidebar_Navigation
+namespace C_WithDatabase.Form_Modals
 {
-    public partial class AssetForm : Form
+    public partial class add_role_modal : Form
     {
-        public AssetForm()
+        public add_role_modal()
         {
             InitializeComponent();
         }
 
-        private void AssetForm_Load(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            this.ControlBox = false;
+
         }
-        
     }
 }

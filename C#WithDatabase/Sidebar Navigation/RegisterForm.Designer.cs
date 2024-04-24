@@ -52,10 +52,10 @@
             this.panelRegisterForm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelRegisterForm.Location = new System.Drawing.Point(-1, 0);
             this.panelRegisterForm.Margin = new System.Windows.Forms.Padding(0);
-            this.panelRegisterForm.MaximumSize = new System.Drawing.Size(1200, 692);
-            this.panelRegisterForm.MinimumSize = new System.Drawing.Size(1200, 692);
+            this.panelRegisterForm.MaximumSize = new System.Drawing.Size(1200, 900);
+            this.panelRegisterForm.MinimumSize = new System.Drawing.Size(1200, 900);
             this.panelRegisterForm.Name = "panelRegisterForm";
-            this.panelRegisterForm.Size = new System.Drawing.Size(1200, 692);
+            this.panelRegisterForm.Size = new System.Drawing.Size(1200, 900);
             this.panelRegisterForm.TabIndex = 1;
             // 
             // dgUsersTable
@@ -64,11 +64,11 @@
             this.dgUsersTable.AllowUserToDeleteRows = false;
             this.dgUsersTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgUsersTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgUsersTable.BackgroundColor = System.Drawing.Color.White;
+            this.dgUsersTable.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgUsersTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgUsersTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgUsersTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUsersTable.Location = new System.Drawing.Point(37, 149);
+            this.dgUsersTable.Location = new System.Drawing.Point(37, 141);
             this.dgUsersTable.Margin = new System.Windows.Forms.Padding(12);
             this.dgUsersTable.Name = "dgUsersTable";
             this.dgUsersTable.ReadOnly = true;
@@ -77,16 +77,16 @@
             this.dgUsersTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgUsersTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgUsersTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgUsersTable.Size = new System.Drawing.Size(1127, 531);
+            this.dgUsersTable.Size = new System.Drawing.Size(1143, 738);
             this.dgUsersTable.TabIndex = 2;
             // 
             // pnlAddUser
             // 
             this.pnlAddUser.Controls.Add(this.btnAddUser);
-            this.pnlAddUser.Location = new System.Drawing.Point(37, 89);
+            this.pnlAddUser.Location = new System.Drawing.Point(37, 79);
             this.pnlAddUser.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAddUser.Name = "pnlAddUser";
-            this.pnlAddUser.Size = new System.Drawing.Size(1127, 48);
+            this.pnlAddUser.Size = new System.Drawing.Size(1144, 50);
             this.pnlAddUser.TabIndex = 1;
             // 
             // btnAddUser
@@ -105,14 +105,15 @@
             // 
             // pnlAssetFilter
             // 
+            this.pnlAssetFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlAssetFilter.Controls.Add(this.btnFilter);
             this.pnlAssetFilter.Controls.Add(this.cbKeyword);
             this.pnlAssetFilter.Controls.Add(this.cbFilter);
             this.pnlAssetFilter.Controls.Add(this.lblFilter);
-            this.pnlAssetFilter.Location = new System.Drawing.Point(37, 18);
+            this.pnlAssetFilter.Location = new System.Drawing.Point(37, 9);
             this.pnlAssetFilter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAssetFilter.Name = "pnlAssetFilter";
-            this.pnlAssetFilter.Size = new System.Drawing.Size(1127, 55);
+            this.pnlAssetFilter.Size = new System.Drawing.Size(1143, 56);
             this.pnlAssetFilter.TabIndex = 0;
             // 
             // btnFilter
@@ -120,7 +121,7 @@
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
             this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFilter.Location = new System.Drawing.Point(827, 4);
+            this.btnFilter.Location = new System.Drawing.Point(826, 3);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(0);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Padding = new System.Windows.Forms.Padding(10);
@@ -164,14 +165,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(1200, 900);
             this.Controls.Add(this.panelRegisterForm);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.MaximumSize = new System.Drawing.Size(1200, 692);
-            this.MinimumSize = new System.Drawing.Size(1200, 692);
+            this.MaximumSize = new System.Drawing.Size(1200, 900);
+            this.MinimumSize = new System.Drawing.Size(1200, 900);
             this.Name = "RegisterForm";
             this.Text = "EMPLOYEE REGISTRATION";
             this.Load += new System.EventHandler(this.RegisterForm_Load);

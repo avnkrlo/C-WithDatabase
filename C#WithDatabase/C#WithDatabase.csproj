@@ -205,6 +205,18 @@
     <Compile Include="Form Modals\add_departments_modal.Designer.cs">
       <DependentUpon>add_departments_modal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form Modals\add_role_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Modals\add_role_modal.Designer.cs">
+      <DependentUpon>add_role_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Modals\add_sites_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Modals\add_sites_modal.Designer.cs">
+      <DependentUpon>add_sites_modal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form Modals\add_users_modal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +228,12 @@
     </Compile>
     <Compile Include="Form Modals\batchupdate_pemissions_modal.Designer.cs">
       <DependentUpon>batchupdate_pemissions_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Modals\system_override_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Modals\system_override_modal.Designer.cs">
+      <DependentUpon>system_override_modal.cs</DependentUpon>
     </Compile>
     <Compile Include="Sidebar Navigation\ActivityForm.cs">
       <SubType>Form</SubType>
@@ -304,20 +322,23 @@
       <DependentUpon>TimesheetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sidebar Navigation\mdiProperties.cs" />
-    <Compile Include="Sidebar Navigation\UsersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sidebar Navigation\UsersForm.Designer.cs">
-      <DependentUpon>UsersForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form Modals\add_departments_modal.resx">
       <DependentUpon>add_departments_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Modals\add_role_modal.resx">
+      <DependentUpon>add_role_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Modals\add_sites_modal.resx">
+      <DependentUpon>add_sites_modal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Modals\add_users_modal.resx">
       <DependentUpon>add_users_modal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Modals\batchupdate_pemissions_modal.resx">
       <DependentUpon>batchupdate_pemissions_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Modals\system_override_modal.resx">
+      <DependentUpon>system_override_modal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar Navigation\ActivityForm.resx">
       <DependentUpon>ActivityForm.cs</DependentUpon>
@@ -362,9 +383,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar Navigation\TimesheetForm.resx">
       <DependentUpon>TimesheetForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sidebar Navigation\UsersForm.resx">
-      <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="crudwithdatabase.xsc">
       <DependentUpon>crudwithdatabase.xsd</DependentUpon>

@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C_WithDatabase.Sidebar_Navigation
+namespace C_WithDatabase.Form_Modals
 {
-    public partial class AssetForm : Form
+    public partial class system_override_modal : Form
     {
-        public AssetForm()
+        public system_override_modal()
         {
             InitializeComponent();
         }
-
-        private void AssetForm_Load(object sender, EventArgs e)
-        {
-            this.ControlBox = false;
-        }
-        
     }
 }

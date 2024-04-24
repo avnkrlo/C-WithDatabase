@@ -46,10 +46,10 @@
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 65);
+            this.panel1.Size = new System.Drawing.Size(492, 75);
             this.panel1.TabIndex = 1;
             // 
             // iconPictureBox1
@@ -59,11 +59,12 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 49;
+            this.iconPictureBox1.IconSize = 58;
             this.iconPictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("iconPictureBox1.InitialImage")));
-            this.iconPictureBox1.Location = new System.Drawing.Point(24, 7);
+            this.iconPictureBox1.Location = new System.Drawing.Point(27, 8);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox1.Size = new System.Drawing.Size(58, 58);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox1.TabIndex = 1;
             this.iconPictureBox1.TabStop = false;
@@ -73,10 +74,10 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(371, 7);
+            this.btnClose.Location = new System.Drawing.Point(417, 8);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(47, 49);
+            this.btnClose.Size = new System.Drawing.Size(53, 58);
             this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
@@ -84,10 +85,10 @@
             // 
             this.labelTarget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTarget.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTarget.Location = new System.Drawing.Point(20, 81);
+            this.labelTarget.Location = new System.Drawing.Point(22, 95);
             this.labelTarget.Margin = new System.Windows.Forms.Padding(0);
             this.labelTarget.Name = "labelTarget";
-            this.labelTarget.Size = new System.Drawing.Size(157, 33);
+            this.labelTarget.Size = new System.Drawing.Size(177, 39);
             this.labelTarget.TabIndex = 3;
             this.labelTarget.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -95,27 +96,30 @@
             // 
             this.cbFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbFilter.FormattingEnabled = true;
-            this.cbFilter.Location = new System.Drawing.Point(50, 127);
+            this.cbFilter.Location = new System.Drawing.Point(56, 149);
+            this.cbFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFilter.Name = "cbFilter";
-            this.cbFilter.Size = new System.Drawing.Size(321, 25);
+            this.cbFilter.Size = new System.Drawing.Size(361, 28);
             this.cbFilter.TabIndex = 4;
             // 
             // cbKeyword
             // 
             this.cbKeyword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbKeyword.FormattingEnabled = true;
-            this.cbKeyword.Location = new System.Drawing.Point(50, 171);
+            this.cbKeyword.Location = new System.Drawing.Point(56, 201);
+            this.cbKeyword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbKeyword.Name = "cbKeyword";
-            this.cbKeyword.Size = new System.Drawing.Size(321, 25);
+            this.cbKeyword.Size = new System.Drawing.Size(361, 28);
             this.cbKeyword.TabIndex = 5;
             // 
             // flpSites
             // 
             this.flpSites.BackColor = System.Drawing.Color.Transparent;
-            this.flpSites.Location = new System.Drawing.Point(24, 215);
+            this.flpSites.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpSites.Location = new System.Drawing.Point(27, 253);
             this.flpSites.Margin = new System.Windows.Forms.Padding(0);
             this.flpSites.Name = "flpSites";
-            this.flpSites.Size = new System.Drawing.Size(361, 274);
+            this.flpSites.Size = new System.Drawing.Size(406, 322);
             this.flpSites.TabIndex = 6;
             // 
             // btnSave
@@ -123,28 +127,28 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(255, 504);
+            this.btnSave.Location = new System.Drawing.Point(287, 593);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(130, 39);
+            this.btnSave.Size = new System.Drawing.Size(146, 46);
             this.btnSave.TabIndex = 20;
             this.btnSave.Text = "   SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // batchupdate_pemissions_modal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 588);
+            this.ClientSize = new System.Drawing.Size(492, 692);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.flpSites);
             this.Controls.Add(this.cbKeyword);
             this.Controls.Add(this.cbFilter);
             this.Controls.Add(this.labelTarget);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "batchupdate_pemissions_modal";
             this.Text = "batchupdate_pemissions_modal";
             this.panel1.ResumeLayout(false);

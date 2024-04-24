@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C_WithDatabase.Sidebar_Navigation
+namespace C_WithDatabase.Form_Modals
 {
-    public partial class UsersForm : Form
+    public partial class add_sites_modal : Form
     {
-        public UsersForm()
+        public add_sites_modal()
         {
             InitializeComponent();
-        }
-
-        private void UsersForm_Load(object sender, EventArgs e)
-        {
-            this.ControlBox = false;
         }
     }
 }

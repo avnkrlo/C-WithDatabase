@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmentsForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlAddUser = new System.Windows.Forms.Panel();
+            this.dgDepartmentsTable = new System.Windows.Forms.DataGridView();
             this.pnlAssetFilter = new System.Windows.Forms.Panel();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.lblDepartment = new System.Windows.Forms.Label();
-            this.dgDepartmentsTable = new System.Windows.Forms.DataGridView();
-            this.btnFilter = new System.Windows.Forms.Button();
+            this.pnlAddUser = new System.Windows.Forms.Panel();
             this.btnAddDepartment = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.pnlAddUser.SuspendLayout();
-            this.pnlAssetFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDepartmentsTable)).BeginInit();
+            this.pnlAssetFilter.SuspendLayout();
+            this.pnlAddUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,14 +55,27 @@
             this.panel1.Size = new System.Drawing.Size(1800, 1062);
             this.panel1.TabIndex = 0;
             // 
-            // pnlAddUser
+            // dgDepartmentsTable
             // 
-            this.pnlAddUser.Controls.Add(this.btnAddDepartment);
-            this.pnlAddUser.Location = new System.Drawing.Point(40, 96);
-            this.pnlAddUser.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlAddUser.Name = "pnlAddUser";
-            this.pnlAddUser.Size = new System.Drawing.Size(1127, 48);
-            this.pnlAddUser.TabIndex = 2;
+            this.dgDepartmentsTable.AllowUserToAddRows = false;
+            this.dgDepartmentsTable.AllowUserToDeleteRows = false;
+            this.dgDepartmentsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgDepartmentsTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgDepartmentsTable.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgDepartmentsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgDepartmentsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgDepartmentsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDepartmentsTable.Location = new System.Drawing.Point(40, 134);
+            this.dgDepartmentsTable.Margin = new System.Windows.Forms.Padding(12);
+            this.dgDepartmentsTable.Name = "dgDepartmentsTable";
+            this.dgDepartmentsTable.ReadOnly = true;
+            this.dgDepartmentsTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgDepartmentsTable.RowHeadersVisible = false;
+            this.dgDepartmentsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgDepartmentsTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgDepartmentsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgDepartmentsTable.Size = new System.Drawing.Size(1127, 537);
+            this.dgDepartmentsTable.TabIndex = 38;
             // 
             // pnlAssetFilter
             // 
@@ -70,11 +83,25 @@
             this.pnlAssetFilter.Controls.Add(this.btnFilter);
             this.pnlAssetFilter.Controls.Add(this.cbDepartment);
             this.pnlAssetFilter.Controls.Add(this.lblDepartment);
-            this.pnlAssetFilter.Location = new System.Drawing.Point(40, 21);
+            this.pnlAssetFilter.Location = new System.Drawing.Point(40, 9);
             this.pnlAssetFilter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAssetFilter.Name = "pnlAssetFilter";
             this.pnlAssetFilter.Size = new System.Drawing.Size(1127, 55);
             this.pnlAssetFilter.TabIndex = 37;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
+            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilter.Location = new System.Drawing.Point(873, 3);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Padding = new System.Windows.Forms.Padding(10);
+            this.btnFilter.Size = new System.Drawing.Size(189, 48);
+            this.btnFilter.TabIndex = 35;
+            this.btnFilter.Text = "FILTER";
+            this.btnFilter.UseVisualStyleBackColor = true;
             // 
             // cbDepartment
             // 
@@ -97,41 +124,14 @@
             this.lblDepartment.Text = "DEPARTMENT";
             this.lblDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dgDepartmentsTable
+            // pnlAddUser
             // 
-            this.dgDepartmentsTable.AllowUserToAddRows = false;
-            this.dgDepartmentsTable.AllowUserToDeleteRows = false;
-            this.dgDepartmentsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgDepartmentsTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgDepartmentsTable.BackgroundColor = System.Drawing.Color.White;
-            this.dgDepartmentsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgDepartmentsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgDepartmentsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDepartmentsTable.Location = new System.Drawing.Point(40, 156);
-            this.dgDepartmentsTable.Margin = new System.Windows.Forms.Padding(12);
-            this.dgDepartmentsTable.Name = "dgDepartmentsTable";
-            this.dgDepartmentsTable.ReadOnly = true;
-            this.dgDepartmentsTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgDepartmentsTable.RowHeadersVisible = false;
-            this.dgDepartmentsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgDepartmentsTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgDepartmentsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgDepartmentsTable.Size = new System.Drawing.Size(1127, 515);
-            this.dgDepartmentsTable.TabIndex = 38;
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
-            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFilter.Location = new System.Drawing.Point(873, 3);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(0);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Padding = new System.Windows.Forms.Padding(10);
-            this.btnFilter.Size = new System.Drawing.Size(189, 48);
-            this.btnFilter.TabIndex = 35;
-            this.btnFilter.Text = "FILTER";
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.pnlAddUser.Controls.Add(this.btnAddDepartment);
+            this.pnlAddUser.Location = new System.Drawing.Point(40, 74);
+            this.pnlAddUser.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAddUser.Name = "pnlAddUser";
+            this.pnlAddUser.Size = new System.Drawing.Size(1127, 56);
+            this.pnlAddUser.TabIndex = 2;
             // 
             // btnAddDepartment
             // 
@@ -139,7 +139,7 @@
             this.btnAddDepartment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDepartment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddDepartment.Image")));
             this.btnAddDepartment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddDepartment.Location = new System.Drawing.Point(874, 0);
+            this.btnAddDepartment.Location = new System.Drawing.Point(874, 4);
             this.btnAddDepartment.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddDepartment.Name = "btnAddDepartment";
             this.btnAddDepartment.Padding = new System.Windows.Forms.Padding(10);
@@ -156,16 +156,16 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(1200, 692);
             this.MinimumSize = new System.Drawing.Size(1200, 692);
             this.Name = "DepartmentsForm";
             this.Text = "DepartmentsForm";
             this.Load += new System.EventHandler(this.DepartmentsForm_Load);
             this.panel1.ResumeLayout(false);
-            this.pnlAddUser.ResumeLayout(false);
-            this.pnlAssetFilter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgDepartmentsTable)).EndInit();
+            this.pnlAssetFilter.ResumeLayout(false);
+            this.pnlAddUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

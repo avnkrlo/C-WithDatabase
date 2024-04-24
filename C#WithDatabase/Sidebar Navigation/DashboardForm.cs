@@ -17,7 +17,6 @@ namespace C_WithDatabase
         AssetForm Asset;
         DepartmentsForm Departments;
         RolesForm Roles;
-        UsersForm Users;
         SitesForm Sites;
         PermissionsForm Permissions;
 
@@ -215,27 +214,6 @@ namespace C_WithDatabase
             Override = null;
         }
 
-        private void btnRegisterUser_Click(object sender, EventArgs e)
-        {
-            if (Register == null)
-            {
-                Register = new RegisterForm();
-                Register.FormClosed += RegisterForm_FormClosed;
-                Register.MdiParent = this;
-                Register.Dock = DockStyle.Fill;
-                Register.Show();
-            }
-            else
-            {
-                Register.Activate();
-            }
-        }
-
-        private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Register = null;
-        }
-
         private void btnAS_Click(object sender, EventArgs e)
         {
             if (AccountSettings == null)
@@ -321,22 +299,22 @@ namespace C_WithDatabase
 
         private void btnUsersMenu_Click(object sender, EventArgs e)
         {
-            if (Users == null)
+            if (Register == null)
             {
-                Users = new UsersForm();
-                Users.FormClosed += UsersForm_FormClosed;
-                Users.MdiParent = this;
-                Users.Dock = DockStyle.Fill;
-                Users.Show();
+                Register = new RegisterForm();
+                Register.FormClosed += UsersForm_FormClosed;
+                Register.MdiParent = this;
+                Register.Dock = DockStyle.Fill;
+                Register.Show();
             } else
             {
-                Users.Activate();
+                Register.Activate();
             }
         }
 
         private void UsersForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Users = null;
+            Register = null;
         }
 
         private void btnSitesMenu_Click(object sender, EventArgs e)
