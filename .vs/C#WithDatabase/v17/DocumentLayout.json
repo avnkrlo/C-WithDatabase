@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}|DataAccess\\DataAccess.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\dataaccess\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\c#withdatabase\\crudwithdatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\crudwithdatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\c#withdatabase\\c#withdatabase.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\c#withdatabase.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\c#withdatabase\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\c#withdatabase\\form modals\\add_users_modal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\form modals\\add_users_modal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\c#withdatabase\\sidebar navigation\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\sidebar navigation\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\c#withdatabase\\sidebar navigation\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\sidebar navigation\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\sidebar navigation\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\sidebar navigation\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +46,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\DataAccess\\DatabaseConnection.cs",
+              "RelativeDocumentMoniker": "DataAccess\\DatabaseConnection.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\DataAccess\\DatabaseConnection.cs",
+              "RelativeToolTip": "DataAccess\\DatabaseConnection.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAIwEAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:02:42.611Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -58,32 +99,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\App.config",
+              "RelativeDocumentMoniker": "C#WithDatabase\\App.config",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\App.config",
+              "RelativeToolTip": "C#WithDatabase\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-25T01:48:16.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "add_users_modal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Form Modals\\add_users_modal.cs",
+              "RelativeDocumentMoniker": "C#WithDatabase\\Form Modals\\add_users_modal.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Form Modals\\add_users_modal.cs [Design]",
+              "RelativeToolTip": "C#WithDatabase\\Form Modals\\add_users_modal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T01:23:03.937Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs",
+              "RelativeDocumentMoniker": "C#WithDatabase\\Login Authentication\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs",
+              "RelativeToolTip": "C#WithDatabase\\Login Authentication\\LoginForm.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAcwBQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T00:41:46.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DashboardForm.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
+              "RelativeToolTip": "C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T00:41:37.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs [Design]",
+              "RelativeToolTip": "C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T00:41:33.881Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "C#WithDatabase\\Sidebar Navigation\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\RegisterForm.cs [Design]",
+              "RelativeToolTip": "C#WithDatabase\\Sidebar Navigation\\RegisterForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T08:21:36.667Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs",
+              "RelativeDocumentMoniker": "C#WithDatabase\\Login Authentication\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs [Design]",
+              "RelativeToolTip": "C#WithDatabase\\Login Authentication\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T08:21:29.574Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "crudwithdatabase.Designer.cs",
               "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\crudwithdatabase.Designer.cs",
               "RelativeDocumentMoniker": "C#WithDatabase\\crudwithdatabase.Designer.cs",
               "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\crudwithdatabase.Designer.cs",
               "RelativeToolTip": "C#WithDatabase\\crudwithdatabase.Designer.cs",
-              "ViewState": "AQIAAFoFAAAAAAAAAAAkwGsFAAAvAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAnwBkAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T07:54:42.836Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "C#WithDatabase",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\C#WithDatabase.csproj",
-              "RelativeDocumentMoniker": "C#WithDatabase\\C#WithDatabase.csproj",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\C#WithDatabase.csproj",
-              "RelativeToolTip": "C#WithDatabase\\C#WithDatabase.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-24T07:53:30.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:12:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             }
           ]
         }

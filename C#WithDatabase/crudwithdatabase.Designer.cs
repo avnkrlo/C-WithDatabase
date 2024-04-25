@@ -10,9 +10,10 @@
 
 #pragma warning disable 1591
 
-namespace C_WithDatabase {
-    
-    
+namespace C_WithDatabase
+{
+
+
     /// <summary>
     ///Represents a strongly typed in-memory cache of data.
     ///</summary>
@@ -1342,9 +1343,10 @@ namespace C_WithDatabase {
         }
     }
 }
-namespace C_WithDatabase.crudwithdatabaseTableAdapters {
-    
-    
+namespace C_WithDatabase.crudwithdatabaseTableAdapters
+{
+
+
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
     ///</summary>
