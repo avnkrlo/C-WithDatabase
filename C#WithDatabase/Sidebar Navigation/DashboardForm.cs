@@ -4,6 +4,11 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using Timer = System.Windows.Forms.Timer;
+using System.Globalization;
+using System.Data;
+using System.Windows.Automation;
+using System.Runtime.InteropServices;
 
 namespace C_WithDatabase
 {
@@ -20,6 +25,10 @@ namespace C_WithDatabase
         RolesForm Roles;
         SitesForm Sites;
         PermissionsForm Permissions;
+
+        //Timer
+        public Timer idleWatcher;
+        public Timer breakTimer;
 
         public DashboardForm()
         {

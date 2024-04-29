@@ -152,7 +152,7 @@ namespace DataAccess
             return arAssets;
         }
 
-        public ArrayList getdepartmentlist()
+        public ArrayList getDepartmentList()
         {
             ArrayList arAssets = new ArrayList();
 
