@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Data;
 using System.Windows.Automation;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace C_WithDatabase
 {
@@ -365,6 +366,36 @@ namespace C_WithDatabase
         private void PermissionsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Permissions = null;
+        }
+
+        public void IdleWatcher()
+        {
+            Debug.WriteLine("Timer:\tStart \tTimestamp: \t{0}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            idleWatcher = new Timer();
+
+            idleWatcher.Interval = (1 * 60 * 1000);
+            idleWatcher.Interval = (11 * 60 * 1000);
+            idleWatcher.Tick += IdleTimer_Tick;
+            idleWatcher.Start();
+        }
+
+        private void IdleTimer_Tick(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Timer:\tStop \tTimestamp: \t{0}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+
+            if (CheckUnauthorized())
+            {
+                SetStatus((int)Utilities.Status.UNAUTHORIZED);
+            }
+            else
+            {
+                SetStatus((int)Utilities.Status.IDLE);
+            }
+        }
+
+        private bool CheckUnauthorized()
+        {
+            throw new NotImplementedException();
         }
     }
 }
