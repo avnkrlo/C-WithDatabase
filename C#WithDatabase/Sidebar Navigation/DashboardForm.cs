@@ -10,11 +10,17 @@ using System.Data;
 using System.Windows.Automation;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using Common.Cache;
+using Domain;
 
 namespace C_WithDatabase
 {
     public partial class DashboardForm : Form
     {
+        UserModel userModel;
+        LogModel logModel;
+        ActivityModel activityModel;
+
         ASForm AccountSettings;
         HomeForm Home;
         TimesheetForm Timesheet;
@@ -31,6 +37,18 @@ namespace C_WithDatabase
         public Timer idleWatcher;
         public Timer breakTimer;
 
+        //Flags
+        public bool isInitialized = false;
+        public bool inBreak = false;
+        public bool inLunch = false;
+
+        public bool hasUnauthorized = false;
+
+        [System.Runtime.InteropServices.DllImport("Wtsapi32")]
+        private static extern int WTSRegisterSessionNotification(IntPtr hWnd, int THISSESS);
+
+        private const int NOTIFY_FOR_ALL_SESSIONS = 1;
+
         public DashboardForm()
         {
             InitializeComponent();
@@ -45,7 +63,52 @@ namespace C_WithDatabase
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
+            userModel = new UserModel();
+            logModel = new LogModel();
+            activityModel = new ActivityModel();
 
+            SetLanguage();
+            SetSidePanel();
+            sidebar.VerticalScroll.Visible = false;
+
+            GetUnauthorizedSites();
+
+            btnHome.PerformClick();
+
+            Utilities.ActiveScreen = (int)Utilities.Screens.MAIN;
+
+            WTSRegisterSessionNotification(this.Handle, NOTIFY_FOR_ALL_SESSIONS);
+
+            Utilities.ShiftDate = DateTime.Now;
+            Utilities.ActivityId = activityModel.CreateActivityMinutes(UserLogin.user_id, Utilities.ShiftDate.ToString("yyyy-MM-dd"), true);
+
+            Utilities.Break1 = (int)Utilities.BreakStatus.AVAILABLE;
+            Utilities.Lunch = (int)Utilities.BreakStatus.AVAILABLE;
+            Utilities.Break2 = (int)Utilities.BreakStatus.AVAILABLE;
+
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+
+            if (UserLogin.middle_name != "")
+                labelUsername.Text = textInfo.ToTitleCase(UserLogin.last_name) + ", " + textInfo.ToTitleCase(UserLogin.first_name) + " " + textInfo.ToTitleCase(UserLogin.middle_name.Substring(0, 1)) + ".";
+            else
+                labelUsername.Text = textInfo.ToTitleCase(UserLogin.last_name) + ", " + textInfo.ToTitleCase(UserLogin.first_name) + ".";
+
+            Home = (HomeForm)System.Windows.Forms.Application.OpenForms["HomeForm"];
+        }
+
+        private void GetUnauthorizedSites()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SetSidePanel()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SetLanguage()
+        {
+            throw new NotImplementedException();
         }
 
         bool menuExpand = false;
@@ -393,9 +456,133 @@ namespace C_WithDatabase
             }
         }
 
+        private void SetStatus(int status)
+        {
+            bool updateStatus = false;
+            bool isConnected = false;
+            bool onlineUpdate = false;
+            string idle_in = "";
+            string active_in = "";
+            string unauthorized_in = "";
+            string activity_in = "";
+            string activity_out = "";
+            TimeSpan TimeElapsed;
+            float time_elapsed = 0f;
+
+            string timeStamp = (DateTime.Now).ToString("yyyy-MM-dd HH:mm:ss");
+
+            if (idleWatcher != null)
+            {
+                idleWatcher.Dispose();
+            }
+
+            if (!CheckConnectivity())
+            {
+                Utilities.HasOfflineData = true;
+            }
+            else
+            {
+                isConnected = true;
+            }
+
+            switch (status)
+            {
+                case (int)Utilities.Status.IDLE:
+
+                    if (Utilities.CurrentStatus == (int)Utilities.Status.ACTIVE)
+                    {
+                        Utilities.IdleIn = Utilities.LastActive;
+                        idle_in = Utilities.LastActive.ToString("yyyy-MM-dd HH:mm:ss");
+                        Utilities.idleinnetstatus = isConnected;
+                        activityModel.RecordActivityIn(UserLogin.user_id, (int)Utilities.Activity_Type.IDLE, idle_in, Utilities.idleinnetstatus);
+
+                        activity_in = Utilities.ActiveIn.ToString("yyyy-MM-dd HH:mm:ss");
+                        activity_out = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        TimeElapsed = DateTime.Now.Subtract(Utilities.ActiveIn);
+                        time_elapsed = (float)TimeElapsed.TotalMinutes;
+                        Utilities.ActiveMins += time_elapsed;
+
+                        if (isConnected && Utilities.activeinnetstatus)
+                        {
+                            onlineUpdate = true;
+                        }
+
+                        activityModel.RecordActivityOut(UserLogin.user_id, (int)Utilities.Activity_Type.ACTIVE, activity_in, activity_out, time_elapsed, onlineUpdate);
+                        activityModel.RecordActivityMinutes(Utilities.ActivityId, UserLogin.user_id, Utilities.ShiftDate.ToString("yyyy-MM-dd"), (int)Utilities.Activity_Type.ACTIVE, Utilities.ActiveMins, onlineUpdate);
+
+                        Debug.WriteLine("Status: \tIdle \tTimestamp: {0}", timeStamp);
+                        updateStatus = true;
+                        panelStatus.BackColor = Color.Yellow;
+                        if (Home != null)
+                        {
+                            Home.labelStatus.Text = StringsResources.Idle.ToUpper();
+                            Home.labelStatus.BackColor = Color.Yellow;
+                            Home.labelIdleMins.Text = Math.Floor(Utilities.IdleMins).ToString("0.00");
+                            Home.labelActiveMins.Text = Math.Floor(Utilities.ActiveMins).ToString("0.00");
+                            Home.labelUnauthorizedMins.Text = Math.Floor(Utilities.UnauthorizedMins).ToString("0.00");
+                            Home.labelBreakMins.Text = Math.Floor(Utilities.BreakMins).ToString("0.00");
+                        }
+                        
+                    }
+                    break;
+
+                case (int)Utilities.Status.ACTIVE:
+
+                    if ((Utilities.CurrentStatus == (int)Utilities.Status.IDLE) ||
+                        (Utilities.CurrentStatus == (int)Utilities.Status.BREAK1 && !inBreak) ||
+                        (Utilities.CurrentStatus == (int)Utilities.Status.BREAK2 && !inBreak) ||
+                        (Utilities.CurrentStatus == (int)Utilities.Status.LUNCH && !inLunch) ||
+                        (Utilities.CurrentStatus == (int)Utilities.Status.OVER_BREAK && !inBreak && !inLunch) ||
+                        (Utilities.CurrentStatus == (int)Utilities.Status.UNAUTHORIZED && !hasUnauthorized))
+                    {
+                        Utilities.ActiveIn = DateTime.Now;
+                        active_in = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        Utilities.activeinnetstatus = isConnected;
+                        activityModel.RecordActivityIn(UserLogin.user_id, (int)Utilities.Activity_Type.ACTIVE, active_in, Utilities.activeinnetstatus);
+
+                        switch (Utilities.CurrentStatus)
+                        {
+                            case (int)Utilities.Status.IDLE:
+                            case (int)Utilities.Status.OVER_BREAK:
+                                if (isInitialized)
+                                {
+                                    activity_in = Utilities.IdleIn.ToString("yyyy-MM-dd HH:mm:ss");
+                                    activity_out = DateTime.Now.ToString("yyyy-MM-dd HH:mm:s")
+                                }
+                        }
+                    }
+
+
+            }
+        }
+
+        private bool CheckConnectivity()
+        {
+            bool result = false;
+
+            if (Utilities.CheckInternet())
+            {
+                if (userModel.CheckConnection())
+                {
+                    panelNetwork.BackColor = Color.Green;
+
+                }
+                else
+                {
+                    panelNetwork.BackColor = Color.Orange;
+                }
+            }
+            else
+            {
+                panelNetwork.BackColor= Color.Red;
+            }
+
+            return result;
+        }
+
         private bool CheckUnauthorized()
         {
             throw new NotImplementedException();
-        }
+        } 
     }
 }

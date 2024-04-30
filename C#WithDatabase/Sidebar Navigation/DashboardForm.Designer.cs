@@ -28,603 +28,620 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
-            this.panelSingleBorder = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.btnHam = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelHome = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelTM = new System.Windows.Forms.Panel();
-            this.btnReportMenu = new System.Windows.Forms.Button();
-            this.panelCalendar = new System.Windows.Forms.Panel();
-            this.btnMenuTimesheet = new System.Windows.Forms.Button();
-            this.btnMenuActivity = new System.Windows.Forms.Button();
-            this.btnMenuOverride = new System.Windows.Forms.Button();
-            this.panelAccountSettings = new System.Windows.Forms.Panel();
-            this.btnAS = new System.Windows.Forms.Button();
-            this.panelLogout = new System.Windows.Forms.Panel();
-            this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
-            this.menuTransition = new System.Windows.Forms.Timer(this.components);
-            this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.menuContainer2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAdminMenu = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAssetMenu = new System.Windows.Forms.Button();
-            this.btnDepartmentMenu = new System.Windows.Forms.Button();
-            this.btnRolesMenu = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnUsersMenu = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnSitesMenu = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnPermissionsMenu = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelTopbar = new System.Windows.Forms.FlowLayoutPanel();
-            this.menuTransition2 = new System.Windows.Forms.Timer(this.components);
-            this.panelSingleBorder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
-            this.panelHome.SuspendLayout();
-            this.menuContainer.SuspendLayout();
-            this.panelTM.SuspendLayout();
-            this.panelCalendar.SuspendLayout();
-            this.panelAccountSettings.SuspendLayout();
-            this.sidebar.SuspendLayout();
-            this.menuContainer2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panelTopbar.SuspendLayout();
-            this.SuspendLayout();
+            panelSingleBorder = new System.Windows.Forms.Panel();
+            btnLogout = new System.Windows.Forms.Button();
+            labelUsername = new System.Windows.Forms.Label();
+            btnHam = new System.Windows.Forms.PictureBox();
+            label1 = new System.Windows.Forms.Label();
+            panelHome = new System.Windows.Forms.Panel();
+            btnHome = new System.Windows.Forms.Button();
+            menuContainer = new System.Windows.Forms.FlowLayoutPanel();
+            panelTM = new System.Windows.Forms.Panel();
+            btnReportMenu = new System.Windows.Forms.Button();
+            panelCalendar = new System.Windows.Forms.Panel();
+            btnMenuTimesheet = new System.Windows.Forms.Button();
+            btnMenuActivity = new System.Windows.Forms.Button();
+            btnMenuOverride = new System.Windows.Forms.Button();
+            panelAccountSettings = new System.Windows.Forms.Panel();
+            btnAS = new System.Windows.Forms.Button();
+            panelLogout = new System.Windows.Forms.Panel();
+            sidebarTransition = new System.Windows.Forms.Timer(components);
+            menuTransition = new System.Windows.Forms.Timer(components);
+            sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            menuContainer2 = new System.Windows.Forms.FlowLayoutPanel();
+            panel1 = new System.Windows.Forms.Panel();
+            btnAdminMenu = new System.Windows.Forms.Button();
+            panel2 = new System.Windows.Forms.Panel();
+            btnAssetMenu = new System.Windows.Forms.Button();
+            btnDepartmentMenu = new System.Windows.Forms.Button();
+            btnRolesMenu = new System.Windows.Forms.Button();
+            panel3 = new System.Windows.Forms.Panel();
+            btnUsersMenu = new System.Windows.Forms.Button();
+            panel4 = new System.Windows.Forms.Panel();
+            btnSitesMenu = new System.Windows.Forms.Button();
+            panel5 = new System.Windows.Forms.Panel();
+            btnPermissionsMenu = new System.Windows.Forms.Button();
+            panelTopbar = new System.Windows.Forms.FlowLayoutPanel();
+            menuTransition2 = new System.Windows.Forms.Timer(components);
+            panelFooter = new System.Windows.Forms.Panel();
+            panelNetwork = new System.Windows.Forms.Panel();
+            panelStatus = new System.Windows.Forms.Panel();
+            label3 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            panelSingleBorder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnHam).BeginInit();
+            panelHome.SuspendLayout();
+            menuContainer.SuspendLayout();
+            panelTM.SuspendLayout();
+            panelCalendar.SuspendLayout();
+            panelAccountSettings.SuspendLayout();
+            sidebar.SuspendLayout();
+            menuContainer2.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panelTopbar.SuspendLayout();
+            panelFooter.SuspendLayout();
+            SuspendLayout();
             // 
             // panelSingleBorder
             // 
-            this.panelSingleBorder.Controls.Add(this.btnLogout);
-            this.panelSingleBorder.Controls.Add(this.lblUsername);
-            this.panelSingleBorder.Controls.Add(this.btnHam);
-            this.panelSingleBorder.Controls.Add(this.label1);
-            this.panelSingleBorder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSingleBorder.Location = new System.Drawing.Point(0, 0);
-            this.panelSingleBorder.Margin = new System.Windows.Forms.Padding(0);
-            this.panelSingleBorder.Name = "panelSingleBorder";
-            this.panelSingleBorder.Size = new System.Drawing.Size(1918, 44);
-            this.panelSingleBorder.TabIndex = 0;
+            panelSingleBorder.Controls.Add(btnLogout);
+            panelSingleBorder.Controls.Add(labelUsername);
+            panelSingleBorder.Controls.Add(btnHam);
+            panelSingleBorder.Controls.Add(label1);
+            panelSingleBorder.Dock = System.Windows.Forms.DockStyle.Top;
+            panelSingleBorder.Location = new System.Drawing.Point(0, 0);
+            panelSingleBorder.Margin = new System.Windows.Forms.Padding(0);
+            panelSingleBorder.Name = "panelSingleBorder";
+            panelSingleBorder.Size = new System.Drawing.Size(1918, 44);
+            panelSingleBorder.TabIndex = 0;
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.White;
-            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(1871, 4);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(10);
-            this.btnLogout.Size = new System.Drawing.Size(40, 37);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.BackColor = System.Drawing.Color.White;
+            btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLogout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = System.Drawing.Color.Black;
+            btnLogout.Image = (System.Drawing.Image)resources.GetObject("btnLogout.Image");
+            btnLogout.Location = new System.Drawing.Point(1871, 4);
+            btnLogout.Margin = new System.Windows.Forms.Padding(0);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Padding = new System.Windows.Forms.Padding(10);
+            btnLogout.Size = new System.Drawing.Size(40, 37);
+            btnLogout.TabIndex = 7;
+            btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnLogout.UseVisualStyleBackColor = false;
             // 
-            // lblUsername
+            // labelUsername
             // 
-            this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(1716, 4);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(0);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(153, 37);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Username";
-            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            labelUsername.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelUsername.Location = new System.Drawing.Point(1716, 4);
+            labelUsername.Margin = new System.Windows.Forms.Padding(0);
+            labelUsername.Name = "labelUsername";
+            labelUsername.Size = new System.Drawing.Size(153, 37);
+            labelUsername.TabIndex = 0;
+            labelUsername.Text = "Username";
+            labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnHam
             // 
-            this.btnHam.Image = ((System.Drawing.Image)(resources.GetObject("btnHam.Image")));
-            this.btnHam.Location = new System.Drawing.Point(9, 4);
-            this.btnHam.Margin = new System.Windows.Forms.Padding(0);
-            this.btnHam.Name = "btnHam";
-            this.btnHam.Size = new System.Drawing.Size(44, 37);
-            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnHam.TabIndex = 6;
-            this.btnHam.TabStop = false;
-            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
+            btnHam.Image = (System.Drawing.Image)resources.GetObject("btnHam.Image");
+            btnHam.Location = new System.Drawing.Point(9, 4);
+            btnHam.Margin = new System.Windows.Forms.Padding(0);
+            btnHam.Name = "btnHam";
+            btnHam.Size = new System.Drawing.Size(44, 37);
+            btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            btnHam.TabIndex = 6;
+            btnHam.TabStop = false;
+            btnHam.Click += btnHam_Click;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(17)))), ((int)(((byte)(20)))));
-            this.label1.Location = new System.Drawing.Point(57, 4);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "IDLE TIME TRACKER SYSTEM";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.ForeColor = System.Drawing.Color.FromArgb(10, 17, 20);
+            label1.Location = new System.Drawing.Point(57, 4);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(215, 37);
+            label1.TabIndex = 1;
+            label1.Text = "IDLE TIME TRACKER SYSTEM";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelHome
             // 
-            this.panelHome.Controls.Add(this.btnHome);
-            this.panelHome.Location = new System.Drawing.Point(0, 0);
-            this.panelHome.Margin = new System.Windows.Forms.Padding(0);
-            this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(260, 61);
-            this.panelHome.TabIndex = 2;
+            panelHome.Controls.Add(btnHome);
+            panelHome.Location = new System.Drawing.Point(0, 0);
+            panelHome.Margin = new System.Windows.Forms.Padding(0);
+            panelHome.Name = "panelHome";
+            panelHome.Size = new System.Drawing.Size(260, 61);
+            panelHome.TabIndex = 2;
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(10);
-            this.btnHome.Size = new System.Drawing.Size(260, 61);
-            this.btnHome.TabIndex = 7;
-            this.btnHome.Text = "      HOME";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            btnHome.BackColor = System.Drawing.Color.White;
+            btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnHome.Image = (System.Drawing.Image)resources.GetObject("btnHome.Image");
+            btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnHome.Location = new System.Drawing.Point(0, 0);
+            btnHome.Margin = new System.Windows.Forms.Padding(0);
+            btnHome.Name = "btnHome";
+            btnHome.Padding = new System.Windows.Forms.Padding(10);
+            btnHome.Size = new System.Drawing.Size(260, 61);
+            btnHome.TabIndex = 7;
+            btnHome.Text = "      HOME";
+            btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // menuContainer
             // 
-            this.menuContainer.Controls.Add(this.panelTM);
-            this.menuContainer.Controls.Add(this.panelCalendar);
-            this.menuContainer.Controls.Add(this.btnMenuActivity);
-            this.menuContainer.Controls.Add(this.btnMenuOverride);
-            this.menuContainer.Location = new System.Drawing.Point(0, 61);
-            this.menuContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.menuContainer.Name = "menuContainer";
-            this.menuContainer.Size = new System.Drawing.Size(260, 61);
-            this.menuContainer.TabIndex = 6;
+            menuContainer.Controls.Add(panelTM);
+            menuContainer.Controls.Add(panelCalendar);
+            menuContainer.Controls.Add(btnMenuActivity);
+            menuContainer.Controls.Add(btnMenuOverride);
+            menuContainer.Location = new System.Drawing.Point(0, 61);
+            menuContainer.Margin = new System.Windows.Forms.Padding(0);
+            menuContainer.Name = "menuContainer";
+            menuContainer.Size = new System.Drawing.Size(260, 61);
+            menuContainer.TabIndex = 6;
             // 
             // panelTM
             // 
-            this.panelTM.Controls.Add(this.btnReportMenu);
-            this.panelTM.Location = new System.Drawing.Point(0, 0);
-            this.panelTM.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTM.Name = "panelTM";
-            this.panelTM.Size = new System.Drawing.Size(260, 61);
-            this.panelTM.TabIndex = 3;
+            panelTM.Controls.Add(btnReportMenu);
+            panelTM.Location = new System.Drawing.Point(0, 0);
+            panelTM.Margin = new System.Windows.Forms.Padding(0);
+            panelTM.Name = "panelTM";
+            panelTM.Size = new System.Drawing.Size(260, 61);
+            panelTM.TabIndex = 3;
             // 
             // btnReportMenu
             // 
-            this.btnReportMenu.BackColor = System.Drawing.Color.White;
-            this.btnReportMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnReportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportMenu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnReportMenu.Image")));
-            this.btnReportMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnReportMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReportMenu.Name = "btnReportMenu";
-            this.btnReportMenu.Padding = new System.Windows.Forms.Padding(10);
-            this.btnReportMenu.Size = new System.Drawing.Size(260, 61);
-            this.btnReportMenu.TabIndex = 7;
-            this.btnReportMenu.Text = "      REPORTS";
-            this.btnReportMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReportMenu.UseVisualStyleBackColor = false;
-            this.btnReportMenu.Click += new System.EventHandler(this.btnReportMenu_Click);
+            btnReportMenu.BackColor = System.Drawing.Color.White;
+            btnReportMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnReportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnReportMenu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnReportMenu.Image = (System.Drawing.Image)resources.GetObject("btnReportMenu.Image");
+            btnReportMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnReportMenu.Location = new System.Drawing.Point(0, 0);
+            btnReportMenu.Margin = new System.Windows.Forms.Padding(0);
+            btnReportMenu.Name = "btnReportMenu";
+            btnReportMenu.Padding = new System.Windows.Forms.Padding(10);
+            btnReportMenu.Size = new System.Drawing.Size(260, 61);
+            btnReportMenu.TabIndex = 7;
+            btnReportMenu.Text = "      REPORTS";
+            btnReportMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnReportMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnReportMenu.UseVisualStyleBackColor = false;
+            btnReportMenu.Click += btnReportMenu_Click;
             // 
             // panelCalendar
             // 
-            this.panelCalendar.Controls.Add(this.btnMenuTimesheet);
-            this.panelCalendar.Location = new System.Drawing.Point(0, 61);
-            this.panelCalendar.Margin = new System.Windows.Forms.Padding(0);
-            this.panelCalendar.Name = "panelCalendar";
-            this.panelCalendar.Size = new System.Drawing.Size(260, 61);
-            this.panelCalendar.TabIndex = 8;
+            panelCalendar.Controls.Add(btnMenuTimesheet);
+            panelCalendar.Location = new System.Drawing.Point(0, 61);
+            panelCalendar.Margin = new System.Windows.Forms.Padding(0);
+            panelCalendar.Name = "panelCalendar";
+            panelCalendar.Size = new System.Drawing.Size(260, 61);
+            panelCalendar.TabIndex = 8;
             // 
             // btnMenuTimesheet
             // 
-            this.btnMenuTimesheet.BackColor = System.Drawing.Color.White;
-            this.btnMenuTimesheet.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnMenuTimesheet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuTimesheet.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuTimesheet.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuTimesheet.Image")));
-            this.btnMenuTimesheet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuTimesheet.Location = new System.Drawing.Point(0, 0);
-            this.btnMenuTimesheet.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuTimesheet.Name = "btnMenuTimesheet";
-            this.btnMenuTimesheet.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnMenuTimesheet.Size = new System.Drawing.Size(260, 61);
-            this.btnMenuTimesheet.TabIndex = 9;
-            this.btnMenuTimesheet.Text = "              TIMESHEET";
-            this.btnMenuTimesheet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuTimesheet.UseVisualStyleBackColor = false;
-            this.btnMenuTimesheet.Click += new System.EventHandler(this.btnMenuTimesheet_Click);
+            btnMenuTimesheet.BackColor = System.Drawing.Color.White;
+            btnMenuTimesheet.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnMenuTimesheet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnMenuTimesheet.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnMenuTimesheet.Image = (System.Drawing.Image)resources.GetObject("btnMenuTimesheet.Image");
+            btnMenuTimesheet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnMenuTimesheet.Location = new System.Drawing.Point(0, 0);
+            btnMenuTimesheet.Margin = new System.Windows.Forms.Padding(0);
+            btnMenuTimesheet.Name = "btnMenuTimesheet";
+            btnMenuTimesheet.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnMenuTimesheet.Size = new System.Drawing.Size(260, 61);
+            btnMenuTimesheet.TabIndex = 9;
+            btnMenuTimesheet.Text = "              TIMESHEET";
+            btnMenuTimesheet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnMenuTimesheet.UseVisualStyleBackColor = false;
+            btnMenuTimesheet.Click += btnMenuTimesheet_Click;
             // 
             // btnMenuActivity
             // 
-            this.btnMenuActivity.FlatAppearance.BorderSize = 0;
-            this.btnMenuActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuActivity.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuActivity.Image")));
-            this.btnMenuActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuActivity.Location = new System.Drawing.Point(0, 122);
-            this.btnMenuActivity.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuActivity.Name = "btnMenuActivity";
-            this.btnMenuActivity.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnMenuActivity.Size = new System.Drawing.Size(260, 61);
-            this.btnMenuActivity.TabIndex = 7;
-            this.btnMenuActivity.Text = "              ACTIVITY";
-            this.btnMenuActivity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuActivity.UseVisualStyleBackColor = false;
-            this.btnMenuActivity.Click += new System.EventHandler(this.btnMenuActivity_Click);
+            btnMenuActivity.FlatAppearance.BorderSize = 0;
+            btnMenuActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnMenuActivity.Image = (System.Drawing.Image)resources.GetObject("btnMenuActivity.Image");
+            btnMenuActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnMenuActivity.Location = new System.Drawing.Point(0, 122);
+            btnMenuActivity.Margin = new System.Windows.Forms.Padding(0);
+            btnMenuActivity.Name = "btnMenuActivity";
+            btnMenuActivity.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnMenuActivity.Size = new System.Drawing.Size(260, 61);
+            btnMenuActivity.TabIndex = 7;
+            btnMenuActivity.Text = "              ACTIVITY";
+            btnMenuActivity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnMenuActivity.UseVisualStyleBackColor = false;
+            btnMenuActivity.Click += btnMenuActivity_Click;
             // 
             // btnMenuOverride
             // 
-            this.btnMenuOverride.FlatAppearance.BorderSize = 0;
-            this.btnMenuOverride.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuOverride.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuOverride.Image")));
-            this.btnMenuOverride.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuOverride.Location = new System.Drawing.Point(0, 183);
-            this.btnMenuOverride.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuOverride.Name = "btnMenuOverride";
-            this.btnMenuOverride.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnMenuOverride.Size = new System.Drawing.Size(260, 61);
-            this.btnMenuOverride.TabIndex = 8;
-            this.btnMenuOverride.Text = "              OVERRIDE";
-            this.btnMenuOverride.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuOverride.UseVisualStyleBackColor = false;
-            this.btnMenuOverride.Click += new System.EventHandler(this.btnMenuOverride_Click);
+            btnMenuOverride.FlatAppearance.BorderSize = 0;
+            btnMenuOverride.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnMenuOverride.Image = (System.Drawing.Image)resources.GetObject("btnMenuOverride.Image");
+            btnMenuOverride.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnMenuOverride.Location = new System.Drawing.Point(0, 183);
+            btnMenuOverride.Margin = new System.Windows.Forms.Padding(0);
+            btnMenuOverride.Name = "btnMenuOverride";
+            btnMenuOverride.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnMenuOverride.Size = new System.Drawing.Size(260, 61);
+            btnMenuOverride.TabIndex = 8;
+            btnMenuOverride.Text = "              OVERRIDE";
+            btnMenuOverride.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnMenuOverride.UseVisualStyleBackColor = false;
+            btnMenuOverride.Click += btnMenuOverride_Click;
             // 
             // panelAccountSettings
             // 
-            this.panelAccountSettings.Controls.Add(this.btnAS);
-            this.panelAccountSettings.Location = new System.Drawing.Point(0, 183);
-            this.panelAccountSettings.Margin = new System.Windows.Forms.Padding(0);
-            this.panelAccountSettings.Name = "panelAccountSettings";
-            this.panelAccountSettings.Size = new System.Drawing.Size(260, 61);
-            this.panelAccountSettings.TabIndex = 4;
+            panelAccountSettings.Controls.Add(btnAS);
+            panelAccountSettings.Location = new System.Drawing.Point(0, 183);
+            panelAccountSettings.Margin = new System.Windows.Forms.Padding(0);
+            panelAccountSettings.Name = "panelAccountSettings";
+            panelAccountSettings.Size = new System.Drawing.Size(260, 61);
+            panelAccountSettings.TabIndex = 4;
             // 
             // btnAS
             // 
-            this.btnAS.BackColor = System.Drawing.Color.White;
-            this.btnAS.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAS.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAS.Image = ((System.Drawing.Image)(resources.GetObject("btnAS.Image")));
-            this.btnAS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAS.Location = new System.Drawing.Point(0, 0);
-            this.btnAS.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAS.Name = "btnAS";
-            this.btnAS.Padding = new System.Windows.Forms.Padding(10);
-            this.btnAS.Size = new System.Drawing.Size(260, 61);
-            this.btnAS.TabIndex = 7;
-            this.btnAS.Text = "      ACCOUNT SETTINGS";
-            this.btnAS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAS.UseVisualStyleBackColor = false;
-            this.btnAS.Click += new System.EventHandler(this.btnAS_Click);
+            btnAS.BackColor = System.Drawing.Color.White;
+            btnAS.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnAS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnAS.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnAS.Image = (System.Drawing.Image)resources.GetObject("btnAS.Image");
+            btnAS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnAS.Location = new System.Drawing.Point(0, 0);
+            btnAS.Margin = new System.Windows.Forms.Padding(0);
+            btnAS.Name = "btnAS";
+            btnAS.Padding = new System.Windows.Forms.Padding(10);
+            btnAS.Size = new System.Drawing.Size(260, 61);
+            btnAS.TabIndex = 7;
+            btnAS.Text = "      ACCOUNT SETTINGS";
+            btnAS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnAS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnAS.UseVisualStyleBackColor = false;
+            btnAS.Click += btnAS_Click;
             // 
             // panelLogout
             // 
-            this.panelLogout.Location = new System.Drawing.Point(1871, 0);
-            this.panelLogout.Margin = new System.Windows.Forms.Padding(0);
-            this.panelLogout.Name = "panelLogout";
-            this.panelLogout.Size = new System.Drawing.Size(47, 45);
-            this.panelLogout.TabIndex = 5;
+            panelLogout.Location = new System.Drawing.Point(1871, 0);
+            panelLogout.Margin = new System.Windows.Forms.Padding(0);
+            panelLogout.Name = "panelLogout";
+            panelLogout.Size = new System.Drawing.Size(47, 45);
+            panelLogout.TabIndex = 5;
             // 
             // sidebarTransition
             // 
-            this.sidebarTransition.Interval = 10;
-            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
+            sidebarTransition.Interval = 10;
+            sidebarTransition.Tick += sidebarTransition_Tick;
             // 
             // menuTransition
             // 
-            this.menuTransition.Interval = 10;
-            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
+            menuTransition.Interval = 10;
+            menuTransition.Tick += menuTransition_Tick;
             // 
             // sidebar
             // 
-            this.sidebar.Controls.Add(this.panelHome);
-            this.sidebar.Controls.Add(this.menuContainer);
-            this.sidebar.Controls.Add(this.menuContainer2);
-            this.sidebar.Controls.Add(this.panelAccountSettings);
-            this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebar.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.sidebar.Location = new System.Drawing.Point(0, 54);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(0);
-            this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(261, 984);
-            this.sidebar.TabIndex = 8;
+            sidebar.Controls.Add(panelHome);
+            sidebar.Controls.Add(menuContainer);
+            sidebar.Controls.Add(menuContainer2);
+            sidebar.Controls.Add(panelAccountSettings);
+            sidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            sidebar.ImeMode = System.Windows.Forms.ImeMode.Off;
+            sidebar.Location = new System.Drawing.Point(0, 54);
+            sidebar.Margin = new System.Windows.Forms.Padding(0);
+            sidebar.Name = "sidebar";
+            sidebar.Size = new System.Drawing.Size(261, 994);
+            sidebar.TabIndex = 8;
             // 
             // menuContainer2
             // 
-            this.menuContainer2.Controls.Add(this.panel1);
-            this.menuContainer2.Controls.Add(this.panel2);
-            this.menuContainer2.Controls.Add(this.btnDepartmentMenu);
-            this.menuContainer2.Controls.Add(this.btnRolesMenu);
-            this.menuContainer2.Controls.Add(this.panel3);
-            this.menuContainer2.Controls.Add(this.panel4);
-            this.menuContainer2.Controls.Add(this.panel5);
-            this.menuContainer2.Location = new System.Drawing.Point(0, 122);
-            this.menuContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.menuContainer2.Name = "menuContainer2";
-            this.menuContainer2.Size = new System.Drawing.Size(260, 61);
-            this.menuContainer2.TabIndex = 14;
+            menuContainer2.Controls.Add(panel1);
+            menuContainer2.Controls.Add(panel2);
+            menuContainer2.Controls.Add(btnDepartmentMenu);
+            menuContainer2.Controls.Add(btnRolesMenu);
+            menuContainer2.Controls.Add(panel3);
+            menuContainer2.Controls.Add(panel4);
+            menuContainer2.Controls.Add(panel5);
+            menuContainer2.Location = new System.Drawing.Point(0, 122);
+            menuContainer2.Margin = new System.Windows.Forms.Padding(0);
+            menuContainer2.Name = "menuContainer2";
+            menuContainer2.Size = new System.Drawing.Size(260, 61);
+            menuContainer2.TabIndex = 14;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnAdminMenu);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 61);
-            this.panel1.TabIndex = 3;
+            panel1.Controls.Add(btnAdminMenu);
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(0);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(260, 61);
+            panel1.TabIndex = 3;
             // 
             // btnAdminMenu
             // 
-            this.btnAdminMenu.BackColor = System.Drawing.Color.White;
-            this.btnAdminMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAdminMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdminMenu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminMenu.Image")));
-            this.btnAdminMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdminMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnAdminMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAdminMenu.Name = "btnAdminMenu";
-            this.btnAdminMenu.Padding = new System.Windows.Forms.Padding(10);
-            this.btnAdminMenu.Size = new System.Drawing.Size(260, 61);
-            this.btnAdminMenu.TabIndex = 7;
-            this.btnAdminMenu.Text = "      ADMIN";
-            this.btnAdminMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdminMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdminMenu.UseVisualStyleBackColor = false;
-            this.btnAdminMenu.Click += new System.EventHandler(this.btnAdminMenu_Click);
+            btnAdminMenu.BackColor = System.Drawing.Color.White;
+            btnAdminMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnAdminMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnAdminMenu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnAdminMenu.Image = (System.Drawing.Image)resources.GetObject("btnAdminMenu.Image");
+            btnAdminMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnAdminMenu.Location = new System.Drawing.Point(0, 0);
+            btnAdminMenu.Margin = new System.Windows.Forms.Padding(0);
+            btnAdminMenu.Name = "btnAdminMenu";
+            btnAdminMenu.Padding = new System.Windows.Forms.Padding(10);
+            btnAdminMenu.Size = new System.Drawing.Size(260, 61);
+            btnAdminMenu.TabIndex = 7;
+            btnAdminMenu.Text = "      ADMIN";
+            btnAdminMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnAdminMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnAdminMenu.UseVisualStyleBackColor = false;
+            btnAdminMenu.Click += btnAdminMenu_Click;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnAssetMenu);
-            this.panel2.Location = new System.Drawing.Point(0, 61);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(260, 61);
-            this.panel2.TabIndex = 8;
+            panel2.Controls.Add(btnAssetMenu);
+            panel2.Location = new System.Drawing.Point(0, 61);
+            panel2.Margin = new System.Windows.Forms.Padding(0);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(260, 61);
+            panel2.TabIndex = 8;
             // 
             // btnAssetMenu
             // 
-            this.btnAssetMenu.BackColor = System.Drawing.Color.White;
-            this.btnAssetMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAssetMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAssetMenu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAssetMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnAssetMenu.Image")));
-            this.btnAssetMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAssetMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnAssetMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAssetMenu.Name = "btnAssetMenu";
-            this.btnAssetMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnAssetMenu.Size = new System.Drawing.Size(260, 61);
-            this.btnAssetMenu.TabIndex = 9;
-            this.btnAssetMenu.Text = "      ASSETS";
-            this.btnAssetMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAssetMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAssetMenu.UseVisualStyleBackColor = false;
-            this.btnAssetMenu.Click += new System.EventHandler(this.btnAssetMenu_Click);
+            btnAssetMenu.BackColor = System.Drawing.Color.White;
+            btnAssetMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnAssetMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnAssetMenu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnAssetMenu.Image = (System.Drawing.Image)resources.GetObject("btnAssetMenu.Image");
+            btnAssetMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnAssetMenu.Location = new System.Drawing.Point(0, 0);
+            btnAssetMenu.Margin = new System.Windows.Forms.Padding(0);
+            btnAssetMenu.Name = "btnAssetMenu";
+            btnAssetMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnAssetMenu.Size = new System.Drawing.Size(260, 61);
+            btnAssetMenu.TabIndex = 9;
+            btnAssetMenu.Text = "      ASSETS";
+            btnAssetMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnAssetMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnAssetMenu.UseVisualStyleBackColor = false;
+            btnAssetMenu.Click += btnAssetMenu_Click;
             // 
             // btnDepartmentMenu
             // 
-            this.btnDepartmentMenu.FlatAppearance.BorderSize = 0;
-            this.btnDepartmentMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepartmentMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnDepartmentMenu.Image")));
-            this.btnDepartmentMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDepartmentMenu.Location = new System.Drawing.Point(0, 122);
-            this.btnDepartmentMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDepartmentMenu.Name = "btnDepartmentMenu";
-            this.btnDepartmentMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnDepartmentMenu.Size = new System.Drawing.Size(260, 61);
-            this.btnDepartmentMenu.TabIndex = 7;
-            this.btnDepartmentMenu.Text = "      DEPARTMENTS";
-            this.btnDepartmentMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDepartmentMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDepartmentMenu.UseVisualStyleBackColor = false;
-            this.btnDepartmentMenu.Click += new System.EventHandler(this.btnDepartmentMenu_Click);
+            btnDepartmentMenu.FlatAppearance.BorderSize = 0;
+            btnDepartmentMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDepartmentMenu.Image = (System.Drawing.Image)resources.GetObject("btnDepartmentMenu.Image");
+            btnDepartmentMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnDepartmentMenu.Location = new System.Drawing.Point(0, 122);
+            btnDepartmentMenu.Margin = new System.Windows.Forms.Padding(0);
+            btnDepartmentMenu.Name = "btnDepartmentMenu";
+            btnDepartmentMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnDepartmentMenu.Size = new System.Drawing.Size(260, 61);
+            btnDepartmentMenu.TabIndex = 7;
+            btnDepartmentMenu.Text = "      DEPARTMENTS";
+            btnDepartmentMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnDepartmentMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnDepartmentMenu.UseVisualStyleBackColor = false;
+            btnDepartmentMenu.Click += btnDepartmentMenu_Click;
             // 
             // btnRolesMenu
             // 
-            this.btnRolesMenu.FlatAppearance.BorderSize = 0;
-            this.btnRolesMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRolesMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnRolesMenu.Image")));
-            this.btnRolesMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRolesMenu.Location = new System.Drawing.Point(0, 183);
-            this.btnRolesMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRolesMenu.Name = "btnRolesMenu";
-            this.btnRolesMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnRolesMenu.Size = new System.Drawing.Size(260, 61);
-            this.btnRolesMenu.TabIndex = 8;
-            this.btnRolesMenu.Text = "      ROLES";
-            this.btnRolesMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRolesMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRolesMenu.UseVisualStyleBackColor = false;
-            this.btnRolesMenu.Click += new System.EventHandler(this.btnRolesMenu_Click);
+            btnRolesMenu.FlatAppearance.BorderSize = 0;
+            btnRolesMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnRolesMenu.Image = (System.Drawing.Image)resources.GetObject("btnRolesMenu.Image");
+            btnRolesMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnRolesMenu.Location = new System.Drawing.Point(0, 183);
+            btnRolesMenu.Margin = new System.Windows.Forms.Padding(0);
+            btnRolesMenu.Name = "btnRolesMenu";
+            btnRolesMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnRolesMenu.Size = new System.Drawing.Size(260, 61);
+            btnRolesMenu.TabIndex = 8;
+            btnRolesMenu.Text = "      ROLES";
+            btnRolesMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnRolesMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnRolesMenu.UseVisualStyleBackColor = false;
+            btnRolesMenu.Click += btnRolesMenu_Click;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnUsersMenu);
-            this.panel3.Location = new System.Drawing.Point(0, 244);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(260, 61);
-            this.panel3.TabIndex = 15;
+            panel3.Controls.Add(btnUsersMenu);
+            panel3.Location = new System.Drawing.Point(0, 244);
+            panel3.Margin = new System.Windows.Forms.Padding(0);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(260, 61);
+            panel3.TabIndex = 15;
             // 
             // btnUsersMenu
             // 
-            this.btnUsersMenu.FlatAppearance.BorderSize = 0;
-            this.btnUsersMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsersMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnUsersMenu.Image")));
-            this.btnUsersMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsersMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnUsersMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnUsersMenu.Name = "btnUsersMenu";
-            this.btnUsersMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnUsersMenu.Size = new System.Drawing.Size(260, 61);
-            this.btnUsersMenu.TabIndex = 18;
-            this.btnUsersMenu.Text = "      USERS";
-            this.btnUsersMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsersMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsersMenu.UseVisualStyleBackColor = false;
-            this.btnUsersMenu.Click += new System.EventHandler(this.btnUsersMenu_Click);
+            btnUsersMenu.FlatAppearance.BorderSize = 0;
+            btnUsersMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnUsersMenu.Image = (System.Drawing.Image)resources.GetObject("btnUsersMenu.Image");
+            btnUsersMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnUsersMenu.Location = new System.Drawing.Point(0, 0);
+            btnUsersMenu.Margin = new System.Windows.Forms.Padding(0);
+            btnUsersMenu.Name = "btnUsersMenu";
+            btnUsersMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnUsersMenu.Size = new System.Drawing.Size(260, 61);
+            btnUsersMenu.TabIndex = 18;
+            btnUsersMenu.Text = "      USERS";
+            btnUsersMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnUsersMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnUsersMenu.UseVisualStyleBackColor = false;
+            btnUsersMenu.Click += btnUsersMenu_Click;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnSitesMenu);
-            this.panel4.Location = new System.Drawing.Point(0, 305);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(260, 61);
-            this.panel4.TabIndex = 17;
+            panel4.Controls.Add(btnSitesMenu);
+            panel4.Location = new System.Drawing.Point(0, 305);
+            panel4.Margin = new System.Windows.Forms.Padding(0);
+            panel4.Name = "panel4";
+            panel4.Size = new System.Drawing.Size(260, 61);
+            panel4.TabIndex = 17;
             // 
             // btnSitesMenu
             // 
-            this.btnSitesMenu.FlatAppearance.BorderSize = 0;
-            this.btnSitesMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSitesMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnSitesMenu.Image")));
-            this.btnSitesMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSitesMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnSitesMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSitesMenu.Name = "btnSitesMenu";
-            this.btnSitesMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnSitesMenu.Size = new System.Drawing.Size(260, 61);
-            this.btnSitesMenu.TabIndex = 16;
-            this.btnSitesMenu.Text = "      SITES";
-            this.btnSitesMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSitesMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSitesMenu.UseVisualStyleBackColor = false;
-            this.btnSitesMenu.Click += new System.EventHandler(this.btnSitesMenu_Click);
+            btnSitesMenu.FlatAppearance.BorderSize = 0;
+            btnSitesMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSitesMenu.Image = (System.Drawing.Image)resources.GetObject("btnSitesMenu.Image");
+            btnSitesMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnSitesMenu.Location = new System.Drawing.Point(0, 0);
+            btnSitesMenu.Margin = new System.Windows.Forms.Padding(0);
+            btnSitesMenu.Name = "btnSitesMenu";
+            btnSitesMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnSitesMenu.Size = new System.Drawing.Size(260, 61);
+            btnSitesMenu.TabIndex = 16;
+            btnSitesMenu.Text = "      SITES";
+            btnSitesMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnSitesMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnSitesMenu.UseVisualStyleBackColor = false;
+            btnSitesMenu.Click += btnSitesMenu_Click;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnPermissionsMenu);
-            this.panel5.Location = new System.Drawing.Point(0, 366);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(260, 61);
-            this.panel5.TabIndex = 19;
+            panel5.Controls.Add(btnPermissionsMenu);
+            panel5.Location = new System.Drawing.Point(0, 366);
+            panel5.Margin = new System.Windows.Forms.Padding(0);
+            panel5.Name = "panel5";
+            panel5.Size = new System.Drawing.Size(260, 61);
+            panel5.TabIndex = 19;
             // 
             // btnPermissionsMenu
             // 
-            this.btnPermissionsMenu.FlatAppearance.BorderSize = 0;
-            this.btnPermissionsMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPermissionsMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnPermissionsMenu.Image")));
-            this.btnPermissionsMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPermissionsMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnPermissionsMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPermissionsMenu.Name = "btnPermissionsMenu";
-            this.btnPermissionsMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
-            this.btnPermissionsMenu.Size = new System.Drawing.Size(260, 61);
-            this.btnPermissionsMenu.TabIndex = 18;
-            this.btnPermissionsMenu.Text = "      PERMISSIONS";
-            this.btnPermissionsMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPermissionsMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPermissionsMenu.UseVisualStyleBackColor = false;
-            this.btnPermissionsMenu.Click += new System.EventHandler(this.btnPermissionsMenu_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.flowLayoutPanel1.Controls.Add(this.label3);
-            this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 1038);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1918, 10);
-            this.flowLayoutPanel1.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(1875, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 38);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "AM";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1782, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 38);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "00:00:00";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            btnPermissionsMenu.FlatAppearance.BorderSize = 0;
+            btnPermissionsMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnPermissionsMenu.Image = (System.Drawing.Image)resources.GetObject("btnPermissionsMenu.Image");
+            btnPermissionsMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnPermissionsMenu.Location = new System.Drawing.Point(0, 0);
+            btnPermissionsMenu.Margin = new System.Windows.Forms.Padding(0);
+            btnPermissionsMenu.Name = "btnPermissionsMenu";
+            btnPermissionsMenu.Padding = new System.Windows.Forms.Padding(60, 10, 10, 10);
+            btnPermissionsMenu.Size = new System.Drawing.Size(260, 61);
+            btnPermissionsMenu.TabIndex = 18;
+            btnPermissionsMenu.Text = "      PERMISSIONS";
+            btnPermissionsMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnPermissionsMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnPermissionsMenu.UseVisualStyleBackColor = false;
+            btnPermissionsMenu.Click += btnPermissionsMenu_Click;
             // 
             // panelTopbar
             // 
-            this.panelTopbar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelTopbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.panelTopbar.Controls.Add(this.panelLogout);
-            this.panelTopbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTopbar.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.panelTopbar.Location = new System.Drawing.Point(0, 44);
-            this.panelTopbar.Name = "panelTopbar";
-            this.panelTopbar.Size = new System.Drawing.Size(1918, 10);
-            this.panelTopbar.TabIndex = 12;
+            panelTopbar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            panelTopbar.BackColor = System.Drawing.Color.FromArgb(17, 17, 17);
+            panelTopbar.Controls.Add(panelLogout);
+            panelTopbar.Dock = System.Windows.Forms.DockStyle.Top;
+            panelTopbar.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            panelTopbar.Location = new System.Drawing.Point(0, 44);
+            panelTopbar.Name = "panelTopbar";
+            panelTopbar.Size = new System.Drawing.Size(1918, 10);
+            panelTopbar.TabIndex = 12;
             // 
             // menuTransition2
             // 
-            this.menuTransition2.Interval = 10;
-            this.menuTransition2.Tick += new System.EventHandler(this.menuTransition2_Tick);
+            menuTransition2.Interval = 10;
+            menuTransition2.Tick += menuTransition2_Tick;
+            // 
+            // panelFooter
+            // 
+            panelFooter.Controls.Add(panelNetwork);
+            panelFooter.Controls.Add(panelStatus);
+            panelFooter.Controls.Add(label3);
+            panelFooter.Controls.Add(label2);
+            panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            panelFooter.Location = new System.Drawing.Point(261, 1025);
+            panelFooter.Margin = new System.Windows.Forms.Padding(0);
+            panelFooter.Name = "panelFooter";
+            panelFooter.Size = new System.Drawing.Size(1657, 23);
+            panelFooter.TabIndex = 14;
+            // 
+            // panelNetwork
+            // 
+            panelNetwork.Location = new System.Drawing.Point(1539, 1);
+            panelNetwork.Margin = new System.Windows.Forms.Padding(0);
+            panelNetwork.Name = "panelNetwork";
+            panelNetwork.Size = new System.Drawing.Size(31, 22);
+            panelNetwork.TabIndex = 16;
+            // 
+            // panelStatus
+            // 
+            panelStatus.Location = new System.Drawing.Point(1626, 1);
+            panelStatus.Margin = new System.Windows.Forms.Padding(0);
+            panelStatus.Name = "panelStatus";
+            panelStatus.Size = new System.Drawing.Size(31, 22);
+            panelStatus.TabIndex = 15;
+            // 
+            // label3
+            // 
+            label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label3.Location = new System.Drawing.Point(1570, 1);
+            label3.Margin = new System.Windows.Forms.Padding(0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(56, 23);
+            label3.TabIndex = 16;
+            label3.Text = "Status";
+            // 
+            // label2
+            // 
+            label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label2.Location = new System.Drawing.Point(1463, 1);
+            label2.Margin = new System.Windows.Forms.Padding(0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(76, 23);
+            label2.TabIndex = 15;
+            label2.Text = "Network";
             // 
             // DashboardForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1918, 1048);
-            this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.panelTopbar);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.panelSingleBorder);
-            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1918, 1048);
-            this.Name = "DashboardForm";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DashboardForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.DashboardForm_Load);
-            this.panelSingleBorder.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
-            this.panelHome.ResumeLayout(false);
-            this.menuContainer.ResumeLayout(false);
-            this.panelTM.ResumeLayout(false);
-            this.panelCalendar.ResumeLayout(false);
-            this.panelAccountSettings.ResumeLayout(false);
-            this.sidebar.ResumeLayout(false);
-            this.menuContainer2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panelTopbar.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(1918, 1048);
+            Controls.Add(panelFooter);
+            Controls.Add(sidebar);
+            Controls.Add(panelTopbar);
+            Controls.Add(panelSingleBorder);
+            Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            IsMdiContainer = true;
+            Margin = new System.Windows.Forms.Padding(4);
+            MaximizeBox = false;
+            MaximumSize = new System.Drawing.Size(1920, 1080);
+            MinimizeBox = false;
+            MinimumSize = new System.Drawing.Size(1918, 1048);
+            Name = "DashboardForm";
+            SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "DashboardForm";
+            WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            Load += DashboardForm_Load;
+            panelSingleBorder.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btnHam).EndInit();
+            panelHome.ResumeLayout(false);
+            menuContainer.ResumeLayout(false);
+            panelTM.ResumeLayout(false);
+            panelCalendar.ResumeLayout(false);
+            panelAccountSettings.ResumeLayout(false);
+            sidebar.ResumeLayout(false);
+            menuContainer2.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panelTopbar.ResumeLayout(false);
+            panelFooter.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
@@ -647,11 +664,8 @@
         private System.Windows.Forms.Button btnMenuActivity;
         private System.Windows.Forms.Button btnMenuOverride;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel panelTopbar;
-        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label labelUsername;
         protected internal System.Windows.Forms.FlowLayoutPanel menuContainer2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAdminMenu;
@@ -667,5 +681,10 @@
         private System.Windows.Forms.Button btnPermissionsMenu;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Timer menuTransition2;
+        private System.Windows.Forms.Panel panelFooter;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelNetwork;
+        private System.Windows.Forms.Panel panelStatus;
+        private System.Windows.Forms.Label label3;
     }
 }
