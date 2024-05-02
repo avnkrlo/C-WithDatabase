@@ -10,5 +10,16 @@ namespace Domain
 {
     public class UserModel
     {
+        UserDAO userDAO = new UserDAO();
+
+        public bool CheckConnection()
+        {
+            return userDAO.checkConnection();
+        }
+
+        public bool LoginUser(string username, string password)
+        {
+            return userDAO.login(username, password);
+        }
     }
 }

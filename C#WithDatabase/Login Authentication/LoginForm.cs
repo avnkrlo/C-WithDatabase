@@ -154,14 +154,98 @@ namespace C_WithDatabase
             {
                 if (userModel.CheckConnection())
                 {
+                    panelCredentials.Visible = false;
+                    panelPower.Visible = false;
+                    btnShutdown.Visible = false;
+                    btnRestart.Visible = false;
 
+                    ShowWaitAnimation();
+
+                    if (SyncOfflineData())
+                    {
+                        Properties.Settings.Default.HasOfflineData = false; {
+                        }
+                    else
+                        {
+                            Properties.Settings.Default.HasOfflineData = true;
+                        }
+                    }
                 }
+            }
+
+            private void btnRestart_Click(object sender, EventArgs e)
+            {
+
             }
         }
 
-        private void btnRestart_Click(object sender, EventArgs e)
+        private bool SyncOfflineData()
         {
+            bool result = false;
 
+            result = activityModel.emp_activities_Sync();
+            result = activityModel.emp_activities_summary_Sync();
+            result = logModel.emp_logs_Sync();
+
+            return result;
+        }
+
+        Timer WaitTimer;
+
+        string[] waitanim = new string[]
+        {
+            "●      ",
+            " ●     ",
+            "  ●    ",
+            "   ●   ",
+            "    ●  ",
+            "     ● ",
+            "  ●   ●",
+            "   ●  ●",
+            "    ● ●",
+            "    ●●●",
+            "●   ●●●",
+            " ●  ●●●",
+            "   ●●●●",
+            "●  ●●●●",
+            " ●●●●●●",
+            "●●●●●●●"
+        };
+
+        public void ShowWaitAnimation()
+        {
+            WaitTimer = new Timer();
+            WaitTimer.Interval = 100;
+            WaitTimer.Tick += WaitTimer_Tick;
+            WaitTimer.Start();
+        }
+
+        int ptr = 0;
+        bool inc = true;
+
+        private void WaitTimer_Tick()
+        {
+            labelProgressBar.Text = waitanim[ptr];
+
+            if (ptr < 15 && inc)
+            {
+                labelProgressBar.RightToLeft = RightToLeft.No;
+                ptr++;
+            }
+            else if (ptr == 15) {
+                inc = false;
+                ptr--;
+            }
+            else
+            {
+                labelProgressBar.RightToLeft = RightToLeft.Yes;
+                ptr--;
+
+                if (ptr == 0)
+                {
+                    inc = true;
+                }
+            }
         }
     }
 }

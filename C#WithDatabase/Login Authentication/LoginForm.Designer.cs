@@ -37,35 +37,43 @@
             pictureBox1 = new System.Windows.Forms.PictureBox();
             btnPeekPassword = new System.Windows.Forms.Button();
             pnlLoginForm = new System.Windows.Forms.Panel();
-            panel1 = new System.Windows.Forms.Panel();
+            panelPower = new System.Windows.Forms.Panel();
             btnShutdown = new System.Windows.Forms.Button();
             btnRestart = new System.Windows.Forms.Button();
+            panelCredentials = new System.Windows.Forms.Panel();
+            labelError = new System.Windows.Forms.Label();
+            button1 = new System.Windows.Forms.Button();
+            panelSyncProgress = new System.Windows.Forms.Panel();
+            labelPanelOfflineSync = new System.Windows.Forms.Label();
+            labelProgressBar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)userIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passwordIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlLoginForm.SuspendLayout();
-            panel1.SuspendLayout();
+            panelPower.SuspendLayout();
+            panelCredentials.SuspendLayout();
+            panelSyncProgress.SuspendLayout();
             SuspendLayout();
             // 
             // txtUsername
             // 
-            txtUsername.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            txtUsername.Location = new System.Drawing.Point(879, 532);
+            txtUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            txtUsername.Location = new System.Drawing.Point(77, 215);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new System.Drawing.Size(247, 33);
+            txtUsername.Size = new System.Drawing.Size(266, 34);
             txtUsername.TabIndex = 13;
             txtUsername.Enter += txtUsername_Enter;
             txtUsername.Leave += txtUsername_Leave;
             // 
             // txtPassword
             // 
-            txtPassword.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            txtPassword.Location = new System.Drawing.Point(879, 571);
+            txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            txtPassword.Location = new System.Drawing.Point(77, 255);
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '•';
-            txtPassword.Size = new System.Drawing.Size(202, 33);
+            txtPassword.Size = new System.Drawing.Size(221, 33);
             txtPassword.TabIndex = 14;
             txtPassword.Enter += txtPassword_Enter;
             txtPassword.Leave += txtPassword_Leave;
@@ -73,18 +81,22 @@
             // userIcon
             // 
             userIcon.Image = (System.Drawing.Image)resources.GetObject("userIcon.Image");
-            userIcon.Location = new System.Drawing.Point(841, 531);
+            userIcon.Location = new System.Drawing.Point(35, 215);
+            userIcon.Margin = new System.Windows.Forms.Padding(0);
             userIcon.Name = "userIcon";
-            userIcon.Size = new System.Drawing.Size(32, 34);
+            userIcon.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            userIcon.Size = new System.Drawing.Size(39, 34);
             userIcon.TabIndex = 15;
             userIcon.TabStop = false;
             // 
             // passwordIcon
             // 
             passwordIcon.Image = (System.Drawing.Image)resources.GetObject("passwordIcon.Image");
-            passwordIcon.Location = new System.Drawing.Point(841, 571);
+            passwordIcon.Location = new System.Drawing.Point(35, 255);
+            passwordIcon.Margin = new System.Windows.Forms.Padding(0);
             passwordIcon.Name = "passwordIcon";
-            passwordIcon.Size = new System.Drawing.Size(32, 32);
+            passwordIcon.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            passwordIcon.Size = new System.Drawing.Size(39, 32);
             passwordIcon.TabIndex = 16;
             passwordIcon.TabStop = false;
             // 
@@ -101,10 +113,10 @@
             // 
             pictureBox1.BackgroundImage = (System.Drawing.Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pictureBox1.Location = new System.Drawing.Point(879, 370);
+            pictureBox1.Location = new System.Drawing.Point(35, 53);
             pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(202, 147);
+            pictureBox1.Size = new System.Drawing.Size(308, 147);
             pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 20;
             pictureBox1.TabStop = false;
@@ -116,18 +128,18 @@
             btnPeekPassword.FlatAppearance.BorderSize = 0;
             btnPeekPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnPeekPassword.Image = Properties.Resources.look;
-            btnPeekPassword.Location = new System.Drawing.Point(1087, 571);
+            btnPeekPassword.Location = new System.Drawing.Point(304, 255);
             btnPeekPassword.Name = "btnPeekPassword";
-            btnPeekPassword.Size = new System.Drawing.Size(39, 34);
+            btnPeekPassword.Size = new System.Drawing.Size(39, 33);
             btnPeekPassword.TabIndex = 21;
             btnPeekPassword.UseVisualStyleBackColor = false;
             btnPeekPassword.Click += btnPeekPassword_Click;
             // 
             // pnlLoginForm
             // 
-            pnlLoginForm.Controls.Add(pictureBox1);
-            pnlLoginForm.Controls.Add(btnPeekPassword);
-            pnlLoginForm.Controls.Add(panel1);
+            pnlLoginForm.Controls.Add(panelSyncProgress);
+            pnlLoginForm.Controls.Add(panelPower);
+            pnlLoginForm.Controls.Add(panelCredentials);
             pnlLoginForm.ForeColor = System.Drawing.Color.Transparent;
             pnlLoginForm.Location = new System.Drawing.Point(0, 0);
             pnlLoginForm.Margin = new System.Windows.Forms.Padding(0);
@@ -137,14 +149,14 @@
             pnlLoginForm.Size = new System.Drawing.Size(1920, 1080);
             pnlLoginForm.TabIndex = 22;
             // 
-            // panel1
+            // panelPower
             // 
-            panel1.Controls.Add(btnShutdown);
-            panel1.Controls.Add(btnRestart);
-            panel1.Location = new System.Drawing.Point(1713, 872);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(195, 142);
-            panel1.TabIndex = 2;
+            panelPower.Controls.Add(btnShutdown);
+            panelPower.Controls.Add(btnRestart);
+            panelPower.Location = new System.Drawing.Point(1713, 872);
+            panelPower.Name = "panelPower";
+            panelPower.Size = new System.Drawing.Size(195, 142);
+            panelPower.TabIndex = 2;
             // 
             // btnShutdown
             // 
@@ -186,17 +198,90 @@
             btnRestart.UseVisualStyleBackColor = false;
             btnRestart.Click += btnRestart_Click;
             // 
+            // panelCredentials
+            // 
+            panelCredentials.Controls.Add(labelError);
+            panelCredentials.Controls.Add(pictureBox1);
+            panelCredentials.Controls.Add(button1);
+            panelCredentials.Controls.Add(passwordIcon);
+            panelCredentials.Controls.Add(btnPeekPassword);
+            panelCredentials.Controls.Add(txtPassword);
+            panelCredentials.Controls.Add(txtUsername);
+            panelCredentials.Controls.Add(userIcon);
+            panelCredentials.Location = new System.Drawing.Point(805, 317);
+            panelCredentials.Name = "panelCredentials";
+            panelCredentials.Size = new System.Drawing.Size(379, 437);
+            panelCredentials.TabIndex = 22;
+            // 
+            // labelError
+            // 
+            labelError.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelError.ForeColor = System.Drawing.Color.Red;
+            labelError.Image = (System.Drawing.Image)resources.GetObject("labelError.Image");
+            labelError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            labelError.Location = new System.Drawing.Point(36, 374);
+            labelError.Margin = new System.Windows.Forms.Padding(0);
+            labelError.Name = "labelError";
+            labelError.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            labelError.Size = new System.Drawing.Size(307, 40);
+            labelError.TabIndex = 22;
+            labelError.Text = "       Incorrect Username or Password";
+            labelError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelError.Visible = false;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            button1.ForeColor = System.Drawing.Color.Black;
+            button1.Location = new System.Drawing.Point(36, 320);
+            button1.Margin = new System.Windows.Forms.Padding(0);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(307, 40);
+            button1.TabIndex = 0;
+            button1.Text = "LOGIN";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // panelSyncProgress
+            // 
+            panelSyncProgress.Controls.Add(labelProgressBar);
+            panelSyncProgress.Controls.Add(labelPanelOfflineSync);
+            panelSyncProgress.Location = new System.Drawing.Point(694, 465);
+            panelSyncProgress.Name = "panelSyncProgress";
+            panelSyncProgress.Size = new System.Drawing.Size(613, 187);
+            panelSyncProgress.TabIndex = 23;
+            panelSyncProgress.Visible = false;
+            // 
+            // labelPanelOfflineSync
+            // 
+            labelPanelOfflineSync.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelPanelOfflineSync.ForeColor = System.Drawing.Color.Black;
+            labelPanelOfflineSync.Location = new System.Drawing.Point(147, 23);
+            labelPanelOfflineSync.Margin = new System.Windows.Forms.Padding(0);
+            labelPanelOfflineSync.Name = "labelPanelOfflineSync";
+            labelPanelOfflineSync.Size = new System.Drawing.Size(308, 41);
+            labelPanelOfflineSync.TabIndex = 0;
+            labelPanelOfflineSync.Text = "Offline data sync in progress.";
+            labelPanelOfflineSync.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelProgressBar
+            // 
+            labelProgressBar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelProgressBar.ForeColor = System.Drawing.Color.Black;
+            labelProgressBar.Location = new System.Drawing.Point(188, 79);
+            labelProgressBar.Margin = new System.Windows.Forms.Padding(0);
+            labelProgressBar.Name = "labelProgressBar";
+            labelProgressBar.Size = new System.Drawing.Size(227, 25);
+            labelProgressBar.TabIndex = 1;
+            labelProgressBar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LoginForm
             // 
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1920, 1061);
-            Controls.Add(rememberMe);
-            Controls.Add(passwordIcon);
-            Controls.Add(userIcon);
-            Controls.Add(txtPassword);
-            Controls.Add(txtUsername);
             Controls.Add(pnlLoginForm);
+            Controls.Add(rememberMe);
             Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
@@ -210,9 +295,11 @@
             ((System.ComponentModel.ISupportInitialize)passwordIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlLoginForm.ResumeLayout(false);
-            panel1.ResumeLayout(false);
+            panelPower.ResumeLayout(false);
+            panelCredentials.ResumeLayout(false);
+            panelCredentials.PerformLayout();
+            panelSyncProgress.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -228,7 +315,13 @@
         private System.Windows.Forms.Panel pnlLoginForm;
         private System.Windows.Forms.Button btnShutdown;
         private System.Windows.Forms.Button btnRestart;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelPower;
+        private System.Windows.Forms.Panel panelCredentials;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Panel panelSyncProgress;
+        private System.Windows.Forms.Label labelProgressBar;
+        private System.Windows.Forms.Label labelPanelOfflineSync;
     }
 }
 

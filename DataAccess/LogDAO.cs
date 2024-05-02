@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    internal class LogDAO
+    public class LogDAO : DatabaseConnection
     {
+
     }
 }
