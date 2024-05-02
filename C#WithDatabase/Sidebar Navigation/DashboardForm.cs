@@ -12,6 +12,8 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using Common.Cache;
 using Domain;
+using System.Collections.Generic;
+using System.Text;
 
 namespace C_WithDatabase
 {
@@ -106,9 +108,21 @@ namespace C_WithDatabase
             throw new NotImplementedException();
         }
 
-        private void SetLanguage()
+        public void SetLanguage()
         {
-            throw new NotImplementedException();
+            btnHome.Text = StringsResources.Home;
+            btnReportMenu.Text = StringsResources.ReportMenu;
+            btnMenuTimesheet.Text = StringsResources.Timesheet;
+            btnMenuActivity.Text = StringsResources.Activity;
+            btnMenuOverride.Text = StringsResources.Override;
+            btnAdminMenu.Text = StringsResources.Admin;
+            btnAssetMenu.Text = StringsResources.Asset;
+            btnDepartmentMenu.Text = StringsResources.Department;
+            btnRolesMenu.Text = StringsResources.Roles;
+            btnUsersMenu.Text = StringsResources.Users;
+            btnSitesMenu.Text = StringsResources.Sites;
+            btnPermissionsMenu.Text = StringsResources.Permissions;
+            btnAS.Text = StringsResources.Settings;
         }
 
         bool menuExpand = false;
@@ -456,7 +470,7 @@ namespace C_WithDatabase
             }
         }
 
-        private void SetStatus(int status)
+        public void SetStatus(int status)
         {
             bool updateStatus = false;
             bool isConnected = false;
@@ -547,8 +561,47 @@ namespace C_WithDatabase
                                 if (isInitialized)
                                 {
                                     activity_in = Utilities.IdleIn.ToString("yyyy-MM-dd HH:mm:ss");
-                                    activity_out = DateTime.Now.ToString("yyyy-MM-dd HH:mm:s")
+                                    activity_out = DateTime.Now.ToString("yyyy-MM-dd HH:mm:s");
+                                    TimeElapsed = DateTime.Now.Subtract(Utilities.IdleIn);
+                                    time_elapsed = (float)TimeElapsed.TotalMinutes;
+                                    Utilities.IdleMins = time_elapsed;
+
+                                    if (isConnected && Utilities.idleinnetstatus)
+                                    {
+                                        onlineUpdate = true;
+                                    }
+
+                                    activityModel.RecordActivityOut(UserLogin.user_id, (int)Utilities.Activity_Type.IDLE, activity_in, activity_out, time_elapsed, onlineUpdate);
+                                    activityModel.RecordActivityMinutes(Utilities.ActivityId, UserLogin.user_id, Utilities.ShiftDate.ToString("yyyy-MM-dd"), (int)Utilities.Activity_Type.IDLE, Utilities.IdleMins, onlineUpdate);
                                 }
+                                isInitialized = true;
+                                break;
+
+                            case (int)Utilities.Status.UNAUTHORIZED:
+                                activity_in = Utilities.UnauthorizedIn.ToString("yyyy-MM-dd HH:mm:ss");
+                                activity_out = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                                TimeElapsed = DateTime.Now.Subtract(Utilities.UnauthorizedIn);
+                                time_elapsed = (float)TimeElapsed.TotalMinutes;
+                                Utilities.UnauthorizedMins += time_elapsed;
+
+                                if (isConnected && Utilities.unauthorizedinnetstatus)
+                                {
+                                    onlineUpdate = true;
+                                }
+
+                                activityModel.RecordActivityOut(UserLogin.user_id, (int)Utilities.Activity_Type.UNAUTHORIZED, activity_in, activity_out, time_elapsed, onlineUpdate); ;
+                                activityModel.RecordActivityMinutes(Utilities.ActivityId, UserLogin.user_id, Utilities.ShiftDate.ToString("yyyy-MM-dd"), (int)Utilities.Activity_Type.UNAUTHORIZED, Utilities.UnauthorizedMins, onlineUpdate);
+                                break;
+
+                            default: break;
+                        }
+                        Debug.WriteLine("Status: \tActive \tTimestamp \t{0}", timeStamp);
+
+                        updateStatus = true;
+                        panelStatus.BackColor = Color.Green;
+                        if (Home != null)
+                        {
+                            Home.labelStatus
                         }
                     }
 
@@ -582,7 +635,112 @@ namespace C_WithDatabase
 
         private bool CheckUnauthorized()
         {
-            throw new NotImplementedException();
-        } 
+            bool siteFound = false;
+
+            string[] browsers = { "chrome", "msedge", "firefox", "opera" };
+
+            for (int app = 0; app < browsers.Length; app++)
+            {
+                switch (browsers[app])
+                {
+                    case "chrome":
+                    case "msedge":
+                    case "firefox":
+                        Process[] browserProcess = Process.GetProcessesByName(browsers[app]);
+                        List<uint> browserProcessIDs = browserProcess.Select(x => (uint)x.Id).ToList;
+                        List<IntPtr> windowHandles = new List<IntPtr>();
+                        EnumWindowsProc enumerateHandle = delegate (IntPtr hWnd, int lParam)
+                        {
+                            uint id;
+                            var x = GetWindowThreadProcessId(hWnd, out id);
+
+                            if (browserProcessIDs.Contains(id))
+                            {
+                                var clsName = new StringBuilder(256);
+                                var hasClass = GetClassName(hWnd, clsName, 256);
+
+                                if (hasClass)
+                                {
+                                    var maxLength = (int)GetWindowTextLength(hWnd);
+                                    var builder = new StringBuilder(maxLength + 1);
+                                    GetWindowText(hWnd, builder, (uint)builder.Capacity);
+                                    var text = builder.ToString();
+                                    var className = clsName.ToString();
+
+                                    if (browsers[app] == "firefox")
+                                    {
+                                        if (!string.IsNullOrWhiteSpace(text) && className.Equals("MozillaWindowClass", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            windowHandles.Add(hWnd);
+                                        }
+                                    }
+
+                                    else
+                                    {
+                                        if (!string.IsNullOrWhiteSpace(text) && className.Equals("Chrome_WidgetWin_1", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            windowHandles.Add(hWnd);
+                                        }
+                                    }
+                                }
+                            }
+                            return true;
+                        };
+
+                        EnumDesktopWindows(IntPtr.Zero, enumerateHandle, 0);
+
+                        foreach (IntPtr ptr in windowHandles)
+                        {
+                            AutomationElement root = AutomationElement.FromHandle(ptr);
+
+                            if (root != null)
+                            {
+                                string name = root.Current.Name as string;
+                                Debug.WriteLine("Sitename: \t{0}", name);
+
+                                if (IsUnauthorizedSite(name))
+                                {
+                                    siteFound = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        break;
+
+                    case "opera":
+
+
+                    default:
+                        break;
+                }
+            }
+
+            hasUnauthorized = siteFound;
+            return siteFound;
+        }
+
+        private bool IsUnauthorizedSite(string siteName)
+        {
+            foreach (string site in Utilities.Unauthorized_Sites)
+            {
+                if (siteName.ToUpper().Contains(site))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public void UpdateName()
+        {
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+
+            if (UserLogin.middle_name != "")
+                labelUsername.Text = textInfo.ToTitleCase(UserLogin.last_name) + ", " + textInfo.ToTitleCase(UserLogin.first_name) + " " + textInfo.ToTitleCase(UserLogin.middle_name.Substring(0, 1)) + ".";
+            else
+                labelUsername.Text = textInfo.ToTitleCase(UserLogin.last_name) + ", " + textInfo.ToTitleCase(UserLogin.first_name) + ".";
+        }
     }
 }

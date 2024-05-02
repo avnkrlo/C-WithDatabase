@@ -38,16 +38,16 @@
             labelUnauthorizedMins = new System.Windows.Forms.Label();
             labelActiveMins = new System.Windows.Forms.Label();
             labelIdleMins = new System.Windows.Forms.Label();
-            label8 = new System.Windows.Forms.Label();
-            label7 = new System.Windows.Forms.Label();
-            label6 = new System.Windows.Forms.Label();
-            label5 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
+            labelSummaryBreak = new System.Windows.Forms.Label();
+            labelSummaryUnauthorized = new System.Windows.Forms.Label();
+            labelSummaryActive = new System.Windows.Forms.Label();
+            labelSummaryIdle = new System.Windows.Forms.Label();
+            labelSummaryMinutesText = new System.Windows.Forms.Label();
+            labelSummaryStatusText = new System.Windows.Forms.Label();
             panel1 = new System.Windows.Forms.Panel();
-            label2 = new System.Windows.Forms.Label();
+            labelSummaryText = new System.Windows.Forms.Label();
             pnlBreaks = new System.Windows.Forms.Panel();
-            lblBreaks = new System.Windows.Forms.Label();
+            labelBreaksText = new System.Windows.Forms.Label();
             pnlBreaksCounter = new System.Windows.Forms.Panel();
             btn2ndBreak = new System.Windows.Forms.Button();
             lblBreakCounter = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             pnlStatusBar = new System.Windows.Forms.Panel();
             labelStatus = new System.Windows.Forms.Label();
             pnlStatus = new System.Windows.Forms.Panel();
-            lblStatus = new System.Windows.Forms.Label();
+            labelStatusText = new System.Windows.Forms.Label();
             pnlHomeDashboard.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -103,12 +103,12 @@
             panel3.Controls.Add(labelUnauthorizedMins);
             panel3.Controls.Add(labelActiveMins);
             panel3.Controls.Add(labelIdleMins);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(label5);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label3);
+            panel3.Controls.Add(labelSummaryBreak);
+            panel3.Controls.Add(labelSummaryUnauthorized);
+            panel3.Controls.Add(labelSummaryActive);
+            panel3.Controls.Add(labelSummaryIdle);
+            panel3.Controls.Add(labelSummaryMinutesText);
+            panel3.Controls.Add(labelSummaryStatusText);
             panel3.Location = new System.Drawing.Point(52, 10);
             panel3.Margin = new System.Windows.Forms.Padding(0);
             panel3.Name = "panel3";
@@ -163,113 +163,113 @@
             labelIdleMins.Text = "0";
             labelIdleMins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // labelSummaryBreak
             // 
-            label8.BackColor = System.Drawing.Color.White;
-            label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label8.ForeColor = System.Drawing.Color.Black;
-            label8.Location = new System.Drawing.Point(7, 238);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(253, 44);
-            label8.TabIndex = 5;
-            label8.Text = "BREAK";
-            label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSummaryBreak.BackColor = System.Drawing.Color.White;
+            labelSummaryBreak.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelSummaryBreak.ForeColor = System.Drawing.Color.Black;
+            labelSummaryBreak.Location = new System.Drawing.Point(7, 238);
+            labelSummaryBreak.Name = "labelSummaryBreak";
+            labelSummaryBreak.Size = new System.Drawing.Size(253, 44);
+            labelSummaryBreak.TabIndex = 5;
+            labelSummaryBreak.Text = "BREAK";
+            labelSummaryBreak.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // labelSummaryUnauthorized
             // 
-            label7.BackColor = System.Drawing.Color.White;
-            label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label7.ForeColor = System.Drawing.Color.Black;
-            label7.Location = new System.Drawing.Point(7, 185);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(253, 44);
-            label7.TabIndex = 4;
-            label7.Text = "UNAUTHORIZED";
-            label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSummaryUnauthorized.BackColor = System.Drawing.Color.White;
+            labelSummaryUnauthorized.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelSummaryUnauthorized.ForeColor = System.Drawing.Color.Black;
+            labelSummaryUnauthorized.Location = new System.Drawing.Point(7, 185);
+            labelSummaryUnauthorized.Name = "labelSummaryUnauthorized";
+            labelSummaryUnauthorized.Size = new System.Drawing.Size(253, 44);
+            labelSummaryUnauthorized.TabIndex = 4;
+            labelSummaryUnauthorized.Text = "UNAUTHORIZED";
+            labelSummaryUnauthorized.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // labelSummaryActive
             // 
-            label6.BackColor = System.Drawing.Color.White;
-            label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label6.ForeColor = System.Drawing.Color.Black;
-            label6.Location = new System.Drawing.Point(7, 132);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(253, 44);
-            label6.TabIndex = 4;
-            label6.Text = "ACTIVE";
-            label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSummaryActive.BackColor = System.Drawing.Color.White;
+            labelSummaryActive.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelSummaryActive.ForeColor = System.Drawing.Color.Black;
+            labelSummaryActive.Location = new System.Drawing.Point(7, 132);
+            labelSummaryActive.Name = "labelSummaryActive";
+            labelSummaryActive.Size = new System.Drawing.Size(253, 44);
+            labelSummaryActive.TabIndex = 4;
+            labelSummaryActive.Text = "ACTIVE";
+            labelSummaryActive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // labelSummaryIdle
             // 
-            label5.BackColor = System.Drawing.Color.White;
-            label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label5.ForeColor = System.Drawing.Color.Black;
-            label5.Location = new System.Drawing.Point(7, 78);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(253, 44);
-            label5.TabIndex = 3;
-            label5.Text = "IDLE";
-            label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSummaryIdle.BackColor = System.Drawing.Color.White;
+            labelSummaryIdle.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelSummaryIdle.ForeColor = System.Drawing.Color.Black;
+            labelSummaryIdle.Location = new System.Drawing.Point(7, 78);
+            labelSummaryIdle.Name = "labelSummaryIdle";
+            labelSummaryIdle.Size = new System.Drawing.Size(253, 44);
+            labelSummaryIdle.TabIndex = 3;
+            labelSummaryIdle.Text = "IDLE";
+            labelSummaryIdle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // labelSummaryMinutesText
             // 
-            label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label4.ForeColor = System.Drawing.Color.White;
-            label4.Location = new System.Drawing.Point(270, 13);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(250, 44);
-            label4.TabIndex = 2;
-            label4.Text = "MINUTES";
-            label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSummaryMinutesText.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelSummaryMinutesText.ForeColor = System.Drawing.Color.White;
+            labelSummaryMinutesText.Location = new System.Drawing.Point(270, 13);
+            labelSummaryMinutesText.Name = "labelSummaryMinutesText";
+            labelSummaryMinutesText.Size = new System.Drawing.Size(250, 44);
+            labelSummaryMinutesText.TabIndex = 2;
+            labelSummaryMinutesText.Text = "MINUTES";
+            labelSummaryMinutesText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // labelSummaryStatusText
             // 
-            label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label3.ForeColor = System.Drawing.Color.White;
-            label3.Location = new System.Drawing.Point(7, 13);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(250, 44);
-            label3.TabIndex = 1;
-            label3.Text = "STATUS";
-            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSummaryStatusText.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelSummaryStatusText.ForeColor = System.Drawing.Color.White;
+            labelSummaryStatusText.Location = new System.Drawing.Point(7, 13);
+            labelSummaryStatusText.Name = "labelSummaryStatusText";
+            labelSummaryStatusText.Size = new System.Drawing.Size(250, 44);
+            labelSummaryStatusText.TabIndex = 1;
+            labelSummaryStatusText.Text = "STATUS";
+            labelSummaryStatusText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(labelSummaryText);
             panel1.Location = new System.Drawing.Point(0, 496);
             panel1.Margin = new System.Windows.Forms.Padding(0);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(1800, 63);
             panel1.TabIndex = 15;
             // 
-            // label2
+            // labelSummaryText
             // 
-            label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(12, 7);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(212, 46);
-            label2.TabIndex = 28;
-            label2.Text = "TODAY'S SUMMARY";
-            label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            labelSummaryText.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelSummaryText.Location = new System.Drawing.Point(12, 7);
+            labelSummaryText.Name = "labelSummaryText";
+            labelSummaryText.Size = new System.Drawing.Size(212, 46);
+            labelSummaryText.TabIndex = 28;
+            labelSummaryText.Text = "TODAY'S SUMMARY";
+            labelSummaryText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlBreaks
             // 
-            pnlBreaks.Controls.Add(lblBreaks);
+            pnlBreaks.Controls.Add(labelBreaksText);
             pnlBreaks.Location = new System.Drawing.Point(0, 143);
             pnlBreaks.Margin = new System.Windows.Forms.Padding(0);
             pnlBreaks.Name = "pnlBreaks";
             pnlBreaks.Size = new System.Drawing.Size(1800, 63);
             pnlBreaks.TabIndex = 14;
             // 
-            // lblBreaks
+            // labelBreaksText
             // 
-            lblBreaks.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            lblBreaks.Location = new System.Drawing.Point(12, 7);
-            lblBreaks.Name = "lblBreaks";
-            lblBreaks.Size = new System.Drawing.Size(144, 46);
-            lblBreaks.TabIndex = 28;
-            lblBreaks.Text = "BREAKS";
-            lblBreaks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            labelBreaksText.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelBreaksText.Location = new System.Drawing.Point(12, 7);
+            labelBreaksText.Name = "labelBreaksText";
+            labelBreaksText.Size = new System.Drawing.Size(144, 46);
+            labelBreaksText.TabIndex = 28;
+            labelBreaksText.Text = "BREAKS";
+            labelBreaksText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlBreaksCounter
             // 
@@ -322,6 +322,7 @@
             btnLunch.TabIndex = 9;
             btnLunch.Text = "      LUNCH";
             btnLunch.UseVisualStyleBackColor = true;
+            btnLunch.Click += btnLunch_Click;
             // 
             // btn1stBreak
             // 
@@ -358,22 +359,22 @@
             // 
             // pnlStatus
             // 
-            pnlStatus.Controls.Add(lblStatus);
+            pnlStatus.Controls.Add(labelStatusText);
             pnlStatus.Location = new System.Drawing.Point(0, 0);
             pnlStatus.Margin = new System.Windows.Forms.Padding(0);
             pnlStatus.Name = "pnlStatus";
             pnlStatus.Size = new System.Drawing.Size(1800, 63);
             pnlStatus.TabIndex = 11;
             // 
-            // lblStatus
+            // labelStatusText
             // 
-            lblStatus.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            lblStatus.Location = new System.Drawing.Point(12, 7);
-            lblStatus.Name = "lblStatus";
-            lblStatus.Size = new System.Drawing.Size(144, 46);
-            lblStatus.TabIndex = 28;
-            lblStatus.Text = "STATUS";
-            lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            labelStatusText.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelStatusText.Location = new System.Drawing.Point(12, 7);
+            labelStatusText.Name = "labelStatusText";
+            labelStatusText.Size = new System.Drawing.Size(144, 46);
+            labelStatusText.TabIndex = 28;
+            labelStatusText.Text = "STATUS";
+            labelStatusText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // HomeForm
             // 
@@ -414,25 +415,25 @@
         private System.Windows.Forms.Button btn1stBreak;
         private System.Windows.Forms.Label lblBreakCounter;
         private System.Windows.Forms.Panel pnlStatus;
-        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label labelStatusText;
         private System.Windows.Forms.Panel pnlStatusBar;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Panel pnlBreaks;
-        private System.Windows.Forms.Label lblBreaks;
+        private System.Windows.Forms.Label labelBreaksText;
         private System.Windows.Forms.Panel pnlBreaksCounter;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelSummaryText;
+        private System.Windows.Forms.Label labelSummaryIdle;
+        private System.Windows.Forms.Label labelSummaryMinutesText;
+        private System.Windows.Forms.Label labelSummaryStatusText;
         private System.Windows.Forms.Label labelBreakMins;
         private System.Windows.Forms.Label labelUnauthorizedMins;
         private System.Windows.Forms.Label labelActiveMins;
         private System.Windows.Forms.Label labelIdleMins;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelSummaryBreak;
+        private System.Windows.Forms.Label labelSummaryUnauthorized;
+        private System.Windows.Forms.Label labelSummaryActive;
     }
 }

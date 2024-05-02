@@ -4,20 +4,64 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Globalization;
+using System.Diagnostics;
+using Domain;
+using Common.Cache;
+using Timer = System.Windows.Forms.Timer;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace C_WithDatabase
 {
     public partial class LoginForm : Form
     {
 
+        private DateTime xTimer;
+        UserModel userModel;
+        ActivityModel activityModel;
+        LogModel logModel;
+
         public LoginForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             txtUsername.Select();
+            userModel = new UserModel();
+            activityModel = new ActivityModel();
+            logModel = new LogModel();
+
+            Utilities.WinkeyDetect();
+            txtUsername.Focus();
+
+            txtUsername.Text = "CCK-CMPTR-0245";
+            txtPassword.Text = "Password01";
+
+            Utilities.ActiveScreen = (int)Utilities.Screens.LOGIN;
+            Utilities.StartMKDetection();
+            LoadPrefLanguage();
+            SetConnectivityIcons();
+            CheckOfflineData();
+        }
+
+        private void LoadPrefLanguage()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SetConnectivityIcons()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CheckOfflineData()
+        {
+            throw new NotImplementedException();
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
@@ -94,10 +138,30 @@ namespace C_WithDatabase
             {
                 txtPassword.PasswordChar = '\0';
                 btnPeekPassword.Image = C_WithDatabase.Properties.Resources.restriction;
-            } else {
+            }
+            else
+            {
                 txtPassword.PasswordChar = '●';
                 btnPeekPassword.Image = C_WithDatabase.Properties.Resources.look;
             }
+        }
+
+        private void btnShutdown_Click(object sender, EventArgs e)
+        {
+            Utilities.EndMKDetection();
+
+            if (Utilities.HasOfflineData)
+            {
+                if (userModel.CheckConnection())
+                {
+
+                }
+            }
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
