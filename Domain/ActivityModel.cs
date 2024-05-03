@@ -19,6 +19,21 @@ namespace Domain
             activityDAO.recordIn(username, log_type, date_in, isOnline);
         }
 
+        public void RecordActivityOut(string username, int log_type, string date_in, string date_out, float time_elapsed, bool isOnline)
+        {
+            activityDAO.recordOut(username, log_type, date_in, date_out, time_elapsed, isOnline);
+        }
+
+        public string CreateActivityMinutes(string user_id, string shiftDate, bool isOnline)
+        {
+            return activityDAO.createMinutes(user_id, shiftDate, isOnline);
+        }
+
+        public void RecordActivityMinutes(string id, string user_id, string shiftDate, int activity_type, float minutes, bool isOnline)
+        {
+            activityDAO.recordMinutes(id, user_id, shiftDate, activity_type, minutes, isOnline);
+        }
+
         public bool emp_activities_Sync()
         {
             bool result = false;
@@ -35,7 +50,7 @@ namespace Domain
             return result;
         }
 
-        public bool Sync_emp_activities_summary()
+        public bool Sync_emp_activities()
         {
             bool result = false;
             ArrayList arr_Local = new ArrayList();
@@ -53,14 +68,18 @@ namespace Domain
                 List<string> arrLocalRecFirst = new List<string>();
                 arrLocalRecFirst = (List<string>)arr_Local[0];
                 user_id = arrLocalRecFirst[1].ToString();
-                start_date = arrLocalRecLast[2].ToString();
+                start_date = arrLocalRecFirst[2].ToString();
+
+                List<string> arrLocalRecLast = new List<string>();
+                arrLocalRecLast = (List<string>)arr_Local[arr_Local.Count - 1];
+                end_date = arrLocalRecLast[3].ToString();
             }
             else
             {
                 return result;
             }
 
-            arr_Server = activityDAO.getServerActivitiesSummary(user_id, start_date, end_date);
+            arr_Server = activityDAO.getServerActivities(user_id, start_date, end_date);
             if (arr_Server.Count <= 0)
             {
                 return result;
@@ -103,11 +122,45 @@ namespace Domain
                     List<string> arrDiffActiveRec = new List<string>();
                     arrDiffActiveRec = (List<string>)arr_Diff[ctr];
 
-                    string recDate;
+                    string timeStart;
+                    string timeEnd;
 
-                    if ()
+                    if (arrDiffActiveRec[3].ToString() == "")
+                    {
+                        timeStart = null;
+                    }
+                    else
+                    {
+                        timeStart = "'" + arrDiffActiveRec[3].ToString() + "'";
+                    }
+
+                    if (arrDiffActiveRec[4].ToString() == "")
+                    {
+                        timeEnd = null;
+                    }
+                    else
+                    {
+                        timeEnd = "'" + arrDiffActiveRec[4].ToString() + "'";
+                    }
+
+                    string record = "(" + arrDiffActiveRec[1].ToString() + "," + arrDiffActiveRec[2].ToString() + "," + timeStart + "," + timeEnd + "," + arrDiffActiveRec[5].ToString() + ")";
+                    values += record;
+
+                    if (ctr < arr_Diff.Count - 1)
+                    {
+                        values += ",";
+                    }
+                }
+
+                result = activityDAO.syncEmpActivities(values);
+
+                if (result)
+                {
+                    activityDAO.resetLocalEmpActivities();
                 }
             }
+
+            return result;
         }
 
         public bool emp_activities_summary_Sync()
