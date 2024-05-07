@@ -54,8 +54,32 @@ namespace C_WithDatabase.Sidebar_Navigation
         {
             if (Utilities.Lunch == (int)Utilities.BreakStatus.INPROGRESS)
             {
-                if (Utilities.ITTS)
+                if (Utilities.ITTSMessage(StringsResources.LunchStart, StringsResources.Lunch, (int)Utilities.MessageMode.OKCANCEL, this))
+                {
+                    Utilities.Lunch = (int)Utilities.BreakStatus.TAKEN;
+                    PForm.inLunch = true;
+                    PForm.SetBreak("LUNCH");
+                }
             }
+            else
+            {
+                if (btn1stBreak.Enabled)
+                {
+                    if (Utilities.ITTSMessage(StringsResources.LunchStart, StringsResources.Lunch, (int)Utilities.MessageMode.OKCANCEL, this))
+                    {
+                        Utilities.Lunch = (int)(Utilities.BreakStatus.TAKEN);
+                        PForm.inLunch = true;
+                        PForm.SetBreak("LUNCH");
+                    }
+                }
+                else
+                {
+                    PForm.inLunch = true;
+                    PForm.SetBreak("LUNCH");
+                }
+            }
+            SetButtons();
+            StyleButtons();
         }
 
         public void SetButtons()

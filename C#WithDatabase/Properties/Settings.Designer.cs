@@ -32,5 +32,29 @@ namespace C_WithDatabase.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+
+        public string Language
+        {
+            get
+            {
+                return ((string)(this["Language"]));
+            }
+            set
+            {
+                this["Language"] = value;
+            }
+        }
+
+        public bool HasOfflineData
+        {
+            get
+            {
+                return ((bool)(this["HasOfflineData"]));
+            }
+            set
+            {
+                this["HasOfflineData"] = value;
+            }
+        }
     }
 }

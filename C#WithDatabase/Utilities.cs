@@ -444,5 +444,49 @@ namespace C_WithDatabase
                 return false;
             }
         }
+
+        public static bool ITTSMessage(string message, string title, int mode, Form parent)
+        {
+            bool result = false;
+            Form backgroundFrom = new Form();
+
+            try
+            {
+                MessageForm messageForm = new MessageForm(message, title, mode);
+                using (messageForm)
+                {
+                    backgroundFrom.StartPosition = FormStartPosition.Manual;
+                    backgroundFrom.FormBorderStyle = FormBorderStyle.None;
+                    backgroundFrom.Opacity = 0.70d;
+                    backgroundFrom.BackColor = Color.Black;
+                    backgroundFrom.WindowState = FormWindowState.Maximized;
+                    backgroundFrom.TopMost = true;
+                    backgroundFrom.Location = parent.Location;
+                    backgroundFrom.ShowInTaskbar = false;
+                    backgroundFrom.Show();
+
+                    messageForm.Owner = backgroundFrom;
+
+                    if (messageForm.ShowDialog() == DialogResult.OK)
+                    {
+                        result = true;
+                        Debug.WriteLine("Dialog OK");
+                    }
+                    else
+                    {
+                        result |= false;
+                        Debug.WriteLine("Dialog NG");
+                    }
+
+                    messageForm.Dispose();
+                };
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return result;
+        }
     }
 }

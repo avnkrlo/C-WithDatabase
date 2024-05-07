@@ -37,22 +37,25 @@
             pictureBox1 = new System.Windows.Forms.PictureBox();
             btnPeekPassword = new System.Windows.Forms.Button();
             pnlLoginForm = new System.Windows.Forms.Panel();
+            panelSyncProgress = new System.Windows.Forms.Panel();
+            labelProgressBar = new System.Windows.Forms.Label();
+            labelPanelOfflineSync = new System.Windows.Forms.Label();
             panelPower = new System.Windows.Forms.Panel();
             btnShutdown = new System.Windows.Forms.Button();
             btnRestart = new System.Windows.Forms.Button();
             panelCredentials = new System.Windows.Forms.Panel();
             labelError = new System.Windows.Forms.Label();
-            button1 = new System.Windows.Forms.Button();
-            panelSyncProgress = new System.Windows.Forms.Panel();
-            labelPanelOfflineSync = new System.Windows.Forms.Label();
-            labelProgressBar = new System.Windows.Forms.Label();
+            btnLogin = new System.Windows.Forms.Button();
+            btnPower = new System.Windows.Forms.Button();
+            ipicConnectivity = new System.Windows.Forms.Button();
+            ipicServerConnection = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)userIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passwordIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlLoginForm.SuspendLayout();
+            panelSyncProgress.SuspendLayout();
             panelPower.SuspendLayout();
             panelCredentials.SuspendLayout();
-            panelSyncProgress.SuspendLayout();
             SuspendLayout();
             // 
             // txtUsername
@@ -137,6 +140,9 @@
             // 
             // pnlLoginForm
             // 
+            pnlLoginForm.Controls.Add(ipicServerConnection);
+            pnlLoginForm.Controls.Add(ipicConnectivity);
+            pnlLoginForm.Controls.Add(btnPower);
             pnlLoginForm.Controls.Add(panelSyncProgress);
             pnlLoginForm.Controls.Add(panelPower);
             pnlLoginForm.Controls.Add(panelCredentials);
@@ -149,14 +155,48 @@
             pnlLoginForm.Size = new System.Drawing.Size(1920, 1080);
             pnlLoginForm.TabIndex = 22;
             // 
+            // panelSyncProgress
+            // 
+            panelSyncProgress.Controls.Add(labelProgressBar);
+            panelSyncProgress.Controls.Add(labelPanelOfflineSync);
+            panelSyncProgress.Location = new System.Drawing.Point(694, 465);
+            panelSyncProgress.Name = "panelSyncProgress";
+            panelSyncProgress.Size = new System.Drawing.Size(613, 187);
+            panelSyncProgress.TabIndex = 23;
+            panelSyncProgress.Visible = false;
+            // 
+            // labelProgressBar
+            // 
+            labelProgressBar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelProgressBar.ForeColor = System.Drawing.Color.Black;
+            labelProgressBar.Location = new System.Drawing.Point(188, 94);
+            labelProgressBar.Margin = new System.Windows.Forms.Padding(0);
+            labelProgressBar.Name = "labelProgressBar";
+            labelProgressBar.Size = new System.Drawing.Size(227, 25);
+            labelProgressBar.TabIndex = 1;
+            labelProgressBar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelPanelOfflineSync
+            // 
+            labelPanelOfflineSync.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            labelPanelOfflineSync.ForeColor = System.Drawing.Color.Black;
+            labelPanelOfflineSync.Location = new System.Drawing.Point(147, 23);
+            labelPanelOfflineSync.Margin = new System.Windows.Forms.Padding(0);
+            labelPanelOfflineSync.Name = "labelPanelOfflineSync";
+            labelPanelOfflineSync.Size = new System.Drawing.Size(308, 41);
+            labelPanelOfflineSync.TabIndex = 0;
+            labelPanelOfflineSync.Text = "Offline data sync in progress.";
+            labelPanelOfflineSync.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panelPower
             // 
             panelPower.Controls.Add(btnShutdown);
             panelPower.Controls.Add(btnRestart);
-            panelPower.Location = new System.Drawing.Point(1713, 872);
+            panelPower.Location = new System.Drawing.Point(1622, 817);
             panelPower.Name = "panelPower";
-            panelPower.Size = new System.Drawing.Size(195, 142);
+            panelPower.Size = new System.Drawing.Size(251, 142);
             panelPower.TabIndex = 2;
+            panelPower.Visible = false;
             // 
             // btnShutdown
             // 
@@ -171,7 +211,7 @@
             btnShutdown.Margin = new System.Windows.Forms.Padding(0);
             btnShutdown.Name = "btnShutdown";
             btnShutdown.Padding = new System.Windows.Forms.Padding(15);
-            btnShutdown.Size = new System.Drawing.Size(189, 67);
+            btnShutdown.Size = new System.Drawing.Size(245, 67);
             btnShutdown.TabIndex = 0;
             btnShutdown.Text = "          SHUTDOWN";
             btnShutdown.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,7 +231,7 @@
             btnRestart.Margin = new System.Windows.Forms.Padding(0);
             btnRestart.Name = "btnRestart";
             btnRestart.Padding = new System.Windows.Forms.Padding(15);
-            btnRestart.Size = new System.Drawing.Size(189, 61);
+            btnRestart.Size = new System.Drawing.Size(245, 61);
             btnRestart.TabIndex = 1;
             btnRestart.Text = "          RESTART";
             btnRestart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -202,7 +242,7 @@
             // 
             panelCredentials.Controls.Add(labelError);
             panelCredentials.Controls.Add(pictureBox1);
-            panelCredentials.Controls.Add(button1);
+            panelCredentials.Controls.Add(btnLogin);
             panelCredentials.Controls.Add(passwordIcon);
             panelCredentials.Controls.Add(btnPeekPassword);
             panelCredentials.Controls.Add(txtPassword);
@@ -229,51 +269,50 @@
             labelError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             labelError.Visible = false;
             // 
-            // button1
+            // btnLogin
             // 
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button1.ForeColor = System.Drawing.Color.Black;
-            button1.Location = new System.Drawing.Point(36, 320);
-            button1.Margin = new System.Windows.Forms.Padding(0);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(307, 40);
-            button1.TabIndex = 0;
-            button1.Text = "LOGIN";
-            button1.UseVisualStyleBackColor = true;
+            btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = System.Drawing.Color.Black;
+            btnLogin.Location = new System.Drawing.Point(36, 320);
+            btnLogin.Margin = new System.Windows.Forms.Padding(0);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new System.Drawing.Size(307, 40);
+            btnLogin.TabIndex = 0;
+            btnLogin.Text = "LOGIN";
+            btnLogin.UseVisualStyleBackColor = true;
             // 
-            // panelSyncProgress
+            // btnPower
             // 
-            panelSyncProgress.Controls.Add(labelProgressBar);
-            panelSyncProgress.Controls.Add(labelPanelOfflineSync);
-            panelSyncProgress.Location = new System.Drawing.Point(694, 465);
-            panelSyncProgress.Name = "panelSyncProgress";
-            panelSyncProgress.Size = new System.Drawing.Size(613, 187);
-            panelSyncProgress.TabIndex = 23;
-            panelSyncProgress.Visible = false;
+            btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnPower.Image = (System.Drawing.Image)resources.GetObject("btnPower.Image");
+            btnPower.Location = new System.Drawing.Point(1817, 965);
+            btnPower.Name = "btnPower";
+            btnPower.Size = new System.Drawing.Size(56, 52);
+            btnPower.TabIndex = 24;
+            btnPower.UseVisualStyleBackColor = true;
+            btnPower.MouseDown += btnPower_MouseDown;
+            btnPower.MouseUp += btnPower_MouseUp;
             // 
-            // labelPanelOfflineSync
+            // ipicConnectivity
             // 
-            labelPanelOfflineSync.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            labelPanelOfflineSync.ForeColor = System.Drawing.Color.Black;
-            labelPanelOfflineSync.Location = new System.Drawing.Point(147, 23);
-            labelPanelOfflineSync.Margin = new System.Windows.Forms.Padding(0);
-            labelPanelOfflineSync.Name = "labelPanelOfflineSync";
-            labelPanelOfflineSync.Size = new System.Drawing.Size(308, 41);
-            labelPanelOfflineSync.TabIndex = 0;
-            labelPanelOfflineSync.Text = "Offline data sync in progress.";
-            labelPanelOfflineSync.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            ipicConnectivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            ipicConnectivity.Image = (System.Drawing.Image)resources.GetObject("ipicConnectivity.Image");
+            ipicConnectivity.Location = new System.Drawing.Point(1755, 965);
+            ipicConnectivity.Name = "ipicConnectivity";
+            ipicConnectivity.Size = new System.Drawing.Size(56, 52);
+            ipicConnectivity.TabIndex = 25;
+            ipicConnectivity.UseVisualStyleBackColor = true;
             // 
-            // labelProgressBar
+            // ipicServerConnection
             // 
-            labelProgressBar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            labelProgressBar.ForeColor = System.Drawing.Color.Black;
-            labelProgressBar.Location = new System.Drawing.Point(188, 79);
-            labelProgressBar.Margin = new System.Windows.Forms.Padding(0);
-            labelProgressBar.Name = "labelProgressBar";
-            labelProgressBar.Size = new System.Drawing.Size(227, 25);
-            labelProgressBar.TabIndex = 1;
-            labelProgressBar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            ipicServerConnection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            ipicServerConnection.Image = (System.Drawing.Image)resources.GetObject("ipicServerConnection.Image");
+            ipicServerConnection.Location = new System.Drawing.Point(1693, 965);
+            ipicServerConnection.Name = "ipicServerConnection";
+            ipicServerConnection.Size = new System.Drawing.Size(56, 52);
+            ipicServerConnection.TabIndex = 26;
+            ipicServerConnection.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
@@ -295,10 +334,10 @@
             ((System.ComponentModel.ISupportInitialize)passwordIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlLoginForm.ResumeLayout(false);
+            panelSyncProgress.ResumeLayout(false);
             panelPower.ResumeLayout(false);
             panelCredentials.ResumeLayout(false);
             panelCredentials.PerformLayout();
-            panelSyncProgress.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -317,11 +356,14 @@
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Panel panelPower;
         private System.Windows.Forms.Panel panelCredentials;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Panel panelSyncProgress;
         private System.Windows.Forms.Label labelProgressBar;
         private System.Windows.Forms.Label labelPanelOfflineSync;
+        private System.Windows.Forms.Button btnPower;
+        private System.Windows.Forms.Button ipicServerConnection;
+        private System.Windows.Forms.Button ipicConnectivity;
     }
 }
 

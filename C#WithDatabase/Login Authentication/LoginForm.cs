@@ -11,6 +11,9 @@ using Common.Cache;
 using Timer = System.Windows.Forms.Timer;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
+using System.Net.NetworkInformation;
+using System.Threading;
+using C_WithDatabase.Form_Modals;
 
 namespace C_WithDatabase
 {
@@ -51,17 +54,89 @@ namespace C_WithDatabase
 
         private void LoadPrefLanguage()
         {
-            throw new NotImplementedException();
+            if (Utilities.Language == "" || Utilities.Language == null)
+            {
+                string language = Properties.Settings.Default.Language;
+
+                if (language == "" || language == null)
+                {
+                    CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+                    if (currentCulture == null)
+                    {
+                        Utilities.Language = "English";
+                    }
+                    else
+                    {
+                        if (currentCulture.Name.Contains("ja"))
+                        {
+                            Utilities.Language = "Japanese";
+                        }
+                        else
+                        {
+                            Utilities.Language = "English";
+                        }
+                    }
+                }
+                else
+                {
+                    switch (language)
+                    {
+                        case "Japanese":
+                            Utilities.Language = "Japanese";
+                            break;
+                        case "English":
+                            Utilities.Language = "English";
+                            break;
+                    }
+                }
+            }
+
+            LanguageLibrary.SetLanguage();
+            SetLanguage();
+        }
+
+        private void SetLanguage()
+        {
+            btnLogin.Text = StringsResources.Login.ToUpper();
+            btnShutdown.Text = StringsResources.Shutdown;
+            btnRestart.Text = StringsResources.Restart;
+            labelProgressBar.Text = StringsResources.SyncInProgress.ToString();
         }
 
         private void SetConnectivityIcons()
         {
-            throw new NotImplementedException();
+            //ipicConnectivity.BackColor = Color.FromArgb(0, 255, 255, 255);
+            if (Utilities.CheckInternet())
+            {
+                this.TopMost = true;
+                Utilities.WindowsLock = true;
+                foreach (NetworkInterface ni in NetworkInterface.GetAllNetworkInterfaces())
+                {
+                    if (ni.OperationalStatus == OperationalStatus.Up)
+                    {
+                        Debug.WriteLine(ni.NetworkInterfaceType.ToString());
+                        if (ni.NetworkInterfaceType.ToString() == "Ethernet")
+                        {
+                            //ipicConnectivity.
+                        }
+                    }
+                }
+            }
         }
 
         private void CheckOfflineData()
         {
-            throw new NotImplementedException();
+            Utilities.HasOfflineData = Properties.Settings.Default.HasOfflineData;
+            if (Utilities.HasOfflineData)
+            {
+                btnRestart.Text = StringsResources.SyncRestart;
+                btnShutdown.Text = StringsResources.SyncShutdown;
+            }
+            else
+            {
+                btnRestart.Text = StringsResources.Restart;
+                btnShutdown.Text = StringsResources.Shutdown;
+            }
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
@@ -163,20 +238,61 @@ namespace C_WithDatabase
 
                     if (SyncOfflineData())
                     {
-                        Properties.Settings.Default.HasOfflineData = false; {
-                        }
+                        //Properties.Settings.Default.HasOfflineData = false;
+                    }
                     else
-                        {
-                            Properties.Settings.Default.HasOfflineData = true;
-                        }
+                    {
+                        //Properties.Settings.Default.HasOfflineData = true;
+                    }
+
+                    labelProgressBar.Visible = false;
+                    if (WaitTimer != null)
+                    {
+                        WaitTimer.Stop();
+                        WaitTimer.Dispose();
                     }
                 }
             }
 
-            private void btnRestart_Click(object sender, EventArgs e)
-            {
+            Application.Exit();
+        }
 
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            Utilities.EndMKDetection();
+
+            if (Utilities.HasOfflineData)
+            {
+                if (userModel.CheckConnection())
+                {
+                    panelCredentials.Visible = false;
+                    panelPower.Visible = false;
+                    btnShutdown.Visible = false;
+                    panelSyncProgress.Visible = true;
+                    panelSyncProgress.BackColor = Color.FromArgb(0, 255, 255, 255);
+                    labelPanelOfflineSync.BackColor = Color.FromArgb(0, 255, 255, 255);
+
+                    ShowWaitAnimation();
+
+                    if (SyncOfflineData())
+                    {
+                        Properties.Settings.Default.HasOfflineData = false;
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.HasOfflineData = true;
+                    }
+
+                    labelProgressBar.Visible = false;
+                    if (WaitTimer != null)
+                    {
+                        WaitTimer.Stop();
+                        WaitTimer.Dispose();
+                    }
+                }
             }
+
+            Application.Restart();
         }
 
         private bool SyncOfflineData()
@@ -185,7 +301,7 @@ namespace C_WithDatabase
 
             result = activityModel.emp_activities_Sync();
             result = activityModel.emp_activities_summary_Sync();
-            result = logModel.emp_logs_Sync();
+            //result = logModel.emp_logs_Sync();
 
             return result;
         }
@@ -199,7 +315,7 @@ namespace C_WithDatabase
             "  ●    ",
             "   ●   ",
             "    ●  ",
-            "     ● ",
+            " ●   ● ",
             "  ●   ●",
             "   ●  ●",
             "    ● ●",
@@ -223,7 +339,7 @@ namespace C_WithDatabase
         int ptr = 0;
         bool inc = true;
 
-        private void WaitTimer_Tick()
+        private async void WaitTimer_Tick(object sender, EventArgs e)
         {
             labelProgressBar.Text = waitanim[ptr];
 
@@ -232,7 +348,8 @@ namespace C_WithDatabase
                 labelProgressBar.RightToLeft = RightToLeft.No;
                 ptr++;
             }
-            else if (ptr == 15) {
+            else if (ptr == 15)
+            {
                 inc = false;
                 ptr--;
             }
@@ -245,6 +362,64 @@ namespace C_WithDatabase
                 {
                     inc = true;
                 }
+            }
+        }
+
+        private void btnPower_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (!panelPower.Visible)
+            {
+                xTimer = DateTime.Now;
+            }
+        }
+
+        private void btnPower_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (!panelPower.Visible)
+            {
+                TimeSpan time_elapsed;
+                time_elapsed = DateTime.Now.Subtract(xTimer);
+
+                if (time_elapsed.TotalSeconds > 5)
+                {
+                    Form backgroundForm = new Form();
+                    try
+                    {
+                        system_override_modal modalOverride = new system_override_modal();
+                        using (modalOverride)
+                        {
+                            backgroundForm.StartPosition = FormStartPosition.Manual;
+                            backgroundForm.FormBorderStyle = FormBorderStyle.None;
+                            backgroundForm.Opacity = 0.70d;
+                            backgroundForm.BackColor = Color.Black;
+                            backgroundForm.WindowState = FormWindowState.Maximized;
+                            backgroundForm.TopMost = true;
+                            backgroundForm.Location = this.Location;
+                            backgroundForm.ShowInTaskbar = false;
+                            backgroundForm.Show();
+
+                            modalOverride.Owner = backgroundForm;
+
+                            if (modalOverride.ShowDialog() == DialogResult.OK)
+                            {
+                                Application.Exit();
+                            }
+                            backgroundForm.Dispose();
+                        };
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
+                else
+                {
+                    panelPower.Visible = true;
+                }
+            }
+            else
+            {
+                panelPower.Visible = false;
             }
         }
     }
