@@ -3,56 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{89E609FB-31C8-4B20-A1BD-E65F72766877}|ExcelReports\\ExcelReports.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\excelreports\\model list\\modellist_timesheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E609FB-31C8-4B20-A1BD-E65F72766877}|ExcelReports\\ExcelReports.csproj|solutionrelative:excelreports\\model list\\modellist_timesheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CEE964D-41FD-4264-9E57-0694E111A88A}|Common\\Common.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\common\\cache\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CEE964D-41FD-4264-9E57-0694E111A88A}|Common\\Common.csproj|solutionrelative:common\\cache\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{89E609FB-31C8-4B20-A1BD-E65F72766877}|ExcelReports\\ExcelReports.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\excelreports\\model\\model_activityreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E609FB-31C8-4B20-A1BD-E65F72766877}|ExcelReports\\ExcelReports.csproj|solutionrelative:excelreports\\model\\model_activityreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\login authentication\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9405ADF-E73C-40F9-B6CF-F8CF293DE311}|Domain\\Domain.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\domain\\reportmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9405ADF-E73C-40F9-B6CF-F8CF293DE311}|Domain\\Domain.csproj|solutionrelative:domain\\reportmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9405ADF-E73C-40F9-B6CF-F8CF293DE311}|Domain\\Domain.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\domain\\activitymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9405ADF-E73C-40F9-B6CF-F8CF293DE311}|Domain\\Domain.csproj|solutionrelative:domain\\activitymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}|DataAccess\\DataAccess.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\dataaccess\\reportdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\reportdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}|DataAccess\\DataAccess.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\dataaccess\\activitydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\activitydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\languagelibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\languagelibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}|DataAccess\\DataAccess.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\dataaccess\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF41BF72-ACBB-4ED6-85B0-0AC84CEBADC9}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\sidebar navigation\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\sidebar navigation\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\sidebar navigation\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\sidebar navigation\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\sidebar navigation\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\sidebar navigation\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|C:\\Users\\812\\source\\repos\\C-WithDatabase\\c#withdatabase\\crudwithdatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D04D68E-F67A-4F9A-B6AA-FC97499FB26E}|C#WithDatabase\\C#WithDatabase.csproj|solutionrelative:c#withdatabase\\crudwithdatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9405ADF-E73C-40F9-B6CF-F8CF293DE311}|Domain\\Domain.csproj|c:\\users\\812\\source\\repos\\c-withdatabase\\domain\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9405ADF-E73C-40F9-B6CF-F8CF293DE311}|Domain\\Domain.csproj|solutionrelative:domain\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,8 +30,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModelList_Timesheet.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\ExcelReports\\Model List\\ModelList_Timesheet.cs",
+              "RelativeDocumentMoniker": "ExcelReports\\Model List\\ModelList_Timesheet.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\ExcelReports\\Model List\\ModelList_Timesheet.cs",
+              "RelativeToolTip": "ExcelReports\\Model List\\ModelList_Timesheet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T02:08:05.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Model_ActivityReport.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\ExcelReports\\Model\\Model_ActivityReport.cs",
+              "RelativeDocumentMoniker": "ExcelReports\\Model\\Model_ActivityReport.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\ExcelReports\\Model\\Model_ActivityReport.cs",
+              "RelativeToolTip": "ExcelReports\\Model\\Model_ActivityReport.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T02:07:54.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReportDAO.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\DataAccess\\ReportDAO.cs",
+              "RelativeDocumentMoniker": "DataAccess\\ReportDAO.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\DataAccess\\ReportDAO.cs",
+              "RelativeToolTip": "DataAccess\\ReportDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T02:02:27.338Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -102,162 +109,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Settings.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Properties\\Settings.Designer.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\Properties\\Settings.Designer.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Properties\\Settings.Designer.cs",
-              "RelativeToolTip": "C#WithDatabase\\Properties\\Settings.Designer.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwDcAAAAvAAAA",
+              "DocumentIndex": 2,
+              "Title": "ReportModel.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\Domain\\ReportModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ReportModel.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\Domain\\ReportModel.cs",
+              "RelativeToolTip": "Domain\\ReportModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T07:02:48.811Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LanguageLibrary.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\LanguageLibrary.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\LanguageLibrary.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\LanguageLibrary.cs",
-              "RelativeToolTip": "C#WithDatabase\\LanguageLibrary.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T06:09:31.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Utilities.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Utilities.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\Utilities.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Utilities.cs",
-              "RelativeToolTip": "C#WithDatabase\\Utilities.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAmwGsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T04:55:19.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserDAO.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\DataAccess\\UserDAO.cs",
-              "RelativeDocumentMoniker": "DataAccess\\UserDAO.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\DataAccess\\UserDAO.cs",
-              "RelativeToolTip": "DataAccess\\UserDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIBAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T03:26:05.428Z"
+              "WhenOpened": "2024-05-08T02:01:55.888Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ActivityDAO.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\DataAccess\\ActivityDAO.cs",
-              "RelativeDocumentMoniker": "DataAccess\\ActivityDAO.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\DataAccess\\ActivityDAO.cs",
-              "RelativeToolTip": "DataAccess\\ActivityDAO.cs",
-              "ViewState": "AQIAAEgEAAAAAAAAAAAIwGUEAAANAAAA",
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\Domain\\UserModel.cs",
+              "RelativeDocumentMoniker": "Domain\\UserModel.cs",
+              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\Domain\\UserModel.cs",
+              "RelativeToolTip": "Domain\\UserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T07:11:37.665Z",
+              "WhenOpened": "2024-05-08T02:01:53.576Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ActivityModel.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\Domain\\ActivityModel.cs",
-              "RelativeDocumentMoniker": "Domain\\ActivityModel.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\Domain\\ActivityModel.cs",
-              "RelativeToolTip": "Domain\\ActivityModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T07:06:05.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\Login Authentication\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs",
-              "RelativeToolTip": "C#WithDatabase\\Login Authentication\\LoginForm.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T05:23:15.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\Login Authentication\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Login Authentication\\LoginForm.cs [Design]",
-              "RelativeToolTip": "C#WithDatabase\\Login Authentication\\LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T05:23:13.141Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeForm.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\HomeForm.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\Sidebar Navigation\\HomeForm.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\HomeForm.cs",
-              "RelativeToolTip": "C#WithDatabase\\Sidebar Navigation\\HomeForm.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAwwFcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T03:30:14.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "HomeForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\HomeForm.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\Sidebar Navigation\\HomeForm.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\HomeForm.cs [Design]",
-              "RelativeToolTip": "C#WithDatabase\\Sidebar Navigation\\HomeForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T02:25:59.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserLogin.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\Common\\Cache\\UserLogin.cs",
-              "RelativeDocumentMoniker": "Common\\Cache\\UserLogin.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\Common\\Cache\\UserLogin.cs",
-              "RelativeToolTip": "Common\\Cache\\UserLogin.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAUwAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T06:42:30.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DashboardForm.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
-              "RelativeToolTip": "C#WithDatabase\\Sidebar Navigation\\DashboardForm.cs",
-              "ViewState": "AQIAAIQAAAAAAAAAAAAAALYDAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T00:41:37.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "crudwithdatabase.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\crudwithdatabase.Designer.cs",
-              "RelativeDocumentMoniker": "C#WithDatabase\\crudwithdatabase.Designer.cs",
-              "ToolTip": "C:\\Users\\812\\source\\repos\\C-WithDatabase\\C#WithDatabase\\crudwithdatabase.Designer.cs",
-              "RelativeToolTip": "C#WithDatabase\\crudwithdatabase.Designer.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAnwBkAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T07:54:42.836Z"
             }
           ]
         }

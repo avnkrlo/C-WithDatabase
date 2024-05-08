@@ -13,4 +13,3 @@ namespace ExcelReports.Model
         public string Total { get; set; }
     }
 }
-}
