@@ -1,11 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess
 {
@@ -37,7 +32,7 @@ namespace DataAccess
                         recordLogCMD.CommandText = "INSERT INTO emp_activities(user_id, activity_type, time_start) VALUES (@user_id, @activity_type, @time_start)";
                         recordLogCMD.Parameters.AddWithValue("@user_id", user_id);
                         recordLogCMD.Parameters.AddWithValue("@activity_type", activity_type);
-                        recordLogCMD.Parameters.AddWithValue ("@time_start", time_start);
+                        recordLogCMD.Parameters.AddWithValue("@time_start", time_start);
 
                         var errors = recordLogCMD.ExecuteNonQuery();
 
@@ -133,7 +128,7 @@ namespace DataAccess
                     }
                 }
             }
-            
+
             if (isOnline)
             {
                 using (var connection = GetConnection())
@@ -219,7 +214,7 @@ namespace DataAccess
 
                             var errors = recordLogCMD.ExecuteNonQuery();
 
-                            if(errors <= 0)
+                            if (errors <= 0)
                             {
                                 Console.WriteLine("Error inserting data!");
                                 connection.Close();
@@ -289,73 +284,128 @@ namespace DataAccess
             return activity_id;
         }
 
-        public ArrayList getServerActivitiesSummary(string user_id, string startdate, string enddate)
+        public void recordMinutes(string id, string user_id, string shiftDate, int activity_type, float minutes, bool isOnline)
         {
-            bool result = false;
             bool hasConnection = false;
+            bool hasLocalConnection = false;
 
-            ArrayList arrServer = new ArrayList();
-
-            using (var connection = GetConnection())
+            using (var localConnection = GetLocalConnection())
             {
                 try
                 {
-                    connection.Open();
-                    hasConnection = true;
+                    localConnection.Open();
+                    hasLocalConnection = true;
                 }
-                catch (MySqlException mysqle)
+                catch (SQLiteException sqlex)
                 {
 
                 }
 
-                if (hasConnection)
+                if (hasLocalConnection)
                 {
-                    using (MySqlCommand recordLogCMD = new MySqlCommand())
+                    using (SQLiteCommand recordLogCMD = new SQLiteCommand())
                     {
-                        recordLogCMD.Connection = connection;
-                        recordLogCMD.CommandText = "SELECT * FROM emp_activities_summary " +
-                            "WHERE user_id = @user_id AND date >= @startdate AND date <= @enddate;";
-                        recordLogCMD.Parameters.AddWithValue("@user_id", user_id);
-                        recordLogCMD.Parameters.AddWithValue("@startdate", startdate);
-                        recordLogCMD.Parameters.AddWithValue("@enddate", enddate);
+                        recordLogCMD.Connection = localConnection;
 
-                        MySqlDataReader dataReader = recordLogCMD.ExecuteReader();
-
-                        if (dataReader.HasRows)
+                        switch (activity_type)
                         {
-                            while (dataReader.Read())
-                            {
-                                List<string> arrData = new List<string>();
-                                arrData.Add(dataReader["id"].ToString());
-                                arrData.Add(dataReader["user_id"].ToString());
-
-                                DateTime recDate = DateTime.Parse(dataReader["date"].ToString());
-                                arrData.Add(recDate.ToString("yyyy-MM-dd"));
-
-                                float recIdle = float.Parse(dataReader["idle"].ToString());
-                                arrData.Add(recIdle.ToString("0.00"));
-
-                                float recActive = float.Parse(dataReader["active"].ToString());
-                                arrData.Add(recActive.ToString("0.00"));
-
-                                float recUnauthorized = float.Parse(dataReader["unauthorized"].ToString());
-                                arrData.Add(recUnauthorized.ToString("0.00"));
-
-                                float recBreak = float.Parse(dataReader["break"].ToString());
-                                arrData.Add(recBreak.ToString("0.00"));
-
-                                arrServer.Add(arrData);
-
-                                arrData = null;
-                            }
+                            case 1:
+                                recordLogCMD.CommandText = "UPDATE emp_activities_summary SET active = @minutes WHERE id = @id AND user_id = @user_id AND date = @shiftDate";
+                                break;
+                            case 2:
+                                recordLogCMD.CommandText = "UPDATE emp_activities_summary SET idle = @minutes WHERE id = @id AND user_id = @user_id AND date = @shiftDate";
+                                break;
+                            case 3:
+                                recordLogCMD.CommandText = "UPDATE emp_activities_summary SET unauthorized = @minutes WHERE id = @id AND user_id = @user_id AND date = @shiftDate";
+                                break;
+                            case 4:
+                                recordLogCMD.CommandText = "UPDATE emp_activities_summary SET break = @minutes WHERE id = @id AND user_id = @user_id AND date = @shiftDate";
+                                break;
+                            default:
+                                localConnection.Close();
+                                return;
+                                break;
                         }
 
-                        connection.Close();
+                        recordLogCMD.Parameters.AddWithValue("@minutes", minutes);
+                        recordLogCMD.Parameters.AddWithValue("@id", id);
+                        recordLogCMD.Parameters.AddWithValue("@user_id", user_id);
+                        recordLogCMD.Parameters.AddWithValue("@shiftDate", shiftDate);
+
+                        var errors = recordLogCMD.ExecuteNonQuery();
+
+                        if (errors < 0)
+
+                            Console.WriteLine("Error inserting data!");
+
+                        localConnection.Close();
+                    }
+                }
+
+                if (isOnline)
+                {
+                    using (var connection = GetConnection())
+                    {
+                        try
+                        {
+                            connection.Open();
+                            hasConnection = true;
+                        }
+                        catch (MySqlException mysqlex)
+                        {
+                            switch (mysqlex.Number)
+                            {
+                                case 0:
+                                    break;
+
+                                case 1045:
+                                    break;
+                            }
+                            return;
+                        }
+
+                        if (hasConnection)
+                        {
+                            using (MySqlCommand recordLogCMD = new MySqlCommand())
+                            {
+                                recordLogCMD.Connection = connection;
+
+                                switch (activity_type)
+                                {
+                                    case 1:
+                                        recordLogCMD.CommandText = "UPDATE emp_activities_summary SET active = @minutes WHERE id = @id AND user_id = @user_id AND date = @shiftDate";
+                                        break;
+                                    case 2:
+                                        recordLogCMD.CommandText = "UPDATE emp_activities_summary SET idle = @minutes WHERE id = @id AND user_id = @user_id AND date = @shiftDate";
+                                        break;
+                                    case 3:
+                                        recordLogCMD.CommandText = "UPDATE emp_activities_summary SET unauthorized = @minutes WHERE id = @id AND user_id = @user_id AND date = @shiftDate";
+                                        break;
+                                    case 4:
+                                        recordLogCMD.CommandText = "UPDATE emp_activities_summary SET break = @minutes WHERE id = @id AND user_id = @user_id AND date = @shiftDate";
+                                        break;
+                                    default:
+                                        connection.Close();
+                                        return;
+                                        break;
+                                }
+
+                                recordLogCMD.Parameters.AddWithValue("@minutes", minutes);
+                                recordLogCMD.Parameters.AddWithValue("id", id);
+                                recordLogCMD.Parameters.AddWithValue("@user_id", user_id);
+                                recordLogCMD.Parameters.AddWithValue("@shiftDate", shiftDate);
+
+                                var errors = recordLogCMD.ExecuteNonQuery();
+
+                                if (errors < 0)
+                                    Console.WriteLine("Error inserting data!");
+
+                                connection.Close();
+                            }
+                        }
                     }
                 }
             }
-
-            return arrServer;
         }
 
         public ArrayList getLocalActivities()
@@ -481,6 +531,75 @@ namespace DataAccess
             return arrServer;
         }
 
+        public ArrayList getServerActivitiesSummary(string user_id, string startdate, string enddate)
+        {
+            bool result = false;
+            bool hasConnection = false;
+
+            ArrayList arrServer = new ArrayList();
+
+            using (var connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    hasConnection = true;
+                }
+                catch (MySqlException mysqle)
+                {
+
+                }
+
+                if (hasConnection)
+                {
+                    using (MySqlCommand recordLogCMD = new MySqlCommand())
+                    {
+                        recordLogCMD.Connection = connection;
+                        recordLogCMD.CommandText = "SELECT * FROM emp_activities_summary " +
+                            "WHERE user_id = @user_id AND date >= @startdate AND date <= @enddate;";
+                        recordLogCMD.Parameters.AddWithValue("@user_id", user_id);
+                        recordLogCMD.Parameters.AddWithValue("@startdate", startdate);
+                        recordLogCMD.Parameters.AddWithValue("@enddate", enddate);
+
+                        MySqlDataReader dataReader = recordLogCMD.ExecuteReader();
+
+                        if (dataReader.HasRows)
+                        {
+                            while (dataReader.Read())
+                            {
+                                List<string> arrData = new List<string>();
+                                arrData.Add(dataReader["id"].ToString());
+                                arrData.Add(dataReader["user_id"].ToString());
+
+                                DateTime recDate = DateTime.Parse(dataReader["date"].ToString());
+                                arrData.Add(recDate.ToString("yyyy-MM-dd"));
+
+                                float recIdle = float.Parse(dataReader["idle"].ToString());
+                                arrData.Add(recIdle.ToString("0.00"));
+
+                                float recActive = float.Parse(dataReader["active"].ToString());
+                                arrData.Add(recActive.ToString("0.00"));
+
+                                float recUnauthorized = float.Parse(dataReader["unauthorized"].ToString());
+                                arrData.Add(recUnauthorized.ToString("0.00"));
+
+                                float recBreak = float.Parse(dataReader["break"].ToString());
+                                arrData.Add(recBreak.ToString("0.00"));
+
+                                arrServer.Add(arrData);
+
+                                arrData = null;
+                            }
+                        }
+
+                        connection.Close();
+                    }
+                }
+            }
+
+            return arrServer;
+        }
+
         public ArrayList getLocalActivitiesSummary()
         {
             bool hasLocalConnection = false;
@@ -548,16 +667,15 @@ namespace DataAccess
             bool result = false;
             bool recordFound = false;
             bool hasConnection = false;
-
             using (var connection = GetConnection())
             {
                 try
-                {
-                    connection.Open();
-                    hasConnection = true;
-                }
+                    {
+                        connection.Open();
+                        hasConnection = true;
+                    }
                 catch (MySqlException mysqle)
-                {
+                    {
                     switch (mysqle.Number)
                     {
                         case 0:
@@ -571,7 +689,7 @@ namespace DataAccess
                 }
 
                 if (hasConnection)
-                {
+                    {
                     try
                     {
                         foreach (List<string> activeRec in ar_local)
@@ -584,51 +702,51 @@ namespace DataAccess
                             string unauthorized = activeRec[5];
                             string record_break = activeRec[6];
 
-                            using (MySqlCommand checkRecordLogCMD = new MySqlCommand())
+                        using (MySqlCommand checkRecordLogCMD = new MySqlCommand())
+                        {
+                            checkRecordLogCMD.Connection = connection;
+                            checkRecordLogCMD.CommandText = "SELECT * FROM emp_activities_summary WHERE(id = @id, user_id = @user_id, DATE= @date)";
+                            checkRecordLogCMD.Parameters.AddWithValue("@id", id);
+                            checkRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
+                            checkRecordLogCMD.Parameters.AddWithValue("@date", record_date);
+
+                            MySqlDataReader dataReader = checkRecordLogCMD.ExecuteReader();
+
+                            if (dataReader.HasRows)
                             {
-                                checkRecordLogCMD.Connection = connection;
-                                checkRecordLogCMD.CommandText = "SELECT * FROM emp_activities_summary WHERE(id = @id, user_id = @user_id, DATE= @date)";
-                                checkRecordLogCMD.Parameters.AddWithValue("@id", id);
-                                checkRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
-                                checkRecordLogCMD.Parameters.AddWithValue("@date", record_date);
-
-                                MySqlDataReader dataReader = checkRecordLogCMD.ExecuteReader();
-
-                                if (dataReader.HasRows)
+                                while (dataReader.Read())
                                 {
-                                    while (dataReader.Read())
-                                    {
-                                        recordFound = true;
-                                    }
+                                    recordFound = true;
                                 }
-
-                                dataReader.Close();
                             }
 
-                            if (recordFound)
+                            dataReader.Close();
+                        }
+
+                        if (recordFound)
+                        {
+                            using (MySqlCommand updateRecordLogCMD = new MySqlCommand())
                             {
-                                using (MySqlCommand updateRecordLogCMD = new MySqlCommand())
+                                updateRecordLogCMD.Connection = connection;
+                                updateRecordLogCMD.CommandText = "UPDATE emp_activities_summary SET idle = @idle, active = @active, unauthorized = @unauthorized, break = @break WHERE id = @id AND user_id = @user_id AND date = @date";
+                                updateRecordLogCMD.Parameters.AddWithValue("@id", id);
+                                updateRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
+                                updateRecordLogCMD.Parameters.AddWithValue("@date", record_date);
+                                updateRecordLogCMD.Parameters.AddWithValue("@idle", idle);
+                                updateRecordLogCMD.Parameters.AddWithValue("@active", active);
+                                updateRecordLogCMD.Parameters.AddWithValue("@unauthorized", unauthorized);
+                                updateRecordLogCMD.Parameters.AddWithValue("break", record_break);
+
+                                var errors = updateRecordLogCMD.ExecuteNonQuery();
+
+                                if (errors <= 0)
                                 {
-                                    updateRecordLogCMD.Connection = connection;
-                                    updateRecordLogCMD.CommandText = "UPDATE emp_activities_summary SET idle = @idle, active = @active, unauthorized = @unauthorized, break = @break WHERE id = @id AND user_id = @user_id AND date = @date";
-                                    updateRecordLogCMD.Parameters.AddWithValue("@id", id);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@date", record_date);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@idle", idle);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@active", active);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@unauthorized", unauthorized);
-                                    updateRecordLogCMD.Parameters.AddWithValue("break", record_break);
-
-                                    var errors = updateRecordLogCMD.ExecuteNonQuery();
-
-                                    if (errors <= 0)
-                                    {
-                                        Console.WriteLine("Error updating data!");
-                                    }
-                                    else
-                                    {
-                                        result = true;
-                                    }
+                                    Console.WriteLine("Error updating data!");
+                                }
+                                else
+                                {
+                                    result = true;
+                                }
                                 }
                             }
 
@@ -660,8 +778,8 @@ namespace DataAccess
                             }
                         }
 
-                        connection.Close();
-                    }
+                            connection.Close();
+                        }
 
                     catch (MySqlException mysqle)
                     {
@@ -682,12 +800,236 @@ namespace DataAccess
             return result;
         }
 
-        public bool empActivitiesSync(ArrayList arr_Local)
+            public bool empActivitiesSync(ArrayList arr_Local)
+            {
+                bool result = false;
+                bool recordFound = false;
+                bool hasConnection = false;
+                string id = "";
+
+                using (var connection = GetConnection())
+                {
+                    try
+                    {
+                        connection.Open();
+                        hasConnection = true;
+                    }
+                    catch (MySqlException msqle)
+                    {
+                        switch (msqle.Number)
+                        {
+                            case 0:
+                                break;
+
+                            case 1045:
+                                break;
+                        }
+                        return result;
+                    }
+
+                    if (hasConnection)
+                    {
+                        try
+                        {
+                            foreach (List<string> activeRec in arr_Local)
+                            {
+                                string user_id = activeRec[1];
+                                string activity_type = activeRec[2];
+                                string time_start = activeRec[3];
+                                string time_end = activeRec[4];
+                                string time_elapsed = activeRec[5];
+
+                                using (MySqlCommand checkRecordLogCMD = new MySqlCommand())
+                                {
+                                    checkRecordLogCMD.Connection = connection;
+                                    checkRecordLogCMD.CommandText = "SELECT * FROM emp_activities WHERE (user_id = @user_id, activity_type = @activity_type, time_start = @time_start)";
+                                    checkRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
+                                    checkRecordLogCMD.Parameters.AddWithValue("@activity_type", activity_type);
+                                    checkRecordLogCMD.Parameters.AddWithValue("@time_start", time_start);
+
+                                    MySqlDataReader dataReader = checkRecordLogCMD.ExecuteReader();
+
+                                    if (dataReader.HasRows)
+                                    {
+                                        while (dataReader.Read())
+                                        {
+                                            id = dataReader["id"].ToString();
+                                            recordFound = true;
+                                        }
+                                    }
+
+                                    dataReader.Close();
+                                }
+
+                                if (recordFound)
+                                {
+                                    using (MySqlCommand updateRecordLogCMD = new MySqlCommand())
+                                    {
+                                        updateRecordLogCMD.Connection = connection;
+                                        updateRecordLogCMD.CommandText = "UPDATE emp_activities SET time_end = @time_end, time_elapsed = @time_elapsed WHERE id = @id AND user_id = @user_id AND activity_type = @activity_type AND time_start = @time_start";
+                                        updateRecordLogCMD.Parameters.AddWithValue("@id", id);
+                                        updateRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
+                                        updateRecordLogCMD.Parameters.AddWithValue("@activity_type", activity_type);
+                                        updateRecordLogCMD.Parameters.AddWithValue("@time_start", time_start);
+                                        updateRecordLogCMD.Parameters.AddWithValue("@time_end", time_end);
+                                        updateRecordLogCMD.Parameters.AddWithValue("@time_elapsed", time_elapsed);
+
+                                        var errors = updateRecordLogCMD.ExecuteNonQuery();
+
+                                        if (errors <= 0)
+                                        {
+                                            Console.WriteLine("Error updating data!");
+                                        }
+                                        else
+                                        {
+                                            result = true;
+                                        }
+                                    }
+                                }
+
+                                else
+                                {
+                                    using (MySqlCommand insertRecordLogCMD = new MySqlCommand())
+                                    {
+                                        insertRecordLogCMD.Connection = connection;
+                                        insertRecordLogCMD.CommandText = "INSERT INTO emp_activities (user_id, activity_type, time_start, time_end, time_elapsed) " +
+                                            "VALUES (@user_id, @activity_type, @time_start, @time_end, @time_elapsed);";
+                                        insertRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
+                                        insertRecordLogCMD.Parameters.AddWithValue("@activity_type", activity_type);
+                                        insertRecordLogCMD.Parameters.AddWithValue("@time_start", time_start);
+                                        insertRecordLogCMD.Parameters.AddWithValue("@time_end", time_end);
+                                        insertRecordLogCMD.Parameters.AddWithValue("@time_elapsed", time_elapsed);
+
+                                        var errors = insertRecordLogCMD.ExecuteNonQuery();
+
+                                        if (errors < 0)
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            result = true;
+                                        }
+                                    }
+                                }
+                            }
+
+                            connection.Close();
+                        }
+
+                        catch (MySqlException mysqle)
+                        {
+                            switch (mysqle.Number)
+                            {
+                                case 0:
+                                    break;
+
+                                case 1045:
+                                    break;
+                            }
+
+                            return result;
+                        }
+                    }
+                }
+
+                return result;
+            }
+
+            public void resetLocalEmpActivities()
+            {
+                bool hasLocalConnection = false;
+
+                using (var localConnection = GetLocalConnection())
+                {
+                    try
+                    {
+                        localConnection.Open();
+                        hasLocalConnection = true;
+                    }
+                    catch (SQLiteException sqlex)
+                    {
+
+                    }
+
+                    if (hasLocalConnection)
+                    {
+                        using (SQLiteCommand recordLogCMD = new SQLiteCommand())
+                        {
+                            recordLogCMD.Connection = localConnection;
+                            recordLogCMD.CommandText = "DROP TABLE IF EXISTS emp_activities;";
+                            recordLogCMD.CommandText += "CREATE TABLE 'emp_activities'(" +
+                                "'id' INTEGER NOT NULL," +
+                                "'user_id' INTEGER," +
+                                "'activity_type' INTEGER," +
+                                "'time_start' TEXT," +
+                                "'time_end' TEXT," +
+                                "'time_elapsed' NUMERIC," +
+                                "PRIMARY KEY('id' AUTOINCREMENT)" +
+                                ");";
+
+                            var errors = recordLogCMD.ExecuteNonQuery();
+
+                            if (errors <= 0)
+                            {
+
+                            }
+
+                            localConnection.Close();
+                        }
+                    }
+                }
+            }
+
+            public void resetLocalEmpActivitiesSummary()
+            {
+                bool hasLocalConnection = false;
+
+                using (var localConnection = GetLocalConnection())
+                {
+                    try
+                    {
+                        localConnection.Open();
+                        hasLocalConnection = true;
+                    }
+                    catch (SQLiteException mysqle)
+                    {
+
+                    }
+
+                    if (hasLocalConnection)
+                    {
+                        using (SQLiteCommand recordLogCMD = new SQLiteCommand())
+                        {
+                            recordLogCMD.Connection = localConnection;
+                            recordLogCMD.CommandText = "DROP TABLE IF EXISTS emp_activities_summary";
+                            recordLogCMD.CommandText += "CREATE TABLE 'emp_activities_summary'(" +
+                                "'id' INTEGER, " +
+                                "'userid' INTEGER, " +
+                                "'date' TEXT, " +
+                                "'idle' NUMERIC, " +
+                                "'active' NUMERIC, " +
+                                "'unauthorized' NUMERIC, " +
+                                "'break' NUMERIC " +
+                                ");";
+
+                            var errors = recordLogCMD.ExecuteNonQuery();
+
+                            if (errors < 0)
+                            {
+
+                            }
+
+                            localConnection.Close();
+                        }
+                    }
+                }
+            }
+
+        public bool syncEmpActivities(string values)
         {
             bool result = false;
-            bool recordFound = false;
             bool hasConnection = false;
-            string id = "";
 
             using (var connection = GetConnection())
             {
@@ -696,121 +1038,38 @@ namespace DataAccess
                     connection.Open();
                     hasConnection = true;
                 }
-                catch (MySqlException msqle)
+                catch (MySqlException mysqlex)
                 {
-                    switch (msqle.Number)
+                    switch (mysqlex.Number)
                     {
                         case 0:
-                            break ;
+                            break;
 
                         case 1045:
                             break;
                     }
-                    return result;
                 }
 
                 if (hasConnection)
                 {
-                    try
+                    using (MySqlCommand recordLogCMD = new MySqlCommand())
                     {
-                        foreach (List<string> activeRec in arr_Local)
+                        recordLogCMD.Connection = connection;
+                        recordLogCMD.CommandText = "INSERT INTO emp_activities (user_id, activity_type, time_start, time_end, time_elapsed)";
+                        recordLogCMD.CommandText += values;
+
+                        var errors = recordLogCMD.ExecuteNonQuery();
+
+                        if (errors < 0)
                         {
-                            string user_id = activeRec[1];
-                            string activity_type = activeRec[2];
-                            string time_start = activeRec[3];
-                            string time_end = activeRec[4];
-                            string time_elapsed = activeRec[5];
-
-                            using (MySqlCommand checkRecordLogCMD = new MySqlCommand())
-                            {
-                                checkRecordLogCMD.Connection = connection;
-                                checkRecordLogCMD.CommandText = "SELECT * FROM emp_activities WHERE (user_id = @user_id, activity_type = @activity_type, time_start = @time_start)";
-                                checkRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
-                                checkRecordLogCMD.Parameters.AddWithValue("@activity_type", activity_type);
-                                checkRecordLogCMD.Parameters.AddWithValue("@time_start", time_start);
-
-                                MySqlDataReader dataReader = checkRecordLogCMD.ExecuteReader();
-
-                                if (dataReader.HasRows)
-                                {
-                                    while (dataReader.Read())
-                                    {
-                                        id = dataReader["id"].ToString();
-                                        recordFound = true;
-                                    }
-                                }
-
-                                dataReader.Close();
-                            }
-
-                            if (recordFound)
-                            {
-                                using (MySqlCommand updateRecordLogCMD = new MySqlCommand())
-                                {
-                                    updateRecordLogCMD.Connection = connection;
-                                    updateRecordLogCMD.CommandText = "UPDATE emp_activities SET time_end = @time_end, time_elapsed = @time_elapsed WHERE id = @id AND user_id = @user_id AND activity_type = @activity_type AND time_start = @time_start";
-                                    updateRecordLogCMD.Parameters.AddWithValue("@id", id);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@activity_type", activity_type);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@time_start", time_start);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@time_end", time_end);
-                                    updateRecordLogCMD.Parameters.AddWithValue("@time_elapsed", time_elapsed);
-
-                                    var errors = updateRecordLogCMD.ExecuteNonQuery();
-
-                                    if (errors <= 0)
-                                    {
-                                        Console.WriteLine("Error updating data!");
-                                    }
-                                    else
-                                    {
-                                        result = true;
-                                    }
-                                }
-                            }
-
-                            else
-                            {
-                                using (MySqlCommand insertRecordLogCMD = new MySqlCommand())
-                                {
-                                    insertRecordLogCMD.Connection = connection;
-                                    insertRecordLogCMD.CommandText = "INSERT INTO emp_activities (user_id, activity_type, time_start, time_end, time_elapsed) " +
-                                        "VALUES (@user_id, @activity_type, @time_start, @time_end, @time_elapsed);";
-                                    insertRecordLogCMD.Parameters.AddWithValue("@user_id", user_id);
-                                    insertRecordLogCMD.Parameters.AddWithValue("@activity_type", activity_type);
-                                    insertRecordLogCMD.Parameters.AddWithValue("@time_start", time_start);
-                                    insertRecordLogCMD.Parameters.AddWithValue("@time_end", time_end);
-                                    insertRecordLogCMD.Parameters.AddWithValue("@time_elapsed", time_elapsed);
-
-                                    var errors = insertRecordLogCMD.ExecuteNonQuery();
-
-                                    if (errors < 0)
-                                    {
-                                        
-                                    }
-                                    else
-                                    {
-                                        result = true;
-                                    }
-                                }
-                            }
+                            Console.WriteLine("Error inserting data!");
+                        }
+                        else
+                        {
+                            result = true;
                         }
 
                         connection.Close();
-                    }
-
-                    catch (MySqlException mysqle)
-                    {
-                        switch (mysqle.Number)
-                        {
-                            case 0:
-                                break;
-
-                            case 1045:
-                                break;
-                        }
-
-                        return result;
                     }
                 }
             }
@@ -818,94 +1077,54 @@ namespace DataAccess
             return result;
         }
 
-        public void resetLocalEmpActivities()
+        public bool syncEmpActivitiesSummary(string values)
         {
-            bool hasLocalConnection = false;
+            bool result = false;
+            bool hasConnection = false;
 
-            using (var localConnection = GetLocalConnection())
+            using (var connection = GetConnection())
             {
                 try
                 {
-                    localConnection.Open();
-                    hasLocalConnection = true;
+                    connection.Open();
+                    hasConnection = true;
                 }
-                catch (SQLiteException sqlex)
+                catch (MySqlException mysqlex)
                 {
-
-                }
-
-                if (hasLocalConnection)
-                {
-                    using (SQLiteCommand recordLogCMD = new SQLiteCommand())
+                    switch (mysqlex.Number)
                     {
-                        recordLogCMD.Connection = localConnection;
-                        recordLogCMD.CommandText = "DROP TABLE IF EXISTS emp_activities;";
-                        recordLogCMD.CommandText += "CREATE TABLE 'emp_activities'(" +
-                            "'id' INTEGER NOT NULL," +
-                            "'user_id' INTEGER," +
-                            "'activity_type' INTEGER," +
-                            "'time_start' TEXT," +
-                            "'time_end' TEXT," +
-                            "'time_elapsed' NUMERIC," +
-                            "PRIMARY KEY('id' AUTOINCREMENT)" +
-                            ");";
+                        case 0:
+                            break;
 
-                        var errors = recordLogCMD.ExecuteNonQuery();
-
-                        if (errors <= 0)
-                        {
-
-                        }
-
-                        localConnection.Close();
+                        case 1045:
+                            break;
                     }
                 }
-            }
-        }
 
-        public void resetLocalEmpActivitiesSummary()
-        {
-            bool hasLocalConnection = false;
-
-            using (var localConnection = GetLocalConnection())
-            {
-                try
+                if (hasConnection)
                 {
-                    localConnection.Open();
-                    hasLocalConnection = true;
-                }
-                catch (SQLiteException mysqle)
-                {
-
-                }
-
-                if (hasLocalConnection)
-                {
-                    using (SQLiteCommand recordLogCMD = new SQLiteCommand())
+                    using (MySqlCommand recordLogCMD = new MySqlCommand())
                     {
-                        recordLogCMD.Connection = localConnection;
-                        recordLogCMD.CommandText = "DROP TABLE IF EXISTS emp_activities_summary";
-                        recordLogCMD.CommandText += "CREATE TABLE 'emp_activities_summary'(" +
-                            "'id' INTEGER, " +
-                            "'userid' INTEGER, " +
-                            "'date' TEXT, " +
-                            "'idle' NUMERIC, " +
-                            "'active' NUMERIC, " +
-                            "'unauthorized' NUMERIC, " +
-                            "'break' NUMERIC " +
-                            ");";
+                        recordLogCMD.Connection = connection;
+                        recordLogCMD.CommandText = "INSERT INTO emp_activities_summary (user_id, date, idle, active, unauthorized, break)";
+                        recordLogCMD.CommandText += values;
 
                         var errors = recordLogCMD.ExecuteNonQuery();
 
-                        if(errors < 0)
+                        if ( errors < 0)
                         {
-
+                            Console.WriteLine("Error inserting data!");
+                        }
+                        else
+                        {
+                            result = true;
                         }
 
-                        localConnection.Close();
+                        connection.Close();
                     }
                 }
             }
         }
     }
 }
+

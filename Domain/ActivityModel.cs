@@ -50,7 +50,7 @@ namespace Domain
             return result;
         }
 
-        public bool Sync_emp_activities()
+        public bool Sync_emp_activities_summary()
         {
             bool result = false;
             ArrayList arr_Local = new ArrayList();
@@ -152,7 +152,7 @@ namespace Domain
                     }
                 }
 
-                result = activityDAO.syncEmpActivities(values);
+                result = activityDAO.syncEmpActivitiesSummary(values);
 
                 if (result)
                 {
